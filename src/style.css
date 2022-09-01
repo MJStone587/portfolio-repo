@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3a94c;
+  column-gap: 70px;
+  height: 50px;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+.navbarBtn {
+  text-decoration: none;
+  font: 20px "Times New Roman", serif;
+  color: #072329;
+  border: none;
+  background-color: #f3a94c;
+  padding: 13.25px 25px 13.25px 25px;
+}
+.navbarBtn:hover {
+  color: #f3a94c;
+  background-color: #072329;
+  border-radius: 22px 50px;
+}
