@@ -1,14 +1,26 @@
 import "./style.css";
-import Navbtn from "./component/Navbtn";
+import React, { useState } from "react";
+import Home from "./component/Home";
+import Navbar from "./component/Navbar";
+import Skills from "./component/Skills";
+import Projects from "./component/Projects";
+import Socials from "./component/Socials";
 
 function App() {
+  const [displayPage, setPage] = useState("home");
   return (
-    <nav className="navbar">
-      <Navbtn text="Home" btnName="navbarBtn" />
-      <Navbtn text="Skills" btnName="navbarBtn" />
-      <Navbtn text="Projects" btnName="navbarBtn" />
-      <Navbtn text="Socials" btnName="navbarBtn" />
-    </nav>
+    <>
+      <Navbar
+        showHome={() => setPage("home")}
+        showSkills={() => setPage("skills")}
+        showProjects={() => setPage("projects")}
+        showSocials={() => setPage("socials")}
+      />
+      {displayPage === "home" && <Home />}
+      {displayPage === "skills" && <Skills />}
+      {displayPage === "projects" && <Projects />}
+      {displayPage === "socials" && <Socials />}
+    </>
   );
 }
 
