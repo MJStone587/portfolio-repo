@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Orbitron:wght@400;500&display=swap");
 
 html {
   background-color: #072329;
@@ -69,41 +70,75 @@ html {
   border-radius: "22px 50px";
   color: "#F3A94C";
 }
+
+/* HOME PAGE STYLING */
 .homeHeader {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: [col1] 1fr [col2] 1fr;
+  grid-template-rows: [row1] 100%;
   background-color: #072329;
+  justify-items: center;
   column-gap: 10px;
   height: 93vh;
-  min-height: 85vh;
+  min-height: 93vh;
 }
 .homeLeft {
-  display: flex;
-  flex-flow: column nowrap;
-  order: 1;
-  justify-content: center;
-  align-content: center;
-  padding: 50px;
-  margin: 0px 40px 0px 40px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  row-gap: 20px;
   border-radius: 15%;
-  height: 65vh;
-  width: 45vw;
+  overflow: hidden;
 }
 .homeLeft h1 {
-  font: 100px "Times New Roman", serif;
-  margin: 75px;
+  font: 125px "Indie Flower", cursive;
+  grid-column: 2 / 9;
+  grid-row: 1 / span 6;
   color: #c4d8e1;
+  place-self: center;
+  z-index: 5;
 }
 .homeLeft p {
   color: #c4d8e1;
-  font-size: 20px;
+  font-size: 23px;
+  grid-column: 2 / span 7;
+  grid-row: 6 / span 7;
+  z-index: 5;
+}
+.homeLeft button {
+  border: 1px solid transparent;
+  background-color: #f3a94c;
+  z-index: 10;
+  justify-self: start;
+  margin: 10px 0px 0px 30px;
+  border-radius: 20px;
+  font-size: 17px;
+  width: 10vw;
+  height: 5vh;
+  grid-column: 4;
+  grid-row: 7 / 8;
+  box-shadow: 3px 3px 2px 0px inital black;
+}
+.homeLeft button:hover {
+  border: 1px solid #c4d8e1;
+  color: red;
+}
+.homeLeft svg {
+  background-color: #145a68;
+  z-index: 1;
+  width: 525px;
+  height: 375px;
+  margin-left: 20px;
+  grid-column: 3 / 6;
+  grid-row: 3 / span 4;
+  border-radius: 4px;
+  transform: rotate(145deg);
 }
 .homeRight {
   display: flex;
   justify-self: center;
   align-self: center;
   margin: 0px 40px 0px 0px;
-  order: 2;
 }
 .homeRight img {
   height: 65vh;

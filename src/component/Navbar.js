@@ -17,10 +17,10 @@ export default function Navbtn(props) {
       </div>
 
       <div className="navbarRight">
-        <button className="btn btnGroup2" onClick={props.showProjects}>
+        <button className="btn btnProjects" onClick={props.showProjects}>
           Projects
         </button>
-        <button className="btn btnGroup2" onClick={props.showSocials}>
+        <button className="btn btnSocials" onClick={props.showSocials}>
           Socials
         </button>
       </div>

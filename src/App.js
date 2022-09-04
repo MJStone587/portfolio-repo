@@ -16,7 +16,7 @@ function App() {
         showProjects={() => setPage("projects")}
         showSocials={() => setPage("socials")}
       />
-      {displayPage === "home" && <Home />}
+      {displayPage === "home" && <Home showHome={() => setPage("home")} />}
       {displayPage === "skills" && <Skills />}
       {displayPage === "projects" && <Projects />}
       {displayPage === "socials" && <Socials />}
