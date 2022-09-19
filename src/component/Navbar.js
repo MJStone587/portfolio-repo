@@ -7,8 +7,8 @@ export default function Navbtn(props) {
         <button className="btn btnHome" onClick={props.showHome}>
           Home
         </button>
-        <button className="btn btnSkills" onClick={props.showSkills}>
-          Skills
+        <button className="btn btnAbout" onClick={props.showAbout}>
+          About
         </button>
       </div>
 
