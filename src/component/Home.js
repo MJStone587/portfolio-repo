@@ -19,26 +19,28 @@ export default function Home(props) {
       <button className="homeHeaderBtn" onClick={props.showAbout}>
         Learn More
       </button>
-      <img
-        src={computerImgTop}
-        className="computerImg imgTop"
-        alt="Computer Top"
-      ></img>
-      <img
-        src={computerImgMid1}
-        className="computerImg imgMid1"
-        alt="Computer Mid"
-      ></img>
-      <img
-        src={computerImgMid2}
-        className="computerImg imgMid2"
-        alt="Computer Mid Second"
-      ></img>
-      <img
-        src={computerImgBottom}
-        className="computerImg imgBottom"
-        alt="Computer Bottom"
-      ></img>
+      <div className="homeBackground">
+        <img
+          src={computerImgTop}
+          className="computerImg imgTop"
+          alt="Computer Top"
+        ></img>
+        <img
+          src={computerImgMid1}
+          className="computerImg imgMid1"
+          alt="Computer Mid"
+        ></img>
+        <img
+          src={computerImgMid2}
+          className="computerImg imgMid2"
+          alt="Computer Mid Second"
+        ></img>
+        <img
+          src={computerImgBottom}
+          className="computerImg imgBottom"
+          alt="Computer Bottom"
+        ></img>
+      </div>
     </div>
   );
 }
