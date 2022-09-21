@@ -232,6 +232,7 @@ body #root {
 .fa-arrow-right-long {
   font-size: 4rem;
   color: #f3a94c;
+  align-self: end;
 }
 .aboutBackground {
   width: 100%;
