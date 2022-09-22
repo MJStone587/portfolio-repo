@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import SkillIconBox from "./SkillIconBox.js";
+import SkillNamesBox from "./SkillNamesBox.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import keyboardImage from "../images/keyboardColorMatch.jpg";
+import "../style.css";
 
 export default function About(props) {
+  const [divDisplay, changeDivDisplay] = useState("skillIconBox");
+
+  const showNamesDiv = function () {
+    changeDivDisplay("skillNamesBox");
+  };
+  const showIconsDiv = function () {
+    changeDivDisplay("skillIconBox");
+  };
+
   return (
     <div className="aboutBody">
       <div className="aboutBodyIntro">
@@ -17,23 +29,23 @@ export default function About(props) {
           with new projects. I am proficient in...
         </p>
       </div>
-      <div className="aboutBodySkills">
-        <FontAwesomeIcon icon="fa-brands fa-html5" />
-        <FontAwesomeIcon icon="fa-brands fa-css3-alt" />
-        <FontAwesomeIcon icon="fa-brands fa-js" />
-        <FontAwesomeIcon icon="fa-brands fa-node" />
-        <FontAwesomeIcon icon="fa-brands fa-react" />
-        <FontAwesomeIcon icon="fa-brands fa-php" />
-        <FontAwesomeIcon icon="fa-brands fa-square-git" />
-        <FontAwesomeIcon icon="fa-brands fa-github" />
+      <div
+        className="dynamicDiv"
+        onMouseEnter={showNamesDiv}
+        onMouseLeave={showIconsDiv}
+      >
+        {divDisplay === "skillIconBox" && <SkillIconBox />}
+        {divDisplay === "skillNamesBox" && <SkillNamesBox />}
       </div>
+
       <div className="aboutBodyArrow">
-        <h2>View My Projects</h2>
+        <h2>View Projects</h2>
         <FontAwesomeIcon
           onClick={props.showProjects}
           icon="fa-solid fa-arrow-right-long"
         />
       </div>
+
       <div className="aboutBackground">
         <img src={keyboardImage} id="keyboardImg" alt="Keyboard on Desk"></img>
       </div>
