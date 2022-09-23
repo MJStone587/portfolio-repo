@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SkillIconBox from "./SkillIconBox.js";
 import SkillNamesBox from "./SkillNamesBox.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,10 +41,9 @@ export default function About(props) {
 
       <div className="aboutBodyArrow">
         <h2>View Projects</h2>
-        <FontAwesomeIcon
-          onClick={props.showProjects}
-          icon="fa-solid fa-arrow-right-long"
-        />
+        <Link className="linkToProjects" to="/projects">
+          <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" />
+        </Link>
       </div>
 
       <div className="aboutBackground">

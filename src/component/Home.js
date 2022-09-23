@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import computerImgTop from "../images/pexelsComputerTop.jpg";
 import computerImgMid1 from "../images/pexelsComputerMid1.jpg";
 import computerImgMid2 from "../images/pexelsComputerMid2.jpg";
 import computerImgBottom from "../images/pexelsComputerBottom.jpg";
 import profilePic from "../images/profilePic.jpg";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <div className="homeHeader">
       <h1 className="homeHeaderTitle">Welcome To My Portfolio</h1>
@@ -16,9 +17,9 @@ export default function Home(props) {
         at urna condimentum mattis. Enim blandit volutpat maecenas volutpat
         blandit aliquam etiam erat velit.
       </p>
-      <button className="homeHeaderBtn" onClick={props.showAbout}>
+      <Link className="homeHeaderBtn" to="/about">
         Learn More
-      </button>
+      </Link>
       <div className="homeBackground">
         <img
           src={computerImgTop}

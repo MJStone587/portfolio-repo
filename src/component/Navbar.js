@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Navbtn(props) {
+export default function Navbtn() {
   return (
     <nav className="navbar">
       <div className="navbarLeft">
-        <button className="btn btnHome" onClick={props.showHome}>
+        <Link className="btn btnHome" to="/">
           Home
-        </button>
-        <button className="btn btnAbout" onClick={props.showAbout}>
+        </Link>
+        <Link className="btn btnAbout" to="/about">
           About
-        </button>
+        </Link>
       </div>
 
       <div className="navbarMid">
@@ -17,12 +18,12 @@ export default function Navbtn(props) {
       </div>
 
       <div className="navbarRight">
-        <button className="btn btnProjects" onClick={props.showProjects}>
+        <Link className="btn btnProjects" to="/projects">
           Projects
-        </button>
-        <button className="btn btnSocials" onClick={props.showSocials}>
+        </Link>
+        <Link className="btn btnSocials" to="/socials">
           Socials
-        </button>
+        </Link>
       </div>
     </nav>
   );

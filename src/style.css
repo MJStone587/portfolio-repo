@@ -30,6 +30,7 @@ body #root {
 }
 .btnAbout {
   justify-self: start;
+  align-self: center;
   color: white;
 }
 .navbarMid {
@@ -56,14 +57,14 @@ body #root {
   font: 2rem "Orbitron", sans-serif;
   color: #5ebce7;
 }
-.navbar button {
+.btn {
   text-decoration: none;
   border: none;
   background-color: #072329;
   color: #5ebce7;
   font: 1.1rem "Times New Roman", serif;
 }
-.navbar button:hover {
+.btn:hover {
   cursor: pointer;
   color: #f3a94c;
   background-color: #072329;
@@ -115,13 +116,15 @@ body #root {
   border: 1px solid transparent;
   background-color: #f58f10;
   margin: 1rem 0rem 0rem 5rem;
+  text-decoration: none;
+  color: #031013;
   border-radius: 20px;
-  grid-column: 5 / span 9;
-  grid-row: 8 / 9;
+  grid-column: 5 / 6;
   font-size: 1rem;
-  width: 17%;
+  text-align: center;
+  grid-row: 8 / 9;
+  padding: 1rem 2rem 1rem 2rem;
   z-index: 5;
-  height: 80%;
   box-shadow: 1px 2px 4px 1px black;
 }
 .homeHeaderBtn:hover {
@@ -176,6 +179,7 @@ body #root {
   height: 99%;
   width: 100%;
   z-index: 5;
+  overflow-x: hidden;
 }
 .aboutBodyIntro {
   display: grid;
@@ -235,10 +239,12 @@ body #root {
   font-size: 1.75rem;
   animation: fadeIn 2s;
 }
+.linkToProjects {
+  justify-self: end;
+}
 .fa-arrow-right-long {
   font-size: 5rem;
   color: #f3a94c;
-  justify-self: end;
 }
 .fa-arrow-right-long:hover {
   color: #c4d8e1;
@@ -260,6 +266,64 @@ body #root {
   top: 20%;
   left: 15%;
   z-index: 1;
+}
+.projectDispContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: [row1] 40% [row2] 40%;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  min-height: 92vh;
+}
+.projectDispBox {
+  display: grid;
+  grid-template-columns: [col1] 50% [col2] 50%;
+  grid-template-rows: [row1] 10% [row2] 30% [row3] 10% [row4] 10%;
+  grid-template-areas:
+    "boxTitle boxTitle"
+    "boxImg boxImg"
+    "boxDesc boxDesc"
+    "boxLink1 boxLink2";
+  background-color: #5ebce7;
+  justify-items: center;
+  overflow: hidden;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+}
+.projectDispBox img {
+  grid-area: boxImg;
+  z-index: 2;
+}
+.projectDispBox h3 {
+  grid-area: boxTitle;
+  font-size: 1.75rem;
+  color: #072329;
+  z-index: 5;
+}
+.projectDispBox p {
+  grid-area: boxDesc;
+  font-size: 1rem;
+  color: #072329;
+  z-index: 5;
+}
+.projectDispBox a {
+  font-size: 1.5rem;
+  color: #f58f10;
+  text-decoration: none;
+  z-index: 5;
+}
+.projectDispBox #boxLink1 {
+  grid-area: boxLink1;
+}
+.projectDispBox #boxLink2 {
+  grid-area: boxLink2;
+}
+.projectDispBox a:hover {
+  color: #c4d8e1;
+  cursor: pointer;
 }
 @keyframes slideInLeft {
   from {
