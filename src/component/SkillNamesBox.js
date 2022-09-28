@@ -6,7 +6,7 @@ export default function SkillNamesBox() {
       <h3 className="iconNames">Html</h3>
       <h3 className="iconNames">CSS</h3>
       <h3 className="iconNames">Javascript</h3>
-      <h3 className="iconNames">nodeJS</h3>
+      <h3 className="iconNames">NodeJS</h3>
       <h3 className="iconNames">React</h3>
       <h3 className="iconNames">PHP</h3>
       <h3 className="iconNames">Git</h3>
