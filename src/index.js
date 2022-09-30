@@ -11,9 +11,11 @@ import {
   faCheckSquare,
   faCoffee,
   faArrowRightLong,
+  faHouse,
+  faFile,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faCheckSquare, faCoffee, faArrowRightLong);
+library.add(fab, faCheckSquare, faCoffee, faArrowRightLong, faHouse, faFile);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

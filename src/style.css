@@ -277,51 +277,92 @@ body #root {
 /*--------Projects Page----------*/
 .projectDispContainer {
   display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: [row1] 40% [row2] 40%;
-  column-gap: 2rem;
-  row-gap: 2rem;
-  justify-content: center;
-  align-content: center;
+  place-items: center;
   overflow: hidden;
   min-height: 92vh;
 }
+.projectExplorerWindow {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  row-gap: 0px;
+  column-gap: 0px;
+  background-color: #2b2b2b;
+  border: 1px solid #031013;
+  height: 70vh;
+  width: 70%;
+}
+.projectExplorerNav {
+  align-content: center;
+  column-gap: 0.5rem;
+  grid-column: 1 / span 20;
+  grid-row: 1 / 5;
+  justify-content: center;
+  width: 100%;
+  background-color: #1f1f1f;
+  height: 50px;
+}
+.projectExplorerNav button {
+  background-color: #353535;
+  border: none;
+  grid-column: 2/2;
+}
+.navigationText {
+  background-color: #313131;
+}
+.projectList {
+  display: grid;
+  background-color: #212121;
+  justify-content: center;
+  grid-column: 1 / 5;
+  grid-row: 5 / span 20;
+  row-gap: 50px;
+  color: white;
+  align-content: start;
+}
+.fa-file {
+  color: white;
+}
+.fa-house {
+  color: white;
+}
+.projectList button {
+  border: none;
+  background-color: #212121;
+  color: white;
+}
+.projectList button:hover {
+  cursor: pointer;
+}
+/*
 .projectDispBox {
   display: grid;
-  grid-template-columns: [col1] 50% [col2] 50%;
-  grid-template-rows: [row1] 10% [row2] 30% [row3] 10% [row4] 10%;
-  grid-template-areas:
-    "boxTitle boxTitle"
-    "boxImg boxImg"
-    "boxDesc boxDesc"
-    "boxLink1 boxLink2";
-  background-color: #5ebce7;
-  justify-items: center;
-  overflow: hidden;
-  box-shadow: 2px 2px 3px black;
-  border-radius: 10px;
+  background-color: #031013;
+  border-radius: 10%;
+  width: 20vw;
+  height: 
+  box-shadow: 1px 2px 2px black;
 }
-.projectDispBox img {
-  grid-area: boxImg;
-  z-index: 2;
-}
-.projectDispBox h3 {
-  grid-area: boxTitle;
+.projectDispBox h2 {
   font-size: 1.75rem;
-  color: #072329;
-  z-index: 5;
+  color: #f58f10;
+}
+figcaption {
+  grid-row: 2/2;
+  font-size: 1.1rem;
+  color: #5ebce7;
 }
 .projectDispBox p {
-  grid-area: boxDesc;
-  font-size: 1rem;
-  color: #072329;
-  z-index: 5;
+  font-size: 1.1rem;
+  color: #5ebce7;
 }
 .projectDispBox a {
   font-size: 1.5rem;
   color: #f58f10;
   text-decoration: none;
-  z-index: 5;
+  padding: 0.4rem;
+  border: 1px solid #f3a94c;
+  border-radius: 5px;
 }
 .projectDispBox #boxLink1 {
   grid-area: boxLink1;
@@ -333,6 +374,7 @@ body #root {
   color: #c4d8e1;
   cursor: pointer;
 }
+*/
 @keyframes slideInLeft {
   from {
     transform: translate(-500%, 0);

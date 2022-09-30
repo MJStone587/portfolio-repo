@@ -1,50 +1,77 @@
 import React from "react";
 import ProjectDisp from "./ProjectDisp.js";
-import codeImg from "../images/codeImg2.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Projects() {
   return (
     <div className="projectDispContainer">
-      <ProjectDisp
-        title="Pokemon Search"
-        image={codeImg}
-        alt="Pokemon App"
-        tools="CSS, Javascript, Html"
-        repo="https://github.com/MJStone587/Pokemon"
-        site="https://mjstone587.github.io/Pokemon/"
-      />
-      <ProjectDisp
-        title="Pig Game"
-        alt="Pig Game App"
-        image=""
-        tools="Javascript, Html, CSS, MongoDB, ExpressJs, NodeJS"
-        repo="https://github.com/MJStone587/Pig-Game"
-        site="https://mjstone587.github.io/Pig-Game/"
-      />
-      <ProjectDisp
-        title=""
-        alt=""
-        image=""
-        tools="Javascript, Html, CSS"
-        repo=""
-        site=""
-      />
-      <ProjectDisp
-        title=""
-        alt=""
-        image=""
-        tools="Javascript, Html, CSS"
-        repo=""
-        site=""
-      />
-      <ProjectDisp
-        title=""
-        alt=""
-        image=""
-        tools="Javascript, Html, CSS"
-        repo=""
-        site=""
-      />
+      <div className="projectExplorerWindow">
+        <div className="projectExplorerNav">
+          <button>ArrowLeft</button>
+          <button>ArrowRight</button>
+          <div className="navigationText">
+            <FontAwesomeIcon icon="fa-light fa-house" />
+          </div>
+        </div>
+        <div className="projectList">
+          <ul>
+            <li>
+              <FontAwesomeIcon icon="fa-regular fa-file" />
+              <button>App Name</button>
+            </li>
+            <li>
+              <FontAwesomeIcon icon="fa-regular fa-file" />
+              <button>App Name</button>
+            </li>
+            <li>
+              <FontAwesomeIcon icon="fa-regular fa-file" />
+              <button>App Name</button>
+            </li>
+            <li>
+              <FontAwesomeIcon icon="fa-regular fa-file" />
+              <button>App Name</button>
+            </li>
+          </ul>
+        </div>
+        <div className="viewingWindow">
+          <ProjectDisp
+            title="Pokemon Search"
+            alt="Pokemon App"
+            description="Search and review pokemon data"
+            tools="CSS, Javascript, Html"
+            repo="https://github.com/MJStone587/Pokemon"
+            site="https://mjstone587.github.io/Pokemon/"
+          />
+          <ProjectDisp
+            title="Financial Organizer"
+            alt="Financial Organizer"
+            tools="Javascript, Html, CSS, MongoDB, ExpressJs, NodeJS, CSS"
+            repo="https://github.com/MJStone587/Framework"
+            site="https://hidden-peak-86387.herokuapp.com/catalog"
+          />
+          <ProjectDisp
+            title=""
+            alt=""
+            tools="Javascript, Html, CSS"
+            repo=""
+            site=""
+          />
+          <ProjectDisp
+            title=""
+            alt=""
+            tools="Javascript, Html, CSS"
+            repo=""
+            site=""
+          />
+          <ProjectDisp
+            title=""
+            alt=""
+            tools="Javascript, Html, CSS"
+            repo=""
+            site=""
+          />
+        </div>
+      </div>
     </div>
   );
 }
