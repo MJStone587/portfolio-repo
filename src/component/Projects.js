@@ -1,77 +1,114 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectDisp from "./ProjectDisp.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Projects() {
+  const [projectDisp, setProjDisp] = useState(0);
+
+  const incrementDisp = function () {
+    let pjcDisp = projectDisp;
+    if (pjcDisp >= 3) {
+      setProjDisp(0);
+    } else {
+      pjcDisp++;
+      setProjDisp(pjcDisp);
+    }
+  };
+
+  const decrementDisp = function () {
+    let pjcDisp = projectDisp;
+    if (pjcDisp < 1) {
+      setProjDisp(3);
+    } else {
+      pjcDisp--;
+      setProjDisp(pjcDisp);
+    }
+  };
+
   return (
-    <div className="projectDispContainer">
-      <div className="projectExplorerWindow">
-        <div className="projectExplorerNav">
-          <button>ArrowLeft</button>
-          <button>ArrowRight</button>
-          <div className="navigationText">
-            <FontAwesomeIcon icon="fa-light fa-house" />
-          </div>
-        </div>
-        <div className="projectList">
-          <ul>
-            <li>
-              <FontAwesomeIcon icon="fa-regular fa-file" />
-              <button>App Name</button>
-            </li>
-            <li>
-              <FontAwesomeIcon icon="fa-regular fa-file" />
-              <button>App Name</button>
-            </li>
-            <li>
-              <FontAwesomeIcon icon="fa-regular fa-file" />
-              <button>App Name</button>
-            </li>
-            <li>
-              <FontAwesomeIcon icon="fa-regular fa-file" />
-              <button>App Name</button>
-            </li>
-          </ul>
-        </div>
-        <div className="viewingWindow">
-          <ProjectDisp
-            title="Pokemon Search"
-            alt="Pokemon App"
-            description="Search and review pokemon data"
-            tools="CSS, Javascript, Html"
-            repo="https://github.com/MJStone587/Pokemon"
-            site="https://mjstone587.github.io/Pokemon/"
+    <main className="projectDispContainer">
+      <h1>My Projects</h1>
+      <h2>Like what you see? Contact Me!</h2>
+      <FontAwesomeIcon
+        onClick={incrementDisp}
+        icon="fa-solid fa-chevron-right"
+      />
+      <FontAwesomeIcon
+        onClick={decrementDisp}
+        icon="fa-solid fa-chevron-left"
+      />
+
+      {projectDisp === 0 && (
+        <ProjectDisp
+          title="Financial Forge"
+          alt="Financial Organizer"
+          description="A place to track and plan financial spending/saving"
+          tools="Javascript, Html, CSS, MongoDB, ExpressJs, NodeJS, CSS"
+          repo="https://github.com/MJStone587/Framework"
+          site="https://hidden-peak-86387.herokuapp.com/catalog"
+        />
+      )}
+      {projectDisp === 1 && (
+        <ProjectDisp
+          title="Pokemon Search"
+          alt="Pokemon App"
+          description="Search and review pokemon data"
+          tools="CSS, Javascript, Html"
+          repo="https://github.com/MJStone587/Pokemon"
+          site="https://mjstone587.github.io/Pokemon/"
+        />
+      )}
+      {projectDisp === 2 && (
+        <ProjectDisp
+          title="What 2 Watch"
+          alt="What2Watch"
+          description="Movie display and search using my own API"
+          tools="CSS, Javascript, Html"
+          repo="https://github.com/MJStone587/What2Watch/"
+          site="https://mjstone587.github.io/What2Watch/"
+        />
+      )}
+      {projectDisp === 3 && (
+        <ProjectDisp
+          title="Portfolio"
+          alt="Portfolio"
+          description="You are looking at it!"
+          tools="CSS, Javascript, Html"
+          repo="https://github.com/MJStone587/portfolio-repo"
+          site="https://mjstone587.github.io/Pokemon/"
+        />
+      )}
+
+      <ol className="carouselNav">
+        <li>
+          <FontAwesomeIcon
+            onClick={() => setProjDisp(0)}
+            style={{ color: projectDisp === 0 ? "white" : "#031013" }}
+            icon="fa-solid fa-circle-notch"
           />
-          <ProjectDisp
-            title="Financial Organizer"
-            alt="Financial Organizer"
-            tools="Javascript, Html, CSS, MongoDB, ExpressJs, NodeJS, CSS"
-            repo="https://github.com/MJStone587/Framework"
-            site="https://hidden-peak-86387.herokuapp.com/catalog"
+        </li>
+        <li>
+          <FontAwesomeIcon
+            onClick={() => setProjDisp(1)}
+            style={{ color: projectDisp === 1 ? "white" : "#031013" }}
+            icon="fa-solid fa-circle-notch"
           />
-          <ProjectDisp
-            title=""
-            alt=""
-            tools="Javascript, Html, CSS"
-            repo=""
-            site=""
+        </li>
+        <li>
+          <FontAwesomeIcon
+            onClick={() => setProjDisp(2)}
+            style={{ color: projectDisp === 2 ? "white" : "#031013" }}
+            icon="fa-solid fa-circle-notch"
           />
-          <ProjectDisp
-            title=""
-            alt=""
-            tools="Javascript, Html, CSS"
-            repo=""
-            site=""
+        </li>
+        <li>
+          <FontAwesomeIcon
+            onClick={() => setProjDisp(3)}
+            style={{ color: projectDisp === 3 ? "white" : "#031013" }}
+            icon="fa-solid fa-circle-notch"
           />
-          <ProjectDisp
-            title=""
-            alt=""
-            tools="Javascript, Html, CSS"
-            repo=""
-            site=""
-          />
-        </div>
-      </div>
-    </div>
+        </li>
+      </ol>
+    </main>
   );
 }

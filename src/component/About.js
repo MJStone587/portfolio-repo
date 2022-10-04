@@ -23,9 +23,9 @@ export default function About(props) {
         now a Software Developer. When I finally started learning to code, a
         lightbulb switched on in my head. I wondered why I hadn't been doing
         this sooner, it just fit. I have been a computer guy for a long time.
-        After getting my Associates degree I have spent a year plus reviewing
-        what I have learned, studying new frameworks, and honing my skills with
-        new projects. I am proficient in...
+        After getting my Software Development degree I have spent a year plus
+        reviewing what I have learned, studying new frameworks, and honing my
+        skills with new projects. I am proficient in...
       </p>
       <div className="aboutContainer2">
         <p>MongoDB</p>

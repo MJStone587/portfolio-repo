@@ -13,9 +13,24 @@ import {
   faArrowRightLong,
   faHouse,
   faFile,
+  faChevronRight,
+  faChevronLeft,
+  faCircleNotch,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faCheckSquare, faCoffee, faArrowRightLong, faHouse, faFile);
+library.add(
+  fab,
+  faCheckSquare,
+  faCoffee,
+  faArrowRightLong,
+  faHouse,
+  faFile,
+  faChevronRight,
+  faChevronLeft,
+  faCircleNotch,
+  faEnvelope
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

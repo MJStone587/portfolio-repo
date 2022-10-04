@@ -12,10 +12,11 @@ export default function Home() {
       <h1 className="homeHeaderTitle">Welcome To My Portfolio</h1>
       <img src={profilePic} id="portraitImg" alt="Mark's Face"></img>
       <p className="homeHeaderText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Eget duis at tellus
-        at urna condimentum mattis. Enim blandit volutpat maecenas volutpat
-        blandit aliquam etiam erat velit.
+        Hi, I'm Mark. A recent graduate with a degree in Software Development.
+        Although proficient with many languages my main focus is Full-Stack Web
+        Development. I am driven, creative, descriptive word, and even better
+        descriptive word. I love to learn and add more tools to my programming
+        toolbox.
       </p>
       <Link className="homeHeaderBtn" to="/about">
         Learn More

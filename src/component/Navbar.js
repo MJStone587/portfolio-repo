@@ -21,8 +21,8 @@ export default function Navbtn() {
         <Link className="btn btnProjects" to="/projects">
           Projects
         </Link>
-        <Link className="btn btnSocials" to="/socials">
-          Socials
+        <Link className="btn btnContact" to="/contact">
+          Contact
         </Link>
       </div>
     </nav>

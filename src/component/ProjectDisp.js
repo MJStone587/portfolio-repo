@@ -1,15 +1,6 @@
 import React from "react";
 
 export default function ProjectDisp(props) {
-  /*<img src={props.image} alt={props.alt}></img> */
-  /*let bgImage = {
-    backgroundImage: `url(${props.image})`,
-  };
-  let bgFilter = {
-    filter: "grayscale(80%)",
-  };
-  */
-
   return (
     <figure className="projectDispBox">
       <h2>{props.title}</h2>
