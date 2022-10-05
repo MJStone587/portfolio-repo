@@ -16,14 +16,13 @@ export default function About(props) {
   };
 
   return (
-    <div className="aboutBody">
+    <main className="aboutBody">
       <p className="aboutContainer1">
-        I have a long history of work, working various jobs since a young age.
-        From a Restaurant Manager, a Gas Attendant, Sales Lead, Animator, and
-        now a Software Developer. When I finally started learning to code, a
-        lightbulb switched on in my head. I wondered why I hadn't been doing
-        this sooner, it just fit. I have been a computer guy for a long time.
-        After getting my Software Development degree I have spent a year plus
+        From a Restaurant Manager, a Gas Attendant, Sales Lead, and an Animator.
+        I have been looking for the right fit. When I started learning
+        programming something clicked. I wondered why I hadn't been doing this
+        sooner, it just fit. I have been a computer guy for a long time. After
+        getting my Software Development degree I have spent a year plus
         reviewing what I have learned, studying new frameworks, and honing my
         skills with new projects. I am proficient in...
       </p>
@@ -47,6 +46,6 @@ export default function About(props) {
           <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" />
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

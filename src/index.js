@@ -17,6 +17,7 @@ import {
   faChevronLeft,
   faCircleNotch,
   faEnvelope,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -29,7 +30,8 @@ library.add(
   faChevronRight,
   faChevronLeft,
   faCircleNotch,
-  faEnvelope
+  faEnvelope,
+  faBars
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

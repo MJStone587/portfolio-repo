@@ -8,15 +8,12 @@ import profilePic from "../images/profilePic.jpg";
 
 export default function Home() {
   return (
-    <div className="homeHeader">
-      <h1 className="homeHeaderTitle">Welcome To My Portfolio</h1>
+    <main className="homeHeader">
+      <h1 className="homeHeaderTitle">Welcome</h1>
       <img src={profilePic} id="portraitImg" alt="Mark's Face"></img>
       <p className="homeHeaderText">
-        Hi, I'm Mark. A recent graduate with a degree in Software Development.
-        Although proficient with many languages my main focus is Full-Stack Web
-        Development. I am driven, creative, descriptive word, and even better
-        descriptive word. I love to learn and add more tools to my programming
-        toolbox.
+        Hi, I'm Mark. A recent Software Development graduate. I am a driven and
+        creative individual with a thirst for knowledge.
       </p>
       <Link className="homeHeaderBtn" to="/about">
         Learn More
@@ -43,6 +40,6 @@ export default function Home() {
           alt="Computer Bottom"
         ></img>
       </div>
-    </div>
+    </main>
   );
 }

@@ -19,7 +19,7 @@ body #root {
   grid-template-rows: [row1] 100%;
   background-color: #072329;
   column-gap: 3rem;
-  height: 100px;
+  height: calc(85px + 1vh);
   font-family: "Orbitron", sans-serif;
 }
 .navbarLeft {
@@ -56,8 +56,7 @@ body #root {
 }
 .navbar h2 {
   color: #5ebce7;
-  margin: 3rem;
-  font-size: calc(25px + 0.390625vw);
+  font-size: calc(22px + 0.390625vw);
 }
 .btn {
   text-decoration: none;
@@ -67,6 +66,7 @@ body #root {
   font-family: "Times New Roman", serif;
   font-size: calc(12px + 0.390625vw);
 }
+
 .btn:hover {
   cursor: pointer;
   color: #f3a94c;
@@ -79,6 +79,42 @@ body #root {
   color: #f3a94c;
 }
 
+/* Navbar Mobile */
+.fa-bars {
+  position: fixed;
+  color: #c4d8e1;
+  font-size: calc(2rem + 0.390625vw);
+  margin-top: calc(1rem + 0.390625vw);
+  margin-left: calc(1.5rem + 0.390625vw);
+  z-index: 10;
+}
+.fa-bars:hover {
+  cursor: pointer;
+}
+.navbarMobile {
+  position: fixed;
+  width: 28vw;
+  margin-left: calc(1.25rem + 1vw);
+  height: 32vh;
+  overflow: auto;
+  margin-top: calc(70px - 0.390625vw);
+  font-size: calc(16px + (35 - 16) * ((100vw - 300px) / (1600 - 300)));
+  z-index: 10;
+  border-radius: 5px;
+  background-color: #c4d8e1;
+}
+.btnMobile {
+  padding: calc(0.85rem + 0.390625vw);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #072329;
+}
+.btnMobile:hover {
+  color: #031013;
+  background-color: #5ebce7;
+}
+
 /* HOME PAGE STYLING */
 .homeHeader {
   display: grid;
@@ -86,16 +122,15 @@ body #root {
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   row-gap: 1rem;
-  height: 100%;
+  height: 98vh;
   width: 100%;
 }
 .homeHeaderTitle {
   filter: brightness(120%);
-  font-size: calc(5rem + 0.390625vw);
+  font-size: calc(16px + (80 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-family: "Orbitron", sans-serif;
-  grid-column: 2 / 10;
+  grid-column: 5 / 10;
   grid-row: 3 / span 4;
-  margin-left: 8rem;
   color: #c4d8e1;
   z-index: 5;
   animation: fadeIn 1s;
@@ -106,16 +141,16 @@ body #root {
   grid-column: 5 / 6;
   grid-row: 5 / 6;
   border-radius: 50%;
-  margin-left: 5rem;
+  margin-left: calc(10rem - 0.390625vw);
   z-index: 5;
   animation: fadeIn 1s;
 }
 .homeHeaderText {
   color: #c4d8e1;
   filter: brightness(120%);
-  grid-column: 3 / 9;
+  grid-column: 4 / 8;
   grid-row: 6 / 9;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-family: "Orbitron", sans-serif;
   z-index: 5;
   animation: fadeIn 1s;
@@ -130,7 +165,7 @@ body #root {
   grid-column: 5 / 6;
   text-align: center;
   grid-row: 8 / 9;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
   z-index: 5;
   box-shadow: 1px 2px 4px 1px black;
   animation: fadeIn 1s ease-out;
@@ -154,33 +189,33 @@ body #root {
 .imgTop {
   position: absolute;
   top: 20%;
-  left: 25%;
+  left: 28%;
   height: 11%;
-  width: 55%;
+  width: 45%;
   animation: slideInRight 0.5s ease-out;
 }
 .imgMid1 {
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 30%;
   height: 11%;
-  width: 55%;
+  width: 45%;
   animation: slideInLeft 0.5s ease-out;
 }
 .imgMid2 {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 27%;
   height: 11%;
-  width: 55%;
+  width: 45%;
   animation: slideInRight 0.5s ease-out;
 }
 .imgBottom {
   position: absolute;
   top: 65%;
-  left: 18%;
+  left: 29%;
   height: 11%;
-  width: 55%;
+  width: 45%;
   animation: slideInLeft 0.5s ease-out;
 }
 /*ABOUT PAGE*/
@@ -188,31 +223,34 @@ body #root {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  height: 99%;
+  height: 98vh;
   width: 100%;
   z-index: 5;
   overflow: hidden;
 }
 .aboutContainer1 {
-  font: 1.5em "Roboto", sans-serif;
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-family: "Roboto", sans-serif;
   grid-column: 2 / 7;
   border: 1px solid #f58f10;
   background-color: #031013;
   animation: slideInLeft 0.4s ease-out;
   grid-row: 2 / auto;
   color: #f3a94c;
-  padding: 1rem;
+  padding: calc(2rem - 0.390625vw);
 }
 .aboutContainer1:hover {
   border: 1px solid #f3a94c;
 }
 .aboutContainer2 {
   display: grid;
-  place-items: center;
-  font-size: 1.4em;
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
   border: 1px solid #f58f10;
   color: #f3a94c;
+  padding: calc(16px - 0.390625vw);
   grid-row: 4 / 9;
+  align-content: space-evenly;
+  justify-content: center;
   grid-column: 2 / 3;
   background-color: #031013;
   animation: slideInUp 1s ease-out;
@@ -234,7 +272,7 @@ body #root {
   cursor: pointer;
 }
 .aboutDynamicDiv h3 {
-  font-size: 1.75rem;
+  font-size: calc(1.75rem - 0.390625vw);
 }
 .fa-html5,
 .fa-js,
@@ -245,7 +283,7 @@ body #root {
 .fa-square-git,
 .fa-github {
   color: #f3a94c;
-  font-size: 3rem;
+  font-size: calc(16px + (50 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 .aboutBodyArrow {
   display: grid;
@@ -290,9 +328,10 @@ body #root {
 .projectDispContainer {
   display: grid;
   grid-template-columns: [col1] 1fr [col2] 2fr [col3] 1fr;
-  grid-template-rows: [row1] 1fr [row2] 2fr [row3] 1fr;
+  grid-template-rows: [row1] 0.5fr [row2] 0.5fr [row3] 2fr [row3] 4fr;
   grid-template-areas:
-    ". title contactLink"
+    ". title ."
+    ". contactLink ."
     "arrowLeft carWindow arrowRight"
     ". carNav .";
   place-items: center;
