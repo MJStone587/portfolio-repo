@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function NavbarMobile() {
+export default function NavbarMobile(props) {
   return (
-    <ul className="navbarMobile">
+    <ul className="navbarMobile" useOnClickOutside={props.turnOffNav}>
       <Link className="btnMobile homeMobile" to="/">
         Home
       </Link>

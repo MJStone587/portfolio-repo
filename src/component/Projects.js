@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProjectDisp from "./ProjectDisp.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   const [projectDisp, setProjDisp] = useState(0);
@@ -28,7 +29,12 @@ export default function Projects() {
   return (
     <main className="projectDispContainer">
       <h1>My Projects</h1>
-      <h2>Like what you see? Contact Me!</h2>
+      <h2>
+        Like what you see?{" "}
+        <Link id="contactMeHyperlink" to="/contact">
+          Contact Me!
+        </Link>
+      </h2>
       <FontAwesomeIcon
         onClick={incrementDisp}
         icon="fa-solid fa-chevron-right"

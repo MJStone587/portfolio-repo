@@ -5,8 +5,8 @@ html {
   background-color: #072329;
   margin: 0;
   font-size: 16px;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
 }
 body #root {
   height: 99vh;
@@ -18,8 +18,8 @@ body #root {
   grid-template-columns: [col1] 1fr [col2] 1.25fr [col3] 1fr;
   grid-template-rows: [row1] 100%;
   background-color: #072329;
-  column-gap: 3rem;
-  height: calc(85px + 1vh);
+  column-gap: 1rem;
+  height: calc(85px - 1vh);
   font-family: "Orbitron", sans-serif;
 }
 .navbarLeft {
@@ -56,7 +56,7 @@ body #root {
 }
 .navbar h2 {
   color: #5ebce7;
-  font-size: calc(22px + 0.390625vw);
+  font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1920 - 300)));
 }
 .btn {
   text-decoration: none;
@@ -64,26 +64,24 @@ body #root {
   background-color: #072329;
   color: #5ebce7;
   font-family: "Times New Roman", serif;
-  font-size: calc(12px + 0.390625vw);
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 
 .btn:hover {
   cursor: pointer;
   color: #f3a94c;
   background-color: #072329;
-  border-radius: 22px 50px;
 }
 .navbarLinkSelected {
   background-color: #072329;
-  border-radius: 22px 50px;
   color: #f3a94c;
 }
 
 /* Navbar Mobile */
 .fa-bars {
-  position: fixed;
+  position: sticky;
   color: #c4d8e1;
-  font-size: calc(2rem + 0.390625vw);
+  font-size: calc(25px + (50 - 25) * ((100vw - 300px) / (1920 - 300)));
   margin-top: calc(1rem + 0.390625vw);
   margin-left: calc(1.5rem + 0.390625vw);
   z-index: 10;
@@ -98,7 +96,7 @@ body #root {
   height: 32vh;
   overflow: auto;
   margin-top: calc(70px - 0.390625vw);
-  font-size: calc(16px + (35 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1920 - 300)));
   z-index: 10;
   border-radius: 5px;
   background-color: #c4d8e1;
@@ -122,15 +120,15 @@ body #root {
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   row-gap: 1rem;
-  height: 98vh;
+  height: 95vh;
   width: 100%;
 }
 .homeHeaderTitle {
   filter: brightness(120%);
-  font-size: calc(16px + (80 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(22px + (90 - 22) * ((100vw - 300px) / (1920 - 300)));
   font-family: "Orbitron", sans-serif;
   grid-column: 5 / 10;
-  grid-row: 3 / span 4;
+  grid-row: 3 / 4;
   color: #c4d8e1;
   z-index: 5;
   animation: fadeIn 1s;
@@ -150,15 +148,16 @@ body #root {
   filter: brightness(120%);
   grid-column: 4 / 8;
   grid-row: 6 / 9;
-  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
   font-family: "Orbitron", sans-serif;
   z-index: 5;
+  margin-left: 2rem;
   animation: fadeIn 1s;
 }
 .homeHeaderBtn {
   border: 1px solid transparent;
   background-color: #f58f10;
-  margin: 1rem 0rem 0rem 5rem;
+  margin: 1rem 0rem 0rem 12rem;
   text-decoration: none;
   color: #031013;
   border-radius: 20px;
@@ -177,7 +176,7 @@ body #root {
   box-shadow: 1px 2px 4px 3px black;
 }
 .homeBackground {
-  height: 100%;
+  height: 95vh;
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -223,42 +222,49 @@ body #root {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  height: 98vh;
+  row-gap: 3rem;
+  column-gap: 3rem;
+  height: 90vh;
   width: 100%;
   z-index: 5;
   overflow: hidden;
 }
+
 .aboutContainer1 {
-  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+  display: grid;
   font-family: "Roboto", sans-serif;
-  grid-column: 2 / 7;
+  grid-column: 2 / 8;
   border: 1px solid #f58f10;
   background-color: #031013;
   animation: slideInLeft 0.4s ease-out;
-  grid-row: 2 / auto;
+  place-items: center;
+  grid-row: 2 / 6;
   color: #f3a94c;
-  padding: calc(2rem - 0.390625vw);
+}
+.aboutContainer1 p {
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1920 - 300)));
+  padding: 0rem 2rem 0rem 2rem;
 }
 .aboutContainer1:hover {
   border: 1px solid #f3a94c;
 }
 .aboutContainer2 {
   display: grid;
-  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
   border: 1px solid #f58f10;
   color: #f3a94c;
   padding: calc(16px - 0.390625vw);
-  grid-row: 4 / 9;
+  grid-row: 6 / 10;
   align-content: space-evenly;
   justify-content: center;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   background-color: #031013;
   animation: slideInUp 1s ease-out;
 }
 .aboutDynamicDiv {
   display: grid;
   grid-column: 4 / 8;
-  grid-row: 5 / 9;
+  grid-row: 6 / 10;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
@@ -272,7 +278,7 @@ body #root {
   cursor: pointer;
 }
 .aboutDynamicDiv h3 {
-  font-size: calc(1.75rem - 0.390625vw);
+  font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 .fa-html5,
 .fa-js,
@@ -283,25 +289,31 @@ body #root {
 .fa-square-git,
 .fa-github {
   color: #f3a94c;
-  font-size: calc(16px + (50 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (46 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 .aboutBodyArrow {
   display: grid;
   grid-template-columns: [col1] 100%;
-  grid-template-rows: [row1] 30% [row2] 50%;
-  grid-column: 9 / 9;
-  grid-row: 3 / 4;
+  grid-template-rows: [row1] 25% [row2] 25%;
+  grid-column: 8 / 10;
+  grid-row: 3 / 8;
   color: #f3a94c;
-  font-size: 1.75rem;
   animation: fadeIn 2s;
+  place-items: center;
+  align-content: center;
+}
+.aboutBodyArrow h2 {
+  font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 .linkToProjects {
   justify-self: end;
 }
 .fa-arrow-right-long {
-  font-size: 5rem;
+  padding: 0.5rem;
+  font-size: calc(16px + (80 - 16) * ((100vw - 300px) / (1920 - 300)));
   color: #f3a94c;
 }
+
 .fa-arrow-right-long:hover {
   color: #c4d8e1;
   cursor: pointer;
@@ -328,7 +340,8 @@ body #root {
 .projectDispContainer {
   display: grid;
   grid-template-columns: [col1] 1fr [col2] 2fr [col3] 1fr;
-  grid-template-rows: [row1] 0.5fr [row2] 0.5fr [row3] 2fr [row3] 4fr;
+  grid-template-rows: [row1] 20% [row2] 5% [row3] 60% [row3] 10%;
+  column-gap: 5px;
   grid-template-areas:
     ". title ."
     ". contactLink ."
@@ -336,17 +349,27 @@ body #root {
     ". carNav .";
   place-items: center;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 98vh;
 }
 .projectDispContainer h1 {
   grid-area: title;
   color: #f3a94c;
-  font: 30px "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding-top: 1rem;
   text-shadow: 6px 5px 1px #031013;
+  font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 .projectDispContainer h2 {
   grid-area: contactLink;
   color: #f58f10;
+}
+#contactMeHyperlink {
+  text-decoration: none;
+  color: #5ebce7;
+}
+#contactMeHyperlink:hover {
+  color: #c4d8e1;
 }
 .fa-chevron-right {
   grid-area: arrowRight;
@@ -373,14 +396,15 @@ body #root {
   display: grid;
   grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20%;
   grid-template-rows: [row1] 100%;
-  column-gap: 10px;
+  column-gap: 15px;
 }
 .fa-circle-notch {
-  font-size: 1.25rem;
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 .fa-circle-notch:hover {
   cursor: pointer;
 }
+
 .projectDispBox {
   grid-area: carWindow;
   display: grid;
@@ -475,5 +499,10 @@ figcaption {
   }
   to {
     border: 1px solid white;
+  }
+}
+@media screen and (max-width: 888) {
+  html {
+    overflow: visible;
   }
 }
