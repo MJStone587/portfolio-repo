@@ -19,13 +19,13 @@ export default function About(props) {
     <main className="aboutBody">
       <div className="aboutContainer1">
         <p>
-          From a Restaurant Manager, a Gas Attendant, Sales Lead, and an
-          Animator. I have been looking for the right fit. When I started
-          learning programming something clicked. I wondered why I hadn't been
-          doing this sooner. I have been a computer guy for a long time. After
-          getting my Software Development degree I have spent a year plus
-          reviewing what I have learned, studying new frameworks, and honing my
-          skills with projects. I am proficient in...
+          From a Restaurant Manager, Gas Attendant, Sales Lead, and an Animator.
+          I have been looking for the right fit. When I started learning
+          programming something clicked. I wondered why I hadn't been doing this
+          sooner. I have been a computer guy for a long time. After getting my
+          Software Development degree I have spent a year plus reviewing what I
+          have learned, studying new frameworks, and honing my skills with
+          projects. I am proficient in...
         </p>
       </div>
       <div className="aboutContainer2">

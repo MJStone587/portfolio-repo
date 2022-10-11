@@ -16,7 +16,7 @@ import {
   faChevronRight,
   faChevronLeft,
   faCircleNotch,
-  faEnvelope,
+  faEnvelopeOpenText,
   faBars,
   faPowerOff,
 } from "@fortawesome/free-solid-svg-icons";
@@ -31,7 +31,7 @@ library.add(
   faChevronRight,
   faChevronLeft,
   faCircleNotch,
-  faEnvelope,
+  faEnvelopeOpenText,
   faBars,
   faPowerOff
 );

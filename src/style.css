@@ -5,11 +5,7 @@ html {
   background-color: #072329;
   margin: 0;
   font-size: 16px;
-  overflow: hidden;
-  width: 100%;
-}
-body #root {
-  height: 99vh;
+  overflow-block: hidden;
   width: 100%;
 }
 /* Navbar */
@@ -79,7 +75,7 @@ body #root {
 
 /* Navbar Mobile */
 .fa-bars {
-  position: sticky;
+  position: fixed;
   color: #c4d8e1;
   font-size: calc(25px + (50 - 25) * ((100vw - 300px) / (1920 - 300)));
   margin-top: calc(1rem + 0.390625vw);
@@ -96,7 +92,7 @@ body #root {
   height: 32vh;
   overflow: auto;
   margin-top: calc(70px - 0.390625vw);
-  font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1920 - 300)));
   z-index: 10;
   border-radius: 5px;
   background-color: #c4d8e1;
@@ -120,7 +116,8 @@ body #root {
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   row-gap: 1rem;
-  height: 95vh;
+  max-height: 93vh;
+  min-height: 90vh;
   width: 100%;
 }
 .homeHeaderTitle {
@@ -134,8 +131,8 @@ body #root {
   animation: fadeIn 1s;
 }
 .homeHeader #portraitImg {
-  height: 27vh;
-  width: 10vw;
+  max-height: 27vh;
+  max-width: 10vw;
   grid-column: 5 / 6;
   grid-row: 5 / 6;
   border-radius: 50%;
@@ -175,46 +172,52 @@ body #root {
   border: 1px solid #f3a94c;
   box-shadow: 1px 2px 4px 3px black;
 }
-.homeBackground {
-  height: 95vh;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: 1;
-}
+
 .computerImg {
   filter: brightness(65%);
 }
 .imgTop {
-  position: absolute;
-  top: 20%;
-  left: 28%;
-  height: 11%;
-  width: 45%;
+  top: 25%;
+  left: 30%;
+  min-height: 11vh;
+  max-height: 11vh;
+  max-width: 40vw;
+  min-width: 30vw;
   animation: slideInRight 0.5s ease-out;
+  z-index: 1;
+  position: absolute;
 }
 .imgMid1 {
-  position: absolute;
-  top: 35%;
+  top: 40%;
   left: 30%;
-  height: 11%;
-  width: 45%;
+  min-height: 11vh;
+  max-height: 11vh;
+  width: 40vw;
+  margin-left: 3rem;
   animation: slideInLeft 0.5s ease-out;
+  z-index: 1;
+  position: absolute;
 }
 .imgMid2 {
-  position: absolute;
-  top: 50%;
-  left: 27%;
-  height: 11%;
-  width: 45%;
+  top: 55%;
+  left: 28%;
+  min-height: 11vh;
+  max-height: 11vh;
+  width: 40vw;
+  margin-left: 1rem;
   animation: slideInRight 0.5s ease-out;
+  z-index: 1;
+  position: absolute;
 }
 .imgBottom {
+  top: 70%;
+  left: 30%;
+  max-height: 11vh;
+  min-height: 11vh;
+  width: 40vw;
+  margin-right: 2rem;
+  z-index: 1;
   position: absolute;
-  top: 65%;
-  left: 29%;
-  height: 11%;
-  width: 45%;
   animation: slideInLeft 0.5s ease-out;
 }
 /*ABOUT PAGE*/
@@ -501,8 +504,8 @@ figcaption {
     border: 1px solid white;
   }
 }
-@media screen and (max-width: 888) {
+@media (max-width: 819) {
   html {
-    overflow: visible;
+    overflow-block: scroll;
   }
 }
