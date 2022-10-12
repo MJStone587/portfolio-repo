@@ -16,8 +16,8 @@ export default function About(props) {
   };
 
   return (
-    <main className="aboutBody">
-      <div className="aboutContainer1">
+    <main className="aboutBodyContainer">
+      <div className="aboutBodyBox1">
         <p>
           From a Restaurant Manager, Gas Attendant, Sales Lead, and an Animator.
           I have been looking for the right fit. When I started learning
@@ -28,7 +28,7 @@ export default function About(props) {
           projects. I am proficient in...
         </p>
       </div>
-      <div className="aboutContainer2">
+      <div className="aboutBodyBox2">
         <p>MongoDB</p>
         <p>mySQL</p>
         <p>WordPress</p>
@@ -36,7 +36,7 @@ export default function About(props) {
         <p>VScode</p>
       </div>
       <div
-        className="aboutDynamicDiv"
+        className="aboutBodyDynamicBox"
         onMouseEnter={showNamesDiv}
         onMouseLeave={showIconsDiv}
       >

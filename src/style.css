@@ -5,7 +5,7 @@ html {
   background-color: #072329;
   margin: 0;
   font-size: 16px;
-  overflow-block: hidden;
+  overflow: hidden;
   width: 100%;
 }
 /* Navbar */
@@ -110,89 +110,90 @@ html {
 }
 
 /* HOME PAGE STYLING */
-.homeHeader {
+.homeBodyContainer {
   display: grid;
   background-color: #072329;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   row-gap: 1rem;
   max-height: 93vh;
-  min-height: 90vh;
+  min-height: 85vh;
   width: 100%;
 }
-.homeHeaderTitle {
+#homeBodyTitle {
   filter: brightness(120%);
-  font-size: calc(22px + (90 - 22) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(28px + (90 - 28) * ((100vw - 300px) / (1920 - 300)));
   font-family: "Orbitron", sans-serif;
-  grid-column: 5 / 10;
+  grid-column: 5 / 7;
   grid-row: 3 / 4;
   color: #c4d8e1;
   z-index: 5;
   animation: fadeIn 1s;
 }
-.homeHeader #portraitImg {
+#portraitImg {
   max-height: 27vh;
-  max-width: 10vw;
+  max-width: 12vw;
   grid-column: 5 / 6;
   grid-row: 5 / 6;
   border-radius: 50%;
-  margin-left: calc(10rem - 0.390625vw);
+  margin-left: calc(9rem - 0.390625vw);
   z-index: 5;
   animation: fadeIn 1s;
 }
-.homeHeaderText {
+#homeBodyText {
   color: #c4d8e1;
   filter: brightness(120%);
   grid-column: 4 / 8;
-  grid-row: 6 / 9;
+  grid-row: 7 / 8;
   font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
   font-family: "Orbitron", sans-serif;
   z-index: 5;
-  margin-left: 2rem;
+  margin-left: 0rem;
   animation: fadeIn 1s;
 }
-.homeHeaderBtn {
+#homeBodyBtn {
   border: 1px solid transparent;
   background-color: #f58f10;
-  margin: 1rem 0rem 0rem 12rem;
   text-decoration: none;
   color: #031013;
   border-radius: 20px;
   grid-column: 5 / 6;
+  margin-left: 8rem;
   text-align: center;
-  grid-row: 8 / 9;
+  grid-row: 9 / 9;
   padding: 1rem;
+  min-width: 7vw;
+  max-width: 8vw;
+  min-height: 2vh;
+  max-height: 3vh;
   z-index: 5;
   box-shadow: 1px 2px 4px 1px black;
   animation: fadeIn 1s ease-out;
 }
-.homeHeaderBtn:hover {
+#homeBodyBtn:hover {
   cursor: pointer;
-  background-color: #f3a94c;
-  border: 1px solid #f3a94c;
+  border: 1px solid #c4d8e1;
+  color: #c4d8e1;
   box-shadow: 1px 2px 4px 3px black;
 }
 
 .computerImg {
-  filter: brightness(65%);
+  filter: brightness(55%);
+  max-height: 11vh;
+  min-height: 7vh;
+  max-width: 60vw;
+  min-width: 40vw;
 }
 .imgTop {
   top: 25%;
-  left: 30%;
-  min-height: 11vh;
-  max-height: 11vh;
-  max-width: 40vw;
-  min-width: 30vw;
+  left: 29vw;
   animation: slideInRight 0.5s ease-out;
   z-index: 1;
   position: absolute;
 }
 .imgMid1 {
   top: 40%;
-  left: 30%;
-  min-height: 11vh;
-  max-height: 11vh;
-  width: 40vw;
+  left: 25vw;
   margin-left: 3rem;
   animation: slideInLeft 0.5s ease-out;
   z-index: 1;
@@ -200,10 +201,7 @@ html {
 }
 .imgMid2 {
   top: 55%;
-  left: 28%;
-  min-height: 11vh;
-  max-height: 11vh;
-  width: 40vw;
+  left: 30vw;
   margin-left: 1rem;
   animation: slideInRight 0.5s ease-out;
   z-index: 1;
@@ -211,17 +209,14 @@ html {
 }
 .imgBottom {
   top: 70%;
-  left: 30%;
-  max-height: 11vh;
-  min-height: 11vh;
-  width: 40vw;
+  left: 28vw;
   margin-right: 2rem;
   z-index: 1;
   position: absolute;
   animation: slideInLeft 0.5s ease-out;
 }
 /*ABOUT PAGE*/
-.aboutBody {
+.aboutBodyContainer {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -233,7 +228,7 @@ html {
   overflow: hidden;
 }
 
-.aboutContainer1 {
+.aboutBodyBox1 {
   display: grid;
   font-family: "Roboto", sans-serif;
   grid-column: 2 / 8;
@@ -244,14 +239,14 @@ html {
   grid-row: 2 / 6;
   color: #f3a94c;
 }
-.aboutContainer1 p {
+.aboutBodyBox1 p {
   font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1920 - 300)));
   padding: 0rem 2rem 0rem 2rem;
 }
-.aboutContainer1:hover {
+.aboutBodyBox1:hover {
   border: 1px solid #f3a94c;
 }
-.aboutContainer2 {
+.aboutBodyBox2 {
   display: grid;
   font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
   border: 1px solid #f58f10;
@@ -264,7 +259,7 @@ html {
   background-color: #031013;
   animation: slideInUp 1s ease-out;
 }
-.aboutDynamicDiv {
+.aboutBodyDynamicBox {
   display: grid;
   grid-column: 4 / 8;
   grid-row: 6 / 10;
@@ -276,11 +271,11 @@ html {
   border: 1px solid #f58f10;
   animation: slideInRight 0.8s ease-out;
 }
-.aboutDynamicDiv:hover {
+.aboutBodyDynamicBox:hover {
   border: 1px solid #f3a94c;
   cursor: pointer;
 }
-.aboutDynamicDiv h3 {
+.aboutBodyDynamicBox h3 {
   font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 .fa-html5,
@@ -504,8 +499,93 @@ figcaption {
     border: 1px solid white;
   }
 }
-@media (max-width: 819) {
+@media screen and (max-width: 1025px) {
+  .homeBodyContainer {
+    overflow: hidden;
+  }
+  #homeBodyTitle {
+    grid-row: 3 / 4;
+  }
+  #portraitImg {
+    grid-row: 4 / 6;
+  }
+  #homeBodyBtn {
+    grid-row: 7 / 7;
+    grid-column: 5 / 7;
+    margin-left: 7rem;
+  }
+  .imgTop {
+    top: 20%;
+  }
+  .imgMid1 {
+    top: 30%;
+  }
+  .imgMid2 {
+    top: 40%;
+  }
+  .imgBottom {
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 415px) {
   html {
-    overflow-block: scroll;
+    overflow-y: scroll;
+  }
+  #homeBodyTitle {
+    grid-column: 1 / 10;
+    padding: 1rem;
+    grid-row: 4 / 6;
+    font-size: 4rem;
+  }
+  #homeBodyBtn {
+    display: none;
+  }
+  #homeBodyText {
+    grid-column: 1 / span 10;
+    grid-row: 6 / 10;
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  #portraitImg {
+    display: none;
+  }
+  .aboutBodyArrow {
+    display: none;
+  }
+  .computerImg {
+    filter: brightness(55%);
+    min-height: 11vh;
+  }
+  .imgTop {
+    top: 20%;
+    left: 20vw;
+    animation: slideInRight 0.5s ease-out;
+    z-index: 1;
+    position: absolute;
+  }
+  .imgMid1 {
+    top: 40%;
+    left: 15vw;
+    margin-left: 3rem;
+    animation: slideInLeft 0.5s ease-out;
+    z-index: 1;
+    position: absolute;
+  }
+  .imgMid2 {
+    top: 60%;
+    left: 18vw;
+    margin-left: 1rem;
+    animation: slideInRight 0.5s ease-out;
+    z-index: 1;
+    position: absolute;
+  }
+  .imgBottom {
+    top: 75%;
+    left: 15vw;
+    margin-right: 2rem;
+    z-index: 1;
+    position: absolute;
+    animation: slideInLeft 0.5s ease-out;
   }
 }
