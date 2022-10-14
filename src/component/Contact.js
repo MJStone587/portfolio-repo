@@ -38,7 +38,7 @@ export default function Contact() {
 
       <aside>
         <h1>Send me an email and let's get in touch!</h1>
-        <FontAwesomeIcon icon="fa-light fa-envelope" />
+        <FontAwesomeIcon icon="fa-solid fa-envelopes-bulk" />
       </aside>
     </main>
   );

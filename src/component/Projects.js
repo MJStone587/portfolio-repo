@@ -30,7 +30,7 @@ export default function Projects() {
     <main className="projectDispContainer">
       <h1>My Projects</h1>
       <h2>
-        Like what you see?{" "}
+        Like what you see? &nbsp;
         <Link id="contactMeHyperlink" to="/contact">
           Contact Me!
         </Link>
@@ -46,9 +46,9 @@ export default function Projects() {
 
       {projectDisp === 0 && (
         <ProjectDisp
-          title="Financial Forge"
+          title="Financial Organizer"
           alt="Financial Organizer"
-          description="A place to track and plan financial spending/saving"
+          description="A place to track and review spending and savings"
           tools="Javascript, Html, CSS, MongoDB, ExpressJs, NodeJS, CSS"
           repo="https://github.com/MJStone587/Framework"
           site="https://hidden-peak-86387.herokuapp.com/catalog"
@@ -58,7 +58,7 @@ export default function Projects() {
         <ProjectDisp
           title="Pokemon Search"
           alt="Pokemon App"
-          description="Search and review pokemon data"
+          description="Search your favorite pokemon"
           tools="CSS, Javascript, Html"
           repo="https://github.com/MJStone587/Pokemon"
           site="https://mjstone587.github.io/Pokemon/"
@@ -66,7 +66,7 @@ export default function Projects() {
       )}
       {projectDisp === 2 && (
         <ProjectDisp
-          title="What 2 Watch"
+          title="Movie / Television Browsing App"
           alt="What2Watch"
           description="Movie display and search using my own API"
           tools="CSS, Javascript, Html"

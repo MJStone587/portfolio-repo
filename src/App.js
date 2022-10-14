@@ -23,11 +23,11 @@ function App() {
   // {navToggle === true && width < 820 && <NavbarMobile />}
   return (
     <>
-      {width < 820 && (
+      {width < 768 && (
         <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
       )}
-      {width >= 820 && <Navbar navOff={turnOffNav} />}
-      {width >= 820 && (
+      {width >= 768 && <Navbar navOff={turnOffNav} />}
+      {width >= 768 && (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -35,7 +35,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       )}
-      {width < 820 && (
+      {width < 768 && (
         <MobileDisp closeNav={turnOffNav} navToggle={navToggle} />
       )}
     </>
