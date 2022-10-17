@@ -23,9 +23,6 @@ function App() {
   // {navToggle === true && width < 820 && <NavbarMobile />}
   return (
     <>
-      {width < 768 && (
-        <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
-      )}
       {width >= 768 && <Navbar navOff={turnOffNav} />}
       {width >= 768 && (
         <Routes>
@@ -36,7 +33,12 @@ function App() {
         </Routes>
       )}
       {width < 768 && (
-        <MobileDisp closeNav={turnOffNav} navToggle={navToggle} />
+        <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
+      )}
+      {width < 768 && (
+        <>
+          <MobileDisp closeNav={turnOffNav} navToggle={navToggle} />
+        </>
       )}
     </>
   );

@@ -25,7 +25,7 @@ export default function Contact() {
       );
   };
   return (
-    <main>
+    <main className="contactPage">
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />

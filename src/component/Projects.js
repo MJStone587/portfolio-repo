@@ -3,7 +3,7 @@ import ProjectDisp from "./ProjectDisp.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export default function Projects() {
+export default function Projects(reference) {
   const [projectDisp, setProjDisp] = useState(0);
 
   const incrementDisp = function () {

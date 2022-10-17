@@ -1,21 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function NavbarMobile() {
   return (
     <ul className="navbarMobile">
-      <Link className="btnMobile homeMobile" to="/">
-        Home
-      </Link>
-      <Link className="btnMobile aboutMobile" to="/about">
-        About
-      </Link>
-      <Link className="btnMobile projectsMobile" to="/projects">
-        Projects
-      </Link>
-      <Link className="btnMobile contactMobile" to="/contact">
-        Contact
-      </Link>
+      <li className="btnMobile homeMobile">Home</li>
+      <li className="btnMobile aboutMobile">About</li>
+      <li className="btnMobile projectsMobile">Projects</li>
+      <li className="btnMobile contactMobile">Contact</li>
     </ul>
   );
 }

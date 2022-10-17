@@ -541,12 +541,17 @@ figcaption {
 }
 
 @media screen and (max-width: 415px) {
-  html {
+  .mobileDisplayMain {
+    height: 100vh;
     overflow-y: scroll;
+    scroll-snap-type: y mandatory;
   }
   .homeBodyContainer {
     height: 100vh;
-    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
+  }
+  .computerImg {
+    display: none;
   }
   #homeBodyTitle {
     grid-column: 1 / 20;
@@ -572,61 +577,46 @@ figcaption {
     filter: brightness(55%);
     min-height: 11vh;
   }
-  .imgTop {
-    top: 20%;
-    left: 20vw;
-    animation: slideInRight 0.5s ease-out;
-    z-index: 1;
-    position: absolute;
-  }
-  .imgMid1 {
-    top: 40%;
-    left: 15vw;
-    margin-left: 3rem;
-    animation: slideInLeft 0.5s ease-out;
-    z-index: 1;
-    position: absolute;
-  }
-  .imgMid2 {
-    top: 60%;
-    left: 18vw;
-    margin-left: 1rem;
-    animation: slideInRight 0.5s ease-out;
-    z-index: 1;
-    position: absolute;
-  }
-  .imgBottom {
-    top: 75%;
-    left: 15vw;
-    margin-right: 2rem;
-    z-index: 1;
-    position: absolute;
-    animation: slideInLeft 0.5s ease-out;
-  }
   .aboutBodyContainer {
     height: 100vh;
-    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+    padding-top: 5vh;
   }
   .aboutBodyBox1 {
     grid-column: 2 / 10;
-    grid-row: 2 / 7;
+    grid-row: 1 / 6;
   }
   .aboutBodyDynamicBox {
     grid-column: 2 / 10;
-    grid-row: 7 / 9;
+    grid-row: 6 / 8;
   }
   .aboutBodyBox2 {
     grid-column: 2 / 10;
-    grid-row: 9 / 11;
+    grid-row: 8 / 10;
   }
   .projectDispContainer {
-    scroll-snap-type: y mandatory;
+    padding-top: 2rem;
     height: 100vh;
+    scroll-snap-align: center;
     margin: 0;
   }
   .projectDispContainer h1 {
     border: 2px dotted #f58f10;
     padding: 5px;
+  }
+  .projectDispBox {
+    width: 75vw;
+    z-index: 1;
+  }
+  .fa-chevron-right,
+  .fa-chevron-left {
+    font-size: 45px;
+  }
+  .contactPage {
+    height: 100vh;
+    display: grid;
+    scroll-snap-align: end;
+    place-items: center;
   }
 }
 @media screen and (max-width: 391px) {
