@@ -1,17 +1,18 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import computerImgTop from "../images/pexelsComputerTop.jpg";
 import computerImgMid1 from "../images/pexelsComputerMid1.jpg";
 import computerImgMid2 from "../images/pexelsComputerMid2.jpg";
 import computerImgBottom from "../images/pexelsComputerBottom.jpg";
 import profilePic from "../images/profilePic.jpg";
+import "animate.css";
 
-export default function Home() {
+const Home = (props, ref) => {
   return (
-    <main className="homeBodyContainer">
-      <h1 id="homeBodyTitle">Welcome</h1>
+    <main className="homeBodyContainer" ref={ref}>
+      <h1 className="homeBodyTitle">Welcome</h1>
       <img src={profilePic} id="portraitImg" alt="Mark's Face"></img>
-      <p id="homeBodyText">
+      <p className="homeBodyText">
         I'm Mark Johnston, a recent Software Development graduate. I am a driven
         and creative individual with a thirst for knowledge.
       </p>
@@ -40,4 +41,6 @@ export default function Home() {
       ></img>
     </main>
   );
-}
+};
+
+export default forwardRef(Home);

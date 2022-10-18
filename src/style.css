@@ -120,7 +120,7 @@ html {
   min-height: 85vh;
   width: 100%;
 }
-#homeBodyTitle {
+.homeBodyTitle {
   filter: brightness(120%);
   font-size: calc(54px + (90 - 54) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Orbitron", sans-serif;
@@ -140,7 +140,7 @@ html {
   z-index: 5;
   animation: fadeIn 1s;
 }
-#homeBodyText {
+.homeBodyText {
   color: #c4d8e1;
   filter: brightness(120%);
   grid-column: 8 / 14;
@@ -508,14 +508,14 @@ figcaption {
   .homeBodyContainer {
     row-gap: 1rem;
   }
-  #homeBodyTitle {
+  .homeBodyTitle {
     grid-column: 9 / 15;
     grid-row: 7 / 8;
   }
   #portraitImg {
     grid-row: 9 /10;
   }
-  #homeBodyText {
+  .homeBodyText {
     grid-column: 8 / 18;
     grid-row: 11 / 15;
   }
@@ -541,19 +541,27 @@ figcaption {
 }
 
 @media screen and (max-width: 415px) {
+  .btnMobile {
+    border: none;
+    background-color: #c4d8e1;
+    width: 100%;
+  }
+  .btnMobile:hover {
+    color: #5ebce7;
+  }
   .mobileDisplayMain {
-    height: 100vh;
+    height: 101vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
   .homeBodyContainer {
-    height: 100vh;
+    height: 101vh;
     scroll-snap-align: start;
   }
   .computerImg {
     display: none;
   }
-  #homeBodyTitle {
+  .homeBodyTitle {
     grid-column: 1 / 20;
     padding: 1rem;
     grid-row: 7 / 11;
@@ -562,7 +570,7 @@ figcaption {
   #homeBodyBtn {
     display: none;
   }
-  #homeBodyText {
+  .homeBodyText {
     grid-column: 1 / 20;
     grid-row: 12 / 17;
     padding: 1rem;
@@ -578,7 +586,7 @@ figcaption {
     min-height: 11vh;
   }
   .aboutBodyContainer {
-    height: 100vh;
+    height: 101vh;
     scroll-snap-align: center;
     padding-top: 5vh;
   }
@@ -596,7 +604,7 @@ figcaption {
   }
   .projectDispContainer {
     padding-top: 2rem;
-    height: 100vh;
+    height: 101vh;
     scroll-snap-align: center;
     margin: 0;
   }
@@ -613,7 +621,7 @@ figcaption {
     font-size: 45px;
   }
   .contactPage {
-    height: 100vh;
+    height: 101vh;
     display: grid;
     scroll-snap-align: end;
     place-items: center;

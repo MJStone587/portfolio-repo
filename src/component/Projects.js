@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import ProjectDisp from "./ProjectDisp.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export default function Projects(reference) {
+const Projects = (props, ref) => {
   const [projectDisp, setProjDisp] = useState(0);
 
   const incrementDisp = function () {
@@ -27,7 +27,7 @@ export default function Projects(reference) {
   };
 
   return (
-    <main className="projectDispContainer">
+    <main className="projectDispContainer" ref={ref}>
       <h1>My Projects</h1>
       <h2>
         Like what you see? &nbsp;
@@ -117,4 +117,6 @@ export default function Projects(reference) {
       </ol>
     </main>
   );
-}
+};
+
+export default forwardRef(Projects);

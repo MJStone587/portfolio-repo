@@ -10,26 +10,44 @@ export default function MobileDisp(props) {
   const projectsRef = useRef();
   const contactRef = useRef();
 
-  function scrollToDiv() {
-    homeRef.current.scrollIntoView({ behavior: "smooth" });
+  function scrollToDiv(currentRef) {
+    currentRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <main onClick={props.closeNav} className="mobileDisplayMain">
       {props.navToggle === true && (
         <ul className="navbarMobile">
-          <button className="btnMobile homeMobile" onClick={scrollToDiv}>
+          <button
+            className="btnMobile homeMobile"
+            onClick={() => scrollToDiv(homeRef)}
+          >
             Home
           </button>
-          <button className="btnMobile aboutMobile">About</button>
-          <button className="btnMobile projectsMobile">Projects</button>
-          <button className="btnMobile contactMobile">Contact</button>
+          <button
+            className="btnMobile aboutMobile"
+            onClick={() => scrollToDiv(aboutRef)}
+          >
+            About
+          </button>
+          <button
+            className="btnMobile projectsMobile"
+            onClick={() => scrollToDiv(projectsRef)}
+          >
+            Projects
+          </button>
+          <button
+            className="btnMobile contactMobile"
+            onClick={() => scrollToDiv(contactRef)}
+          >
+            Contact
+          </button>
         </ul>
       )}
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <Home ref={homeRef} />
+      <About ref={aboutRef} />
+      <Projects ref={projectsRef} />
+      <Contact ref={contactRef} />
     </main>
   );
 }

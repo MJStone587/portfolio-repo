@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Contact() {
+const Contact = (props, ref) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,7 +25,7 @@ export default function Contact() {
       );
   };
   return (
-    <main className="contactPage">
+    <main className="contactPage" ref={ref}>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -42,4 +42,6 @@ export default function Contact() {
       </aside>
     </main>
   );
-}
+};
+
+export default forwardRef(Contact);
