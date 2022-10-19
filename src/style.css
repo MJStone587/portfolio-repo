@@ -257,7 +257,6 @@ html {
   justify-content: center;
   grid-column: 2 / 4;
   background-color: #031013;
-  animation: slideInUp 1s ease-out;
 }
 .aboutBodyDynamicBox {
   display: grid;
@@ -269,7 +268,6 @@ html {
   background-color: #031013;
   color: #f3a94c;
   border: 1px solid #f58f10;
-  animation: slideInRight 0.8s ease-out;
 }
 .aboutBodyDynamicBox:hover {
   border: 1px solid #f3a94c;
@@ -296,7 +294,6 @@ html {
   grid-column: 8 / 10;
   grid-row: 3 / 8;
   color: #f3a94c;
-  animation: fadeIn 2s;
   place-items: center;
   align-content: center;
 }
@@ -453,6 +450,27 @@ figcaption {
   grid-column: 4 / 5;
   grid-row: 4 / 4;
 }
+.animateSlideInRight {
+  animation: slideInRight 0.4s ease-out;
+}
+.animateSlideInLeft {
+  animation: slideInLeft 0.4s ease-out;
+}
+.animateSlideUp {
+  animation: slideInUp 0.5s ease-out;
+}
+.animateFadeIn {
+  animation: fadeIn 2s;
+}
+.noVisibility {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+}
+.animateFadeOut {
+  animation: fadeOut 0.4s ease-out;
+}
 @keyframes slideInLeft {
   from {
     transform: translate(-500%, 0);
@@ -491,6 +509,14 @@ figcaption {
   }
   to {
     opacity: 100%;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
   }
 }
 @keyframes lightUp {
@@ -550,16 +576,15 @@ figcaption {
     color: #5ebce7;
   }
   .mobileDisplayMain {
-    height: 101vh;
+    height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
   }
   .homeBodyContainer {
-    height: 101vh;
-    scroll-snap-align: start;
-  }
-  .computerImg {
-    display: none;
+    height: 100vh;
+    scroll-snap-align: center;
+    padding-bottom: 10vh;
   }
   .homeBodyTitle {
     grid-column: 1 / 20;
@@ -575,18 +600,14 @@ figcaption {
     grid-row: 12 / 17;
     padding: 1rem;
   }
+  .computerImg {
+    display: none;
+  }
   #portraitImg {
     display: none;
   }
-  .aboutBodyArrow {
-    display: none;
-  }
-  .computerImg {
-    filter: brightness(55%);
-    min-height: 11vh;
-  }
   .aboutBodyContainer {
-    height: 101vh;
+    height: 100vh;
     scroll-snap-align: center;
     padding-top: 5vh;
   }
@@ -602,9 +623,12 @@ figcaption {
     grid-column: 2 / 10;
     grid-row: 8 / 10;
   }
+  .aboutBodyArrow {
+    display: none;
+  }
   .projectDispContainer {
     padding-top: 2rem;
-    height: 101vh;
+    height: 100vh;
     scroll-snap-align: center;
     margin: 0;
   }
@@ -621,9 +645,9 @@ figcaption {
     font-size: 45px;
   }
   .contactPage {
-    height: 101vh;
+    height: 100vh;
     display: grid;
-    scroll-snap-align: end;
+    scroll-snap-align: center;
     place-items: center;
   }
 }
