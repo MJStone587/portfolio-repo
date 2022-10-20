@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectDisp(props) {
   return (
-    <figure className="projectDispBox">
+    <figure className={props.name}>
       <h2>{props.title}</h2>
       <figcaption>{props.description}</figcaption>
       <p>{props.tools}</p>

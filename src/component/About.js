@@ -3,14 +3,12 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import SkillIconBox from "./SkillIconBox.js";
 import SkillNamesBox from "./SkillNamesBox.js";
-import useWindowSize from "use-window-size-v2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../style.css";
+import "animate.css";
 
 const About = (props, ref) => {
   const { ref: myRef, inView: isVisible } = useInView();
-
-  const { width } = useWindowSize();
   const [divDisplay, changeDivDisplay] = useState("skillIconBox");
 
   const showNamesDiv = function () {
@@ -21,13 +19,14 @@ const About = (props, ref) => {
   };
 
   return (
-    <main className="aboutBodyContainer" ref={ref}>
+    <main className="aboutBodyContainer" ref={myRef}>
       <div
         className={
           isVisible
-            ? "aboutBodyBox1 animateSlideInRight"
-            : "aboutBodyBox1 animateFadeOut"
+            ? "aboutBodyBox1 animate__animated animate__bounceInLeft"
+            : "aboutBodyBox1 invisible"
         }
+        ref={ref}
       >
         <p>
           From a Restaurant Manager, Gas Attendant, Sales Lead, and an Animator.
@@ -42,8 +41,8 @@ const About = (props, ref) => {
       <div
         className={
           isVisible
-            ? "aboutBodyBox2 animateSlideInLeft"
-            : "aboutBodyBox2 animateFadeOut"
+            ? "aboutBodyBox2 animate__animated animate__bounceInRight"
+            : "aboutBodyBox2 invisible"
         }
       >
         <p>MongoDB</p>
@@ -55,10 +54,9 @@ const About = (props, ref) => {
       <div
         className={
           isVisible
-            ? "aboutBodyDynamicBox animateSlideUp"
-            : "aboutBodyDynamicBox animateFadeOut"
+            ? "aboutBodyDynamicBox animate__animated animate__jackInTheBox"
+            : "aboutBodyDynamicBox invisible"
         }
-        ref={myRef}
         onMouseEnter={showNamesDiv}
         onMouseLeave={showIconsDiv}
       >

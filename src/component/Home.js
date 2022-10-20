@@ -1,42 +1,11 @@
 import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import computerImgTop from "../images/pexelsComputerTop.jpg";
-import computerImgMid1 from "../images/pexelsComputerMid1.jpg";
-import computerImgMid2 from "../images/pexelsComputerMid2.jpg";
-import computerImgBottom from "../images/pexelsComputerBottom.jpg";
-import profilePic from "../images/profilePic.jpg";
 import "animate.css";
 
 const Home = (props, ref) => {
-  const { ref: myRef, inView: isVisible } = useInView();
-  return (
-    <main className="homeBodyContainer" ref={ref}>
-      <h1
-        className={
-          isVisible
-            ? "homeBodyTitle animateFadeIn"
-            : "homeBodyTitle animateFadeOut"
-        }
-      >
-        Welcome
-      </h1>
-      <img src={profilePic} id="portraitImg" alt="Mark's Face"></img>
-      <p
-        className={
-          isVisible
-            ? "homeBodyText animateFadeIn"
-            : "homeBodyText animateFadeOut"
-        }
-        ref={myRef}
-      >
-        I'm Mark Johnston, a recent Software Development graduate. I am a driven
-        and creative individual with a thirst for knowledge.
-      </p>
-      <Link id="homeBodyBtn" to="/about">
-        Learn More
-      </Link>
-      <img
+  /*
+   <img
         src={computerImgTop}
         className="computerImg imgTop"
         alt="Computer Top"
@@ -56,6 +25,31 @@ const Home = (props, ref) => {
         className="computerImg imgBottom"
         alt="Computer Bottom"
       ></img>
+  */
+  const { ref: myRef, inView: isVisible } = useInView();
+  return (
+    <main className="homeBodyContainer" ref={myRef}>
+      <div className="homeBackground">
+        <h3
+          className={isVisible ? "homeBodyTitle" : "homeBodyTitle invisible"}
+          ref={ref}
+        >
+          Hi, my name is
+        </h3>
+        <p
+          className={
+            isVisible
+              ? "homeBodyText animate__animated"
+              : "homeBodyText invisible"
+          }
+        >
+          I'm Mark Johnston, a recent Software Development graduate. I am a
+          driven and creative individual with a thirst for knowledge.
+        </p>
+        <Link id="homeBodyBtn" to="/about">
+          Learn More
+        </Link>
+      </div>
     </main>
   );
 };
