@@ -19,7 +19,7 @@ const About = (props, ref) => {
   };
 
   return (
-    <main className="aboutBodyContainer" ref={myRef}>
+    <div className="aboutBodyContainer" ref={myRef}>
       <div
         className={
           isVisible
@@ -70,7 +70,7 @@ const About = (props, ref) => {
           <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" />
         </Link>
       </div>
-    </main>
+    </div>
   );
 };
 

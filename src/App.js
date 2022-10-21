@@ -5,7 +5,7 @@ import Home from "./component/Home";
 import About from "./component/About";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
-import MobileDisp from "./component/MobileDisp";
+import SnowWorld from "./component/SnowWorld";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
@@ -66,17 +66,20 @@ function App() {
               </button>
             </div>
           </nav>
-          <Home ref={homeRef} />
-          <About ref={aboutRef} />
-          <Projects ref={projectsRef} />
-          <Contact ref={contactRef} />
+          <main className="desktopMainContainer">
+            <Home ref={homeRef} />
+            <SnowWorld />
+            <About ref={aboutRef} />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />
+          </main>
         </>
       )}
       {width < 768 && (
         <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
       )}
       {width < 768 && (
-        <main onClick={turnOffNav} className="mobileDisplayMain">
+        <main onClick={turnOffNav} className="mobileMainContainer">
           {navToggle === true && (
             <ul className="navbarMobile">
               <button

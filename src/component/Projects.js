@@ -29,7 +29,7 @@ const Projects = (props, ref) => {
   };
 
   return (
-    <main className="projectDispContainer" ref={myRef}>
+    <div className="projectDispContainer" ref={myRef}>
       <h1
         className={isVisible ? "animate__animated animate__flash" : ""}
         ref={ref}
@@ -129,7 +129,7 @@ const Projects = (props, ref) => {
           />
         </li>
       </ol>
-    </main>
+    </div>
   );
 };
 
