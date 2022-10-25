@@ -134,14 +134,137 @@ html {
   text-shadow: 7px 7px 15px #0f0;
   -webkit-box-reflect: below 8px
     linear-gradient(transparent, transparent, #0002);
+  z-index: 1;
 }
-.snowPageContainer {
+.pawPrint {
+  height: 3vh;
+  width: 2vw;
+  z-index: 5;
+}
+.print1 {
+  position: absolute;
+  margin-top: -20rem;
+  left: 55%;
+  opacity: 0%;
+  transform: rotate(195deg);
+  animation: slowFadeIn 2s;
+  animation-delay: 18s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.print2 {
+  position: absolute;
+  margin-top: -17rem;
+  left: 50%;
+  opacity: 0%;
+  transform: rotate(200deg);
+  animation: slowFadeIn 2s;
+  animation-delay: 18.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.print3 {
+  position: absolute;
+  margin-top: -11rem;
+  left: 50%;
+  opacity: 0%;
+  transform: rotate(195deg);
+  animation: slowFadeIn 2s;
+  animation-delay: 19s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.print4 {
+  position: absolute;
+  margin-top: -8rem;
+  left: 45%;
+  opacity: 0%;
+  transform: rotate(200deg);
+  animation: slowFadeIn 2s;
+  animation-delay: 19.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+/* Skills Page */
+.skillsPageContainer {
   height: 110vh;
   width: 100%;
-  background-image: url("images/snowWorld1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  display: grid;
+  grid-template-rows: [row1] 30% [row2] 25% [row3] 25% [row4] 10%;
+  background-color: #031013;
+  align-items: center;
+  justify-content: center;
+}
+.row1 {
+  display: flex;
+  flex-flow: column nowrap;
+  color: gray;
+  background-color: #0106078f;
+  padding: 1rem;
+  border: 1px solid rgba(0, 255, 0, 0.603);
+  border-radius: 1rem;
+}
+.row1 h1 {
+  font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+  color: #0f0;
+}
+#myName {
+  filter: grayscale(30%);
+  letter-spacing: 3px;
+}
+#myTitle {
+  filter: grayscale(80%);
+  letter-spacing: 3px;
+}
+.row1 h2 {
+  font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+}
+.row2 {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #0f0;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.row3 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.skillCircle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #0f0);
+}
+.skillCircle:before,
+.skillCircle:after {
+  content: " ";
+  position: absolute;
+  inset: 4px;
+  background-color: #031013;
+  border-radius: inherit;
+}
+.skillCircle:before {
+  background: linear-gradient(45deg, transparent, transparent 55%, yellow);
+  filter: blur(32px);
+}
+.circleHTML {
+  background: linear-gradient(45deg, transparent, transparent 20%, #0f0);
+}
+.circleCSS {
+  background: linear-gradient(45deg, transparent, transparent 30%, #0f0);
+}
+.circleJS {
+  background: linear-gradient(45deg, transparent, transparent 35%, #0f0);
+}
+.circleExpress {
+  background: linear-gradient(45deg, transparent, transparent 65%, #0f0);
+}
+.circleNode {
+  background: linear-gradient(45deg, transparent, transparent 65%, #0f0);
 }
 /*ABOUT PAGE*/
 .aboutBodyContainer {
@@ -239,23 +362,6 @@ html {
 .fa-arrow-right-long:hover {
   color: #c4d8e1;
   cursor: pointer;
-}
-.aboutBackground {
-  width: 100%;
-  height: 99%;
-  position: absolute;
-  display: none;
-  z-index: 1;
-  filter: opacity(70%);
-}
-.aboutBackground #keyboardImg {
-  width: 50%;
-  height: 30%;
-  position: absolute;
-  display: none;
-  top: 20%;
-  left: 15%;
-  z-index: 1;
 }
 
 /*--------Projects Page----------*/
@@ -389,10 +495,16 @@ figcaption {
 }
 @keyframes slowFadeIn {
   from {
-    opacity: 20%;
+    opacity: 0%;
   }
   to {
     opacity: 100%;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
 @media screen and (max-width: 1024px) {

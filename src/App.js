@@ -5,7 +5,7 @@ import Home from "./component/Home";
 import About from "./component/About";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
-import SnowWorld from "./component/SnowWorld";
+import SkillsPage from "./component/SkillsPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
           </nav>
           <main className="desktopMainContainer">
             <Home ref={homeRef} />
-            <SnowWorld />
+            <SkillsPage />
             <About ref={aboutRef} />
             <Projects ref={projectsRef} />
             <Contact ref={contactRef} />
