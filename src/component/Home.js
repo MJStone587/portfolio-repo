@@ -6,7 +6,14 @@ import "animate.css";
 const Home = (props, ref) => {
   const { ref: myRef, inView: isVisible } = useInView();
   return (
-    <div className="homeBodyContainer" ref={myRef}>
+    <div
+      className={
+        isVisible
+          ? "homeBodyContainer animate__animated animate__fadeIn"
+          : "homeBodyContainer"
+      }
+      ref={myRef}
+    >
       <div className="matrixText">
         <Typewriter
           onInit={(typewriter) => {

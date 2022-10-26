@@ -8,10 +8,11 @@ html {
   width: 100%;
   overflow-x: hidden;
 }
-.desktopMaiContainer {
+.desktopMainContainer {
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
+  background-color: #031013;
 }
 /* Navbar */
 .navbar {
@@ -70,13 +71,13 @@ html {
   background-color: transparent;
   color: #0f0;
   font-family: "Times New Roman", serif;
+  border: 1px solid transparent;
   font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 
 .btn:hover {
   cursor: pointer;
-  color: #f3a94c;
-  background-color: #072329;
+  border: 1px solid #0f0;
 }
 .navbarLinkSelected {
   background-color: #072329;
@@ -122,7 +123,7 @@ html {
 /* HOME PAGE STYLING */
 .homeBodyContainer {
   display: grid;
-  background-color: #031013;
+  background-color: transparent;
   align-items: center;
   justify-content: center;
   height: 110vh;
@@ -143,8 +144,8 @@ html {
 }
 .print1 {
   position: absolute;
-  margin-top: -20rem;
   left: 55%;
+  top: 70%;
   opacity: 0%;
   transform: rotate(195deg);
   animation: slowFadeIn 2s;
@@ -154,8 +155,8 @@ html {
 }
 .print2 {
   position: absolute;
-  margin-top: -17rem;
   left: 50%;
+  top: 80%;
   opacity: 0%;
   transform: rotate(200deg);
   animation: slowFadeIn 2s;
@@ -165,8 +166,8 @@ html {
 }
 .print3 {
   position: absolute;
-  margin-top: -11rem;
   left: 50%;
+  top: 90%;
   opacity: 0%;
   transform: rotate(195deg);
   animation: slowFadeIn 2s;
@@ -176,8 +177,8 @@ html {
 }
 .print4 {
   position: absolute;
-  margin-top: -8rem;
   left: 45%;
+  top: 100%;
   opacity: 0%;
   transform: rotate(200deg);
   animation: slowFadeIn 2s;
@@ -190,21 +191,22 @@ html {
   height: 110vh;
   width: 100%;
   display: grid;
-  grid-template-rows: [row1] 30% [row2] 25% [row3] 25% [row4] 10%;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   background-color: #031013;
   align-items: center;
   justify-content: center;
 }
-.row1 {
+.skillsContainer1 {
   display: flex;
   flex-flow: column nowrap;
+  grid-column: 2 / 6;
+  grid-row: 4 / 7;
   color: gray;
-  background-color: #0106078f;
   padding: 1rem;
-  border: 1px solid rgba(0, 255, 0, 0.603);
   border-radius: 1rem;
 }
-.row1 h1 {
+.skillsContainer1 h1 {
   font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
   color: #0f0;
 }
@@ -216,21 +218,14 @@ html {
   filter: grayscale(80%);
   letter-spacing: 3px;
 }
-.row1 h2 {
+.skillsContainer1_row2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.skillsContainer1 h2 {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
-}
-.row2 {
-  display: flex;
-  flex-flow: row nowrap;
-  color: #0f0;
-  justify-content: space-evenly;
-  padding: 1rem;
-}
-.row3 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  padding: 1rem;
 }
 .skillCircle {
   position: relative;
@@ -248,25 +243,45 @@ html {
   border-radius: inherit;
 }
 .skillCircle:before {
-  background: linear-gradient(45deg, transparent, transparent 55%, yellow);
+  background: linear-gradient(45deg, transparent, transparent 55%, #0f0);
   filter: blur(32px);
 }
-.circleHTML {
-  background: linear-gradient(45deg, transparent, transparent 20%, #0f0);
+.skillsContainer2 {
+  grid-column: 6 / 10;
+  grid-row: 4 / 6;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 1rem;
 }
-.circleCSS {
-  background: linear-gradient(45deg, transparent, transparent 30%, #0f0);
+.skillsContainer2_row1 {
+  place-self: center;
+  padding: 1rem;
 }
-.circleJS {
-  background: linear-gradient(45deg, transparent, transparent 35%, #0f0);
+.skillsContainer2 h1 {
+  color: #0f0;
+  font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
-.circleExpress {
-  background: linear-gradient(45deg, transparent, transparent 65%, #0f0);
+.skillsContainer2_row2 {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #0f0;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
-.circleNode {
-  background: linear-gradient(45deg, transparent, transparent 65%, #0f0);
+.skillsContainer2_row3 {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #0f0;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
-/*ABOUT PAGE*/
+/*ABOUT PAGE
 .aboutBodyContainer {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -363,7 +378,42 @@ html {
   color: #c4d8e1;
   cursor: pointer;
 }
-
+*/
+/* Neon City Page */
+.neonCityContainer {
+  height: 110vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #031013;
+  background-image: url("./images/neonCity1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.sign1 {
+  display: grid;
+  grid-row: 3 / 7;
+  grid-column: 3 / 4;
+  color: rgb(248, 110, 76);
+  background-color: black;
+  text-shadow: 0 0 7px rgb(248, 131, 77), 0 0 10px rgb(248, 131, 77),
+    0 0 21px rgb(248, 131, 77), 0 0 42px rgb(255, 81, 0),
+    0 0 82px rgb(255, 81, 0), 0 0 92px rgb(255, 81, 0),
+    0 0 102px rgb(255, 81, 0), 0 0 151px rgb(255, 81, 0);
+  border: 0.2rem solid #f58f10;
+  border-radius: 2rem;
+  place-items: center;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f58f10,
+    0 0 0.8rem #f58f10, 0 0 2.8rem #f58f10, inset 0 0 1.3rem #f58f10;
+  transform: rotate(35deg);
+}
+.sign1 h1 {
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-family: "Sacramento", sans-serif;
+}
 /*--------Projects Page----------*/
 .projectDispContainer {
   display: grid;
@@ -493,6 +543,9 @@ figcaption {
 .faded {
   opacity: 15;
 }
+.animationRotate {
+  animation: rotate 2s;
+}
 @keyframes slowFadeIn {
   from {
     opacity: 0%;
@@ -504,7 +557,6 @@ figcaption {
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
-    filter: hue-rotate(360deg);
   }
 }
 @media screen and (max-width: 1024px) {

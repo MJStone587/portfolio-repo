@@ -7,6 +7,8 @@ import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import SkillsPage from "./component/SkillsPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NeonCity from "./component/NeonCity";
+import pawPrint from "./images/pawprint.png";
 
 function App() {
   const { width } = useWindowSize();
@@ -31,6 +33,10 @@ function App() {
     <>
       {width >= 768 && (
         <>
+          <img src={pawPrint} class="pawPrint print1" alt="Paw Print"></img>
+          <img src={pawPrint} class="pawPrint print2" alt="Paw Print"></img>
+          <img src={pawPrint} class="pawPrint print3" alt="Paw Print"></img>
+          <img src={pawPrint} class="pawPrint print4" alt="Paw Print"></img>
           <nav className="navbar">
             <div className="navbarLeft">
               <button
@@ -69,7 +75,7 @@ function App() {
           <main className="desktopMainContainer">
             <Home ref={homeRef} />
             <SkillsPage />
-            <About ref={aboutRef} />
+            <NeonCity />
             <Projects ref={projectsRef} />
             <Contact ref={contactRef} />
           </main>
@@ -109,7 +115,6 @@ function App() {
             </ul>
           )}
           <Home ref={homeRef} />
-          <About ref={aboutRef} />
           <Projects ref={projectsRef} />
           <Contact ref={contactRef} />
         </main>
