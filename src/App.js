@@ -2,13 +2,12 @@ import "./style.css";
 import React, { useState, useRef } from "react";
 import useWindowSize from "use-window-size-v2";
 import Home from "./component/Home";
-import About from "./component/About";
+import TeslaEffect from "./component/TeslaEffect";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import SkillsPage from "./component/SkillsPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NeonCity from "./component/NeonCity";
-import pawPrint from "./images/pawprint.png";
 
 function App() {
   const { width } = useWindowSize();
@@ -33,10 +32,6 @@ function App() {
     <>
       {width >= 768 && (
         <>
-          <img src={pawPrint} class="pawPrint print1" alt="Paw Print"></img>
-          <img src={pawPrint} class="pawPrint print2" alt="Paw Print"></img>
-          <img src={pawPrint} class="pawPrint print3" alt="Paw Print"></img>
-          <img src={pawPrint} class="pawPrint print4" alt="Paw Print"></img>
           <nav className="navbar">
             <div className="navbarLeft">
               <button
@@ -74,6 +69,7 @@ function App() {
           </nav>
           <main className="desktopMainContainer">
             <Home ref={homeRef} />
+            <TeslaEffect />
             <SkillsPage />
             <NeonCity />
             <Projects ref={projectsRef} />

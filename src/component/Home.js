@@ -2,18 +2,12 @@ import React, { forwardRef } from "react";
 import { useInView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
 import "animate.css";
+import pawPrint from "../images/pawprint.png";
 
 const Home = (props, ref) => {
-  const { ref: myRef, inView: isVisible } = useInView();
+  const { ref: myRef, inView } = useInView();
   return (
-    <div
-      className={
-        isVisible
-          ? "homeBodyContainer animate__animated animate__fadeIn"
-          : "homeBodyContainer"
-      }
-      ref={myRef}
-    >
+    <div className="homeBodyContainer" ref={myRef}>
       <div className="matrixText">
         <Typewriter
           onInit={(typewriter) => {
@@ -35,6 +29,10 @@ const Home = (props, ref) => {
           }}
         />
       </div>
+      <img src={pawPrint} class="pawPrint print1" alt="Paw Print"></img>
+      <img src={pawPrint} class="pawPrint print2" alt="Paw Print"></img>
+      <img src={pawPrint} class="pawPrint print3" alt="Paw Print"></img>
+      <img src={pawPrint} class="pawPrint print4" alt="Paw Print"></img>
     </div>
   );
 };

@@ -5,14 +5,7 @@ export default function SkillsPage() {
   const { ref: myRef, inView } = useInView();
   return (
     <>
-      <div
-        className={
-          inView
-            ? "skillsPageContainer animate__animated animate_fadeIn"
-            : "skillsPageContainer animate___animated animate__fadeOut"
-        }
-        ref={myRef}
-      >
+      <div className="skillsPageContainer" ref={myRef}>
         <div
           className={
             inView
