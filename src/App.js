@@ -2,7 +2,7 @@ import "./style.css";
 import React, { useState, useRef } from "react";
 import useWindowSize from "use-window-size-v2";
 import Home from "./component/Home";
-import TeslaEffect from "./component/TeslaEffect";
+import ParallaxEffect from "./component/ParallaxEffect";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import SkillsPage from "./component/SkillsPage";
@@ -69,9 +69,10 @@ function App() {
           </nav>
           <main className="desktopMainContainer">
             <Home ref={homeRef} />
-            <TeslaEffect />
-            <SkillsPage />
+            <ParallaxEffect />
+            <div className="desktopEmptyDiv"></div>
             <NeonCity />
+            <SkillsPage />
             <Projects ref={projectsRef} />
             <Contact ref={contactRef} />
           </main>

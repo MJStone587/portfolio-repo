@@ -13,7 +13,6 @@ export default function NeonCity() {
       }
       ref={myRef}
     >
-      NeonCity
       <div
         className={
           inView

@@ -14,7 +14,7 @@ html {
   height: 110vh;
   width: 100%;
   perspective: 10px;
-  background-color: #031013;
+  background-image: url("./images/space.jpg");
 }
 
 /* Navbar */
@@ -126,16 +126,17 @@ html {
 /* HOME PAGE STYLING */
 .homeBodyContainer {
   display: grid;
-  background-color: transparent;
-  align-items: center;
-  justify-content: center;
   height: 100%;
+  align-content: center;
   width: 100%;
   background-color: #031013;
+  transform-style: preserve-3d;
+  z-index: -2;
 }
 .matrixText {
   font-size: calc(18px + (48 - 18) * ((100vw - 320px) / (1920 - 320)));
   color: #0f0;
+  place-self: center;
   text-shadow: 7px 7px 15px #0f0;
   -webkit-box-reflect: below 8px
     linear-gradient(transparent, transparent, #0002);
@@ -204,29 +205,76 @@ html {
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  z-index: -1;
+  object-fit: contain;
 }
 .background {
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-20px) scale(1);
+  object-fit: contain;
+  right: 40%;
+  top: 180%;
 }
 .foreground {
-  transform: translateZ(-5px) scale(2);
+  transform: translateZ(-10px) scale(2);
+  object-fit: contain;
+  top: 50%;
 }
 .parallaxTitle {
-  font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
   color: #0f0;
-  text-shadow: 0px 0px 10px #0f0;
+  text-shadow: 0px 0px 10px rgb(1, 29, 1);
+  z-index: 4;
+  align-self: flex-end;
+}
+.parallaxRefDiv {
+  align-self: flex-end;
+}
+.desktopEmptyDiv {
+  height: 100%;
+}
+/* Neon City Page */
+.neonCityContainer {
+  padding-top: 10vh;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.sign1 {
+  display: grid;
+  grid-row: 3 / 7;
+  grid-column: 3 / 4;
+  color: rgb(248, 110, 76);
+  background-color: black;
+  text-shadow: 0 0 7px rgb(248, 131, 77), 0 0 10px rgb(248, 131, 77),
+    0 0 21px rgb(248, 131, 77), 0 0 42px rgb(255, 81, 0),
+    0 0 82px rgb(255, 81, 0), 0 0 92px rgb(255, 81, 0),
+    0 0 102px rgb(255, 81, 0), 0 0 151px rgb(255, 81, 0);
+  border: 0.2rem solid #f58f10;
+  border-radius: 2rem;
+  place-items: center;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f58f10,
+    0 0 0.8rem #f58f10, 0 0 2.8rem #f58f10, inset 0 0 1.3rem #f58f10;
+  transform: rotate(35deg);
+}
+.sign1 h1 {
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-family: "Sacramento", sans-serif;
 }
 /* Skills Page */
 .skillsPageContainer {
-  height: 110vh;
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
 }
 .skillsContainer1 {
   display: flex;
@@ -312,139 +360,7 @@ html {
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
-/*ABOUT PAGE
-.aboutBodyContainer {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  row-gap: 1.5rem;
-  column-gap: 1.5rem;
-  height: 110vh;
-  width: 100%;
-  z-index: 5;
-  overflow: hidden;
-}
 
-.aboutBodyBox1 {
-  display: grid;
-  font-family: "Roboto", sans-serif;
-  grid-column: 2 / 8;
-  border: 1px solid #f58f10;
-  background-color: #031013;
-  place-items: center;
-  grid-row: 2 / 6;
-  color: #f3a94c;
-  font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
-}
-.aboutBodyBox1 p {
-  padding: 0rem 2rem 0rem 2rem;
-}
-.aboutBodyBox1:hover {
-  border: 1px solid #f3a94c;
-}
-.aboutBodyBox2 {
-  display: grid;
-  font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1920 - 320)));
-  border: 1px solid #f58f10;
-  color: #f3a94c;
-  padding: 0.5rem;
-  grid-row: 6 / 10;
-  align-content: space-evenly;
-  justify-content: center;
-  grid-column: 2 / 4;
-  background-color: #031013;
-}
-.aboutBodyDynamicBox {
-  display: grid;
-  grid-column: 4 / 8;
-  grid-row: 6 / 10;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  justify-items: center;
-  background-color: #031013;
-  color: #f3a94c;
-  border: 1px solid #f58f10;
-}
-.aboutBodyDynamicBox:hover {
-  border: 1px solid #f3a94c;
-  cursor: pointer;
-}
-.aboutBodyDynamicBox h3 {
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-}
-.fa-html5,
-.fa-js,
-.fa-css3-alt,
-.fa-node,
-.fa-react,
-.fa-php,
-.fa-square-git,
-.fa-github {
-  color: #f3a94c;
-  font-size: calc(32px + (46 - 32) * ((100vw - 320px) / (1920 - 320)));
-}
-.aboutBodyArrow {
-  display: grid;
-  grid-template-columns: [col1] 100%;
-  grid-template-rows: [row1] 25% [row2] 25%;
-  grid-column: 8 / 10;
-  grid-row: 3 / 8;
-  color: #f3a94c;
-  place-items: center;
-  align-content: center;
-}
-.aboutBodyArrow h2 {
-  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
-}
-.linkToProjects {
-  justify-self: end;
-}
-.fa-arrow-right-long {
-  padding: 0.5rem;
-  font-size: calc(16px + (80 - 16) * ((100vw - 320px) / (1920 - 320)));
-  color: #f3a94c;
-}
-
-.fa-arrow-right-long:hover {
-  color: #c4d8e1;
-  cursor: pointer;
-}
-*/
-/* Neon City Page */
-.neonCityContainer {
-  height: 110vh;
-  width: 100%;
-  display: grid;
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(12, 1fr);
-  background-color: #031013;
-  background-image: url("./images/neonCity1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-.sign1 {
-  display: grid;
-  grid-row: 3 / 7;
-  grid-column: 3 / 4;
-  color: rgb(248, 110, 76);
-  background-color: black;
-  text-shadow: 0 0 7px rgb(248, 131, 77), 0 0 10px rgb(248, 131, 77),
-    0 0 21px rgb(248, 131, 77), 0 0 42px rgb(255, 81, 0),
-    0 0 82px rgb(255, 81, 0), 0 0 92px rgb(255, 81, 0),
-    0 0 102px rgb(255, 81, 0), 0 0 151px rgb(255, 81, 0);
-  border: 0.2rem solid #f58f10;
-  border-radius: 2rem;
-  place-items: center;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f58f10,
-    0 0 0.8rem #f58f10, 0 0 2.8rem #f58f10, inset 0 0 1.3rem #f58f10;
-  transform: rotate(35deg);
-}
-.sign1 h1 {
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-  font-family: "Sacramento", sans-serif;
-}
 /*--------Projects Page----------*/
 .projectDispContainer {
   display: grid;
@@ -576,6 +492,12 @@ figcaption {
 }
 .animationRotate {
   animation: rotate 2s;
+}
+.animationBigZoom {
+  animation: bigZoom 3s ease-out;
+}
+.animationBigZoomOut {
+  animation: bigZoomOut 3s ease-out;
 }
 @keyframes slowFadeIn {
   from {
