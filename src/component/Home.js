@@ -30,10 +30,10 @@ const Home = (props, ref) => {
         />
       </div>
       <div ref={myRef}></div>
-      <img src={pawPrint} class="pawPrint print1" alt="Paw Print"></img>
-      <img src={pawPrint} class="pawPrint print2" alt="Paw Print"></img>
-      <img src={pawPrint} class="pawPrint print3" alt="Paw Print"></img>
-      <img src={pawPrint} class="pawPrint print4" alt="Paw Print"></img>
+      <img src={pawPrint} className="pawPrint print1" alt="Paw Print"></img>
+      <img src={pawPrint} className="pawPrint print2" alt="Paw Print"></img>
+      <img src={pawPrint} className="pawPrint print3" alt="Paw Print"></img>
+      <img src={pawPrint} className="pawPrint print4" alt="Paw Print"></img>
     </div>
   );
 };

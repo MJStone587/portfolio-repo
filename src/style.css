@@ -209,13 +209,11 @@ html {
 }
 .background {
   transform: translateZ(-20px) scale(1);
-  object-fit: contain;
   right: 40%;
   top: 180%;
 }
 .foreground {
   transform: translateZ(-10px) scale(2);
-  object-fit: contain;
   top: 50%;
 }
 .parallaxTitle {
@@ -499,6 +497,7 @@ figcaption {
 .animationBigZoomOut {
   animation: bigZoomOut 3s ease-out;
 }
+
 @keyframes slowFadeIn {
   from {
     opacity: 0%;
