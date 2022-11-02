@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&family=VT323&display=swap");
 
 html {
   background-color: #072329;
@@ -14,7 +13,10 @@ html {
   height: 110vh;
   width: 100%;
   perspective: 10px;
-  background-image: url("./images/space.jpg");
+  background-image: url("./images/parallax-space-backgound.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Navbar */
@@ -27,7 +29,7 @@ html {
   background-color: transparent;
   column-gap: 1rem;
   height: 5vh;
-  font-family: "Orbitron", sans-serif;
+  font-family: "VT323", monospace;
   z-index: 12;
 }
 .navbarLeft {
@@ -52,7 +54,7 @@ html {
 }
 #navbarMidName {
   font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1920 - 300)));
-  color: #0f0;
+  color: #2adfff;
 }
 .navbarRight {
   display: grid;
@@ -65,22 +67,23 @@ html {
   justify-self: end;
 }
 .navbar h2 {
-  color: #5ebce7;
+  color: #2adfff;
   font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1920 - 320)));
 }
 .btn {
   text-decoration: none;
   border: none;
   background-color: transparent;
-  color: #0f0;
-  font-family: "Times New Roman", serif;
+  color: #2adfff;
+  font-family: "VT323", monospace;
   border: 1px solid transparent;
   font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
 }
 
 .btn:hover {
   cursor: pointer;
-  border: 1px solid #0f0;
+  color: #2a86ff;
+  border: 1px solid #2a86ff;
 }
 .navbarLinkSelected {
   background-color: #072329;
@@ -129,15 +132,16 @@ html {
   height: 100%;
   align-content: center;
   width: 100%;
-  background-color: #031013;
-  transform-style: preserve-3d;
+  background-color: transparent;
   z-index: -2;
 }
 .matrixText {
   font-size: calc(18px + (48 - 18) * ((100vw - 320px) / (1920 - 320)));
-  color: #0f0;
+  color: #2adfff;
+  font-family: "VT323", monospace;
   place-self: center;
-  text-shadow: 7px 7px 15px #0f0;
+  margin-bottom: 6rem;
+  text-shadow: 7px 7px 15px;
   -webkit-box-reflect: below 8px
     linear-gradient(transparent, transparent, #0002);
 }
@@ -201,24 +205,29 @@ html {
   z-index: -1;
 }
 .foreground,
-.background {
+.background,
+.midground {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 .background {
-  transform: translateZ(-20px) scale(1);
+  transform: translateZ(-20px) scale(0.5);
   right: 40%;
-  top: 180%;
+  top: 140%;
 }
 .foreground {
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-10px) scale(1.5);
   top: 50%;
+}
+.midground {
+  transform: translateZ(-15px) scale(1);
+  left: 30%;
 }
 .parallaxTitle {
   font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
-  color: #0f0;
+  color: #2adfff;
   text-shadow: 0px 0px 10px rgb(1, 29, 1);
   z-index: 4;
   align-self: flex-end;

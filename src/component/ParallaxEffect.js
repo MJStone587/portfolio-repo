@@ -1,20 +1,16 @@
-import React, { useRef } from "react";
-import earth from "../images/earth.png";
-import moon from "../images/moon.png";
-import { motion, useScroll } from "framer-motion";
+import React from "react";
+import farPlanets from "../images/parallax-space-far-planets.png";
+import bigPlanet from "../images/parallax-space-big-planet.png";
+import ringPlanet from "../images/parallax-space-ring-planet.png";
 
 export default function ParallaxEffect() {
-  const planetRef = useRef();
-  const { scrollYProgress } = useScroll();
-
   return (
-    <motion.div className="parallaxContainer">
-      <motion.img src={earth} alt="Earth" className="foreground"></motion.img>
-      <img src={moon} alt="Moon" className="background"></img>
-      <h1 className="parallaxTitle">
-        Together we can create and explore the Universe!
-      </h1>
+    <div className="parallaxContainer">
+      <img src={bigPlanet} alt="Big Planet" className="foreground"></img>
+      <img src={ringPlanet} alt="Ring Planet" className="background"></img>
+      <img src={farPlanets} alt="Far Planet" className="midground"></img>
+      <h1 className="parallaxTitle">WORDS GO HERE!</h1>
       <div className="parallaxRefDiv"></div>
-    </motion.div>
+    </div>
   );
 }

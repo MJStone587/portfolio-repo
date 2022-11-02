@@ -8,6 +8,8 @@ import Contact from "./component/Contact";
 import SkillsPage from "./component/SkillsPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NeonCity from "./component/NeonCity";
+import spaceShip from "./images/spaceship24.png";
+import { motion } from "framer-motion";
 
 function App() {
   const { width } = useWindowSize();
@@ -68,6 +70,20 @@ function App() {
             </div>
           </nav>
           <main className="desktopMainContainer">
+            <motion.img
+              src={spaceShip}
+              alt="Space Ship"
+              className="spaceShip"
+              animate={{
+                x: [100, 200, 400, 500, 600],
+                y: [0, 200, 300, 500, 700, 900, 1200, 1500, 2000],
+                rotate: [125, 140, 130, 125, 120],
+                opacity: 100,
+                scale: 1.5,
+              }}
+              transition={{ delay: 5, duration: 6 }}
+              initial={{ opacity: 0, rotate: 120, x: 0 }}
+            ></motion.img>
             <Home ref={homeRef} />
             <ParallaxEffect />
             <div className="desktopEmptyDiv"></div>

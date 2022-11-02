@@ -1,11 +1,8 @@
 import React, { forwardRef } from "react";
-import { useInView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
 import "animate.css";
-import pawPrint from "../images/pawprint.png";
 
 const Home = (props, ref) => {
-  const { ref: myRef, inView } = useInView();
   return (
     <div className="homeBodyContainer">
       <div className="matrixText">
@@ -14,26 +11,15 @@ const Home = (props, ref) => {
             typewriter
               .changeDeleteSpeed(30)
               .changeDelay(100)
-              .pauseFor(500)
-              .typeString("Welcome.")
-              .pauseFor(500)
+              .pauseFor(200)
+              .typeString("You there! Yes, you!")
+              .pauseFor(400)
               .deleteAll()
-              .typeString("I've been waiting for you.")
-              .pauseFor(500)
-              .deleteAll()
-              .typeString("We have a lot to do.")
-              .pauseFor(500)
-              .deleteAll()
-              .typeString("If you are ready, follow the white rabbit.")
+              .typeString("You must follow that space ship!")
               .start();
           }}
         />
       </div>
-      <div ref={myRef}></div>
-      <img src={pawPrint} className="pawPrint print1" alt="Paw Print"></img>
-      <img src={pawPrint} className="pawPrint print2" alt="Paw Print"></img>
-      <img src={pawPrint} className="pawPrint print3" alt="Paw Print"></img>
-      <img src={pawPrint} className="pawPrint print4" alt="Paw Print"></img>
     </div>
   );
 };
