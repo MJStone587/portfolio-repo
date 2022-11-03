@@ -6,10 +6,12 @@ import ParallaxEffect from "./component/ParallaxEffect";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import SkillsPage from "./component/SkillsPage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Campground from "./component/Campground";
+import Mountains from "./component/Mountains";
 import NeonCity from "./component/NeonCity";
 import spaceShip from "./images/spaceship24.png";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   const { width } = useWindowSize();
@@ -30,6 +32,16 @@ function App() {
     setNavToggle(false);
   };
   // {navToggle === true && width < 820 && <NavbarMobile />}
+  /* <Home ref={homeRef} />
+            <ParallaxEffect />
+            <div className="desktopEmptyDiv"></div>
+            <NeonCity />
+            <Mountains />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />\
+          <main className="desktopMainContainer">
+</main>
+*/
   return (
     <>
       {width >= 768 && (
@@ -69,29 +81,8 @@ function App() {
               </button>
             </div>
           </nav>
-          <main className="desktopMainContainer">
-            <motion.img
-              src={spaceShip}
-              alt="Space Ship"
-              className="spaceShip"
-              animate={{
-                x: [100, 200, 400, 500, 600],
-                y: [0, 200, 300, 500, 700, 900, 1200, 1500, 2000],
-                rotate: [125, 140, 130, 125, 120],
-                opacity: 100,
-                scale: 1.5,
-              }}
-              transition={{ delay: 5, duration: 6 }}
-              initial={{ opacity: 0, rotate: 120, x: 0 }}
-            ></motion.img>
-            <Home ref={homeRef} />
-            <ParallaxEffect />
-            <div className="desktopEmptyDiv"></div>
-            <NeonCity />
-            <SkillsPage />
-            <Projects ref={projectsRef} />
-            <Contact ref={contactRef} />
-          </main>
+          <Home ref={homeRef} />
+          <SkillsPage />
         </>
       )}
       {width < 768 && (

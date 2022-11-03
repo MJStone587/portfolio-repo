@@ -10,13 +10,9 @@ html {
 .desktopMainContainer {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
-  perspective: 10px;
-  background-image: url("./images/parallax-space-backgound.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  perspective: 20px;
 }
 
 /* Navbar */
@@ -129,70 +125,92 @@ html {
 /* HOME PAGE STYLING */
 .homeBodyContainer {
   display: grid;
-  height: 100%;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  height: 110vh;
   align-content: center;
   width: 100%;
+  background-image: url("images/pixelCityScape.jpg");
+  background-position: center;
+  background-size: cover;
   background-color: transparent;
-  z-index: -2;
+  z-index: 1;
+}
+.comet {
+  width: 3vw;
+  height: 2.5vh;
 }
 .matrixText {
-  font-size: calc(18px + (48 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(20px + (48 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: #2adfff;
   font-family: "VT323", monospace;
   place-self: center;
+  grid-column: 4 / 8;
+  grid-row: 4 / 6;
   margin-bottom: 6rem;
   text-shadow: 7px 7px 15px;
   -webkit-box-reflect: below 8px
     linear-gradient(transparent, transparent, #0002);
 }
-.pawPrint {
-  height: 3vh;
-  width: 2vw;
-  z-index: 5;
+.btnOneContainer {
+  display: flex;
+  grid-row: 6 / 9;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
 }
-.print1 {
-  position: absolute;
-  left: 55%;
-  top: 70%;
-  opacity: 0%;
-  transform: rotate(195deg);
-  animation: slowFadeIn 2s;
-  animation-delay: 18s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+.btnTwoContainer {
+  display: flex;
+  grid-row: 6 / 9;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
 }
-.print2 {
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  opacity: 0%;
-  transform: rotate(200deg);
-  animation: slowFadeIn 2s;
-  animation-delay: 18.5s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+.btnThreeContainer {
+  display: flex;
+  grid-row: 6 / 9;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
 }
-.print3 {
-  position: absolute;
-  left: 50%;
-  top: 90%;
-  opacity: 0%;
-  transform: rotate(195deg);
-  animation: slowFadeIn 2s;
-  animation-delay: 19s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+
+a {
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+  padding: 1rem 3rem;
+  font-family: "VT323", monospace;
+  color: #2adfff;
+  text-transform: uppercase;
 }
-.print4 {
+.homeBtnOne,
+.homeBtnTwo,
+.homeBtnThree {
+  text-decoration: none;
+  border: 2px solid #2adfffb4;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.homeBtnOne:hover,
+.homeBtnTwo:hover,
+.homeBtnThree:hover {
+  box-shadow: 1px 1px 10px 6px #2adfffb4;
+}
+.homeBtnOne:before,
+.homeBtnTwo:before,
+.homeBtnThree:before {
+  content: "";
   position: absolute;
-  left: 45%;
-  top: 100%;
-  opacity: 0%;
-  transform: rotate(200deg);
-  animation: slowFadeIn 2s;
-  animation-delay: 19.5s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #fb00afb4, transparent);
+  transition: all 500ms;
+}
+.homeBtnOne:hover:before,
+.homeBtnTwo:hover:before,
+.homeBtnThree:hover:before {
+  left: 100%;
 }
 /* TESLA BALL*/
 .parallaxContainer {
@@ -205,17 +223,11 @@ html {
   z-index: -1;
 }
 .foreground,
-.background,
 .midground {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: contain;
-}
-.background {
-  transform: translateZ(-20px) scale(0.5);
-  right: 40%;
-  top: 140%;
 }
 .foreground {
   transform: translateZ(-10px) scale(1.5);
@@ -272,6 +284,44 @@ html {
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Sacramento", sans-serif;
 }
+/* */
+.mountainsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.mtLayer1,
+.mtLayer2,
+.mtLayer3,
+.mtLayer4,
+.mtLayer5,
+.mtLayer6 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.mtLayer1 {
+  transform: translateZ(-12px) scale(1.6);
+}
+.mtLayer2 {
+  transform: translateZ(-11px) scale(1.65);
+}
+.mtLayer3 {
+  transform: translateZ(-10px) scale(1.7);
+}
+.mtLayer4 {
+  transform: translateZ(-9px) scale(1.75);
+}
+.mtLayer5 {
+  transform: translateZ(-8px) scale(1.8);
+}
+.mtLayer6 {
+  transform: translateZ(-7px) scale(1.85);
+}
 /* Skills Page */
 .skillsPageContainer {
   height: 100%;
@@ -279,6 +329,7 @@ html {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
+  background-color: #000631;
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
