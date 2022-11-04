@@ -12,9 +12,26 @@ html {
   overflow-y: scroll;
   height: 100vh;
   width: 100%;
+  background-color: #000631;
   perspective: 20px;
 }
-
+.desktopOverlayDiv {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 5%;
+  width: 3rem;
+}
+.desktopOverlayDiv li {
+  color: #2adfff;
+}
+.feather-github {
+  color: #a85b92;
+}
+.desktopOverlayDiv li a svg {
+  width: 20px;
+  height: 20px;
+}
 /* Navbar */
 .navbar {
   display: grid;
@@ -124,54 +141,67 @@ html {
 
 /* HOME PAGE STYLING */
 .homeBodyContainer {
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
-  grid-template-columns: repeat(10, 1fr);
-  height: 110vh;
-  align-content: center;
-  width: 100%;
-  background-image: url("images/pixelCityScape.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: transparent;
-  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
 }
 .comet {
   width: 3vw;
   height: 2.5vh;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(145deg);
 }
-.matrixText {
-  font-size: calc(20px + (48 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+.homeBodyContainer_p1 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+  color: #a85b92;
+  transform: translateZ(-10px) scale(1);
+}
+.homeBodyContainer_p2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+  width: 40%;
+  height: 20%;
+  color: #a85b92;
+  transform: translateZ(-10px) scale(1);
+}
+.homeBodyContainer_p2Span {
   color: #2adfff;
+}
+
+.matrixText {
+  position: absolute;
+  font-size: calc(24px + (46 - 24) * ((100vw - 320px) / (1920 - 320)));
+  color: #2adfff;
+  top: 40%;
+  right: 46.5%;
   font-family: "VT323", monospace;
-  place-self: center;
-  grid-column: 4 / 8;
-  grid-row: 4 / 6;
-  margin-bottom: 6rem;
+  transform: translateZ(-5px) scale(2);
   text-shadow: 7px 7px 15px;
   -webkit-box-reflect: below 8px
     linear-gradient(transparent, transparent, #0002);
+  object-fit: contain;
 }
 .btnOneContainer {
+  position: absolute;
   display: flex;
-  grid-row: 6 / 9;
-  justify-content: center;
+  top: 59%;
+  left: 36.5%;
+  justify-content: start;
   align-items: center;
-  height: 8vh;
-}
-.btnTwoContainer {
-  display: flex;
-  grid-row: 6 / 9;
-  justify-content: center;
-  align-items: center;
-  height: 8vh;
-}
-.btnThreeContainer {
-  display: flex;
-  grid-row: 6 / 9;
-  justify-content: center;
-  align-items: center;
-  height: 8vh;
+  margin-top: 1rem;
+  height: 6vh;
+  transform: translateZ(-2) scale(2);
 }
 
 a {
