@@ -25,14 +25,14 @@ const Home = (props, ref) => {
             {" "}
             Software Developer.{" "}
           </span>
-          Come, learn more about me, my skills, and see some of the projects
-          I've built.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
-      </div>{" "}
-      <div className="btnOneContainer">
-        <a href="#" className="homeBtnOne">
-          Learn More
-        </a>
+      </div>
+      <div className="continueBtn_container">
+        <button className="continueBtn">Continue</button>
       </div>
     </div>
   );
