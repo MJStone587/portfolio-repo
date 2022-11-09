@@ -132,7 +132,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <main className="desktopMainContainer">
+          <main className="desktopContent">
             <Home ref={homeRef} />
             <AboutMe />
             <Projects />
@@ -173,7 +173,7 @@ function App() {
             </ul>
           )}
           <Home ref={homeRef} />
-          <AboutMe />
+          <AboutMe ref={aboutRef} />
         </main>
       )}
     </>

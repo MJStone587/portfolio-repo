@@ -5,7 +5,7 @@ const AboutMe = (props, ref) => {
   const { ref: myRef, inView } = useInView();
 
   return (
-    <div className="aboutMeContainer" ref={myRef}>
+    <section className="aboutMeContainer" ref={ref}>
       <div className="aboutMe_box">
         <h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -17,13 +17,7 @@ const AboutMe = (props, ref) => {
           Platea dictumst quisque sagittis purus sit amet volutpat consequat. In
           cursus turpis massa tincidunt dui ut ornare. Lacinia at quis risus sed
           vulputate odio. Et magnis dis parturient montes nascetur ridiculus mus
-          mauris vitae. Felis imperdiet proin fermentum leo vel orci porta non.
-          Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla
-          facilisi. Ac tincidunt vitae semper quis lectus. Leo in vitae turpis
-          massa sed elementum. Eget nulla facilisi etiam dignissim diam quis.
-          Diam sit amet nisl suscipit adipiscing. Velit scelerisque in dictum
-          non. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Nunc
-          eget lorem dolor sed viverra..
+          mauris vitae.
         </h3>
       </div>
       <div className="skillsBox">
@@ -32,20 +26,21 @@ const AboutMe = (props, ref) => {
         </div>
         <div className="skillsBox_row2">
           <ol>
-            <h3> HTML </h3>
-            <h3> CSS </h3>
-            <h3> Javascript </h3>
-            <h3> Express </h3>
-            <h3> NodeJS </h3>
-            <h3> MongoDb </h3>
-            <h3> PHP </h3>
-            <h3> mySQL </h3>
-            <h3> React </h3>
-            <h3> Java </h3>
+            <h3>HTML</h3>
+            <h3>CSS</h3>
+            <h3>Javascript</h3>
+            <h3>Express</h3>
+            <h3>NodeJS</h3>
+            <h3>MongoDb</h3>
+            <h3>PHP</h3>
+            <h3>mySQL</h3>
+            <h3>ReactJS</h3>
+            <h3>Java</h3>
           </ol>
         </div>
       </div>
-    </div>
+      <div className="portraitBox"></div>
+    </section>
   );
 };
 

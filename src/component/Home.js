@@ -4,7 +4,7 @@ import "animate.css";
 
 const Home = (props, ref) => {
   return (
-    <div className="homeContainer">
+    <section className="homeContainer">
       <div className="homeContainer_centerBox">
         <p className="homeContainer_centerBox_p1">Hi, my name is</p>
         <div className="homeContainer_centerBox_typeWriterText">
@@ -25,16 +25,16 @@ const Home = (props, ref) => {
             {" "}
             Software Developer.{" "}
           </span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          An aspiring professional Web Developer, I graduated with an Associates
+          in Software Development. After graduating, I have spent the past year
+          honing my craft, learning frameworks, building apps, and exploring
+          development. Take a look at my skills, experience, and apps!
         </p>
       </div>
       <div className="continueBtn_container">
         <button className="continueBtn">Continue</button>
       </div>
-    </div>
+    </section>
   );
 };
 
