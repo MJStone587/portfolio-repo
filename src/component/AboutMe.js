@@ -6,6 +6,9 @@ const AboutMe = (props, ref) => {
 
   return (
     <section className="aboutMeContainer" ref={ref}>
+      <div className="aboutMe_header">
+        <h1>About Me</h1>
+      </div>
       <div className="aboutMe_box">
         <h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -14,10 +17,7 @@ const AboutMe = (props, ref) => {
           adipiscing enim eu turpis. Auctor augue mauris augue neque gravida in
           fermentum et sollicitudin. Venenatis urna cursus eget nunc
           scelerisque. Maecenas volutpat blandit aliquam etiam erat velit.
-          Platea dictumst quisque sagittis purus sit amet volutpat consequat. In
-          cursus turpis massa tincidunt dui ut ornare. Lacinia at quis risus sed
-          vulputate odio. Et magnis dis parturient montes nascetur ridiculus mus
-          mauris vitae.
+          Platea dictumst quisque sagittis purus sit amet volutpat consequat.
         </h3>
       </div>
       <div className="skillsBox">

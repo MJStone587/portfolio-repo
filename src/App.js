@@ -174,6 +174,7 @@ function App() {
           )}
           <Home ref={homeRef} />
           <AboutMe ref={aboutRef} />
+          <Projects ref={projectsRef} />
         </main>
       )}
     </>
