@@ -6,8 +6,8 @@ import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import AboutMe from "./component/AboutMe";
 import logo from "./images/logoMJ5.png";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 function App() {
   const { width } = useWindowSize();
@@ -134,8 +134,9 @@ function App() {
           </div>
           <main className="desktopContent">
             <Home ref={homeRef} />
-            <AboutMe />
-            <Projects />
+            <AboutMe ref={aboutRef} />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />
           </main>
         </>
       )}

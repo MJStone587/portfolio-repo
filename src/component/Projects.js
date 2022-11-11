@@ -1,13 +1,14 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useRef } from "react";
 import ProjectDisp from "./ProjectDisp.js";
-import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import financialForgeScreen from "../images/financialForgeSS.png";
-import { Link } from "react-router-dom";
+import pokemonScreen from "../images/pokemonAppScreen1.png";
+import what2watchScreen from "../images/what2watchScreen.png";
+import portfolioScreen from "../images/portfolioScreen.png";
 
 const Projects = (props, ref) => {
   const [projectDisp, setProjDisp] = useState(0);
-  const { ref: myRef, inView: isVisible } = useInView();
+  const contactRef = useRef();
 
   const incrementDisp = function () {
     let pjcDisp = projectDisp;
@@ -29,15 +30,17 @@ const Projects = (props, ref) => {
     }
   };
 
+  function scrollToDiv(currentRef) {
+    currentRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <section className="projects_container" ref={myRef}>
+    <section className="projects_container" ref={ref}>
       <div className="projects_header">
-        <h1 className="projects_title" ref={ref}>
-          My Projects
-        </h1>
-        <h2 id="projects_callToAction">
+        <h1>My Projects</h1>
+        <h2>
           Like what you see?
-          <button id="contactMeBtn" to="/contact">
+          <button id="contactMeBtn" onClick={() => scrollToDiv(contactRef)}>
             Contact Me!
           </button>
         </h2>
@@ -50,7 +53,7 @@ const Projects = (props, ref) => {
 
         {projectDisp === 0 && (
           <ProjectDisp
-            img={financialForgeScreen}
+            image={financialForgeScreen}
             title="Financial Organizer App"
             alt="Financial Organizer"
             description="Track and review spending and savings"
@@ -61,6 +64,7 @@ const Projects = (props, ref) => {
         )}
         {projectDisp === 1 && (
           <ProjectDisp
+            image={pokemonScreen}
             title="Pokemon Search"
             alt="Pokemon App"
             description="Search your favorite pokemon"
@@ -71,6 +75,7 @@ const Projects = (props, ref) => {
         )}
         {projectDisp === 2 && (
           <ProjectDisp
+            image={what2watchScreen}
             title="Movie / Television Browsing App"
             alt="What2Watch"
             description="Movie display and search using my own API"
@@ -81,6 +86,7 @@ const Projects = (props, ref) => {
         )}
         {projectDisp === 3 && (
           <ProjectDisp
+            image={portfolioScreen}
             title="Portfolio"
             alt="Portfolio"
             description="You are looking at it!"
@@ -99,28 +105,28 @@ const Projects = (props, ref) => {
         <li>
           <FontAwesomeIcon
             onClick={() => setProjDisp(0)}
-            style={{ color: projectDisp === 0 ? "white" : "#031013" }}
+            style={{ color: projectDisp === 0 ? "#2adfff" : "#031013" }}
             icon="fa-solid fa-circle-notch"
           />
         </li>
         <li>
           <FontAwesomeIcon
             onClick={() => setProjDisp(1)}
-            style={{ color: projectDisp === 1 ? "white" : "#031013" }}
+            style={{ color: projectDisp === 1 ? "#2adfff" : "#031013" }}
             icon="fa-solid fa-circle-notch"
           />
         </li>
         <li>
           <FontAwesomeIcon
             onClick={() => setProjDisp(2)}
-            style={{ color: projectDisp === 2 ? "white" : "#031013" }}
+            style={{ color: projectDisp === 2 ? "#2adfff" : "#031013" }}
             icon="fa-solid fa-circle-notch"
           />
         </li>
         <li>
           <FontAwesomeIcon
             onClick={() => setProjDisp(3)}
-            style={{ color: projectDisp === 3 ? "white" : "#031013" }}
+            style={{ color: projectDisp === 3 ? "#2adfff" : "#031013" }}
             icon="fa-solid fa-circle-notch"
           />
         </li>

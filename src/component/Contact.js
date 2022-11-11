@@ -25,7 +25,7 @@ const Contact = (props, ref) => {
       );
   };
   return (
-    <div className="contactPage" ref={ref}>
+    <div className="contact_container" ref={ref}>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />

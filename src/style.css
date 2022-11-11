@@ -16,6 +16,7 @@ html {
   --blueShadow-color: #2adfff6c;
   --pinkGradientButton-color: #fb00afb4;
   --global-borderRadius: 0.25rem;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "VT323", monospace;
 }
 section {
@@ -73,6 +74,7 @@ section {
   width: 1.25rem;
   height: 1.25rem;
 }
+/*-------------------------*/
 /* --------Desktop Navbar------- */
 .navbar {
   display: flex;
@@ -159,6 +161,7 @@ section {
 .btnContact:hover:before {
   left: 100%;
 }
+/*-------------------------*/
 
 /* ---------Navbar Mobile-------- */
 .fa-bars {
@@ -195,6 +198,7 @@ section {
   color: #031013;
   background-color: #5ebce7;
 }
+/*-------------------------*/
 
 /* --------HOME---------- */
 .homeContainer {
@@ -202,7 +206,7 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .homeContainer_centerBox {
@@ -271,57 +275,14 @@ section {
 .continueBtn_container:hover {
   border: 1px solid var(--blueFont-color);
 }
-/*
-REFLECTION OPTIONAL
--webkit-box-reflect: below 8px
-linear-gradient(transparent, transparent, #0002); */
-
-/* 
-.parallaxContainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-.foreground,
-.midground {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-.foreground {
-  transform: translateZ(-10px) scale(1.5);
-  top: 50%;
-}
-.midground {
-  transform: translateZ(-15px) scale(1);
-  left: 30%;
-}
-.parallaxTitle {
-  font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
-  color: #2adfff;
-  text-shadow: 0px 0px 10px rgb(1, 29, 1);
-  z-index: 4;
-  align-self: flex-end;
-}
-.parallaxRefDiv {
-  align-self: flex-end;
-}
-.desktopEmptyDiv {
-  height: 100%;
-}
-*/
+/*-------------------------*/
 /* ----------About Me---------- */
 .aboutMeContainer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
 }
 .aboutMe_header {
   align-self: flex-start;
@@ -334,11 +295,19 @@ linear-gradient(transparent, transparent, #0002); */
   width: 100%;
 }
 .aboutMe_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+.aboutMe_description {
+  display: flex;
+  flex-flow: column wrap;
   color: var(--pinkFadedFont-color);
   max-width: 35vw;
+  order: 1;
   max-height: 25vh;
-  margin-top: calc(2rem + 0.390625vw);
-  margin-right: calc(15rem + 0.390625vw);
   font-size: calc(18px + (23 - 18) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 0.25rem;
 }
@@ -349,8 +318,9 @@ linear-gradient(transparent, transparent, #0002); */
   align-items: center;
   justify-content: flex-end;
   border-radius: 0.25rem;
-  margin-top: calc(-2rem + 0.390625vw);
-  margin-left: calc(10rem + 0.390625vw);
+  margin-top: calc(8rem - 0.390625vw);
+  margin-left: calc(-18rem - 0.390625vw);
+  order: 2;
   z-index: 10;
 }
 .skillsBox_row1 {
@@ -383,11 +353,12 @@ linear-gradient(transparent, transparent, #0002); */
   height: 60vh;
   max-width: 18vw;
   min-width: 15vw;
-  margin-top: calc(-18rem + 0.390625vw);
-  margin-left: calc(40rem + 0.390625vw);
+  order: 3;
   box-shadow: 2px 2px 10px 2px black;
+  margin-left: calc(-8rem - 0.390625vw);
   z-index: 5;
 }
+/*-------------------------*/
 
 /*--------Projects Page----------*/
 .projects_container {
@@ -395,19 +366,7 @@ linear-gradient(transparent, transparent, #0002); */
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  row-gap: 1rem;
-}
-
-#contactMeBtn {
-  text-decoration: none;
-  border: none;
-  background-color: transparent;
-  color: var(--blueFont-color);
-}
-#contactMeBtn:hover {
-  cursor: pointer;
-  color: #c4d8e1;
+  height: 100%;
 }
 .projects_header {
   display: flex;
@@ -415,7 +374,6 @@ linear-gradient(transparent, transparent, #0002); */
   width: 100%;
   align-items: flex-start;
   justify-content: flex-end;
-  flex-grow: 1;
   border-bottom: 1px solid var(--pinkFadedFont-color);
 }
 .projects_header h1 {
@@ -431,13 +389,22 @@ linear-gradient(transparent, transparent, #0002); */
   color: var(--pinkFadedFont-color);
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
+#contactMeBtn {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: var(--blueFadedFont-color);
+}
+#contactMeBtn:hover {
+  cursor: pointer;
+  color: var(--blueFont-color);
+}
 .projects_carousel {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  flex-grow: 1;
-  column-gap: 2rem;
-  width: 100%;
+  column-gap: 1rem;
+  width: 80%;
 }
 .fa-chevron-right {
   font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
@@ -477,20 +444,30 @@ linear-gradient(transparent, transparent, #0002); */
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;
-  flex-grow: 2;
   padding: 1rem;
 }
 .carousel_window_left {
   display: flex;
   border-radius: 0.25rem;
-  mix-blend-mode: screen;
   width: 50%;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+  background-color: var(--boxBG-alt-color);
   z-index: 1;
+  transition: background-color 0.5s;
+}
+.carousel_window_left:hover {
+  background-color: transparent;
+  cursor: pointer;
 }
 .carousel_window_left img {
   width: 100%;
   height: 100%;
+  mix-blend-mode: screen;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+  transition: mix-blend-mode 0.5s filter 0.5s;
+}
+.carousel_window_left img:hover {
+  mix-blend-mode: none;
+  filter: none;
 }
 .carousel_window_right {
   display: flex;
@@ -546,10 +523,43 @@ figcaption {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 2rem;
   flex-grow: 1;
 }
-/*-----------------------------------------*/
+/*-------------------------*/
+
+/*-------Contact---------*/
+.contact_container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/*------------------------*/
+
+/*------ScrollBar---------*/
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--boxBG-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blueFadedFont-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blueFont-color);
+}
+
+/*-------------------------*/
 
 .invisibile {
   visibility: hidden;
@@ -610,7 +620,7 @@ figcaption {
   .aboutBodyContainer {
     padding-top: 5vh;
   }
-  .aboutMe_box {
+  .aboutMe_description {
     margin: 0;
   }
   .aboutBodyArrow {
@@ -642,8 +652,7 @@ figcaption {
   .fa-circle-notch {
     font-size: 1.25rem;
   }
-  .contactPage {
-    height: 100vh;
+  .contact_container {
     display: grid;
     scroll-snap-align: center;
     place-items: center;

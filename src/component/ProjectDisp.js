@@ -1,11 +1,10 @@
 import React from "react";
-import financialForgeScreen from "../images/financialForgeSS.png";
 
 export default function ProjectDisp(props) {
   return (
     <figure className="projects_carousel_window">
       <div className="carousel_window_left">
-        <img src={financialForgeScreen} alt={props.alt}></img>
+        <img src={props.image} alt={props.alt}></img>
       </div>
       <div className="carousel_window_right">
         <div className="carousel_window_right_innerTop">
