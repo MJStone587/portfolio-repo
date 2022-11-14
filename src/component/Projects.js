@@ -7,9 +7,11 @@ import what2watchScreen from "../images/what2watchScreen.png";
 import portfolioScreen from "../images/portfolioScreen.png";
 
 const Projects = (props, ref) => {
+  // projectDisp is to change our current viewed project
   const [projectDisp, setProjDisp] = useState(0);
   const contactRef = useRef();
 
+  //
   const incrementDisp = function () {
     let pjcDisp = projectDisp;
     if (pjcDisp >= 3) {
@@ -56,7 +58,7 @@ const Projects = (props, ref) => {
             image={financialForgeScreen}
             title="Financial Organizer App"
             alt="Financial Organizer"
-            description="Track and review spending and savings"
+            description="CRUD app for finances with login authentication"
             tools="Javascript, Html, CSS, MongoDB, Express, NodeJS"
             repo="https://github.com/MJStone587/Framework"
             site="https://hidden-peak-86387.herokuapp.com/catalog"
@@ -67,8 +69,8 @@ const Projects = (props, ref) => {
             image={pokemonScreen}
             title="Pokemon Search"
             alt="Pokemon App"
-            description="Search your favorite pokemon"
-            tools="CSS, Javascript, Html"
+            description="To better understand APIs, I created this Pokemon search/browse app"
+            tools="CSS, Javascript, Html, PokemonAPI, VScode  "
             repo="https://github.com/MJStone587/Pokemon"
             site="https://mjstone587.github.io/Pokemon/"
           />
@@ -78,8 +80,8 @@ const Projects = (props, ref) => {
             image={what2watchScreen}
             title="Movie / Television Browsing App"
             alt="What2Watch"
-            description="Movie display and search using my own API"
-            tools="CSS, Javascript, Html"
+            description="Movie display and search using my own JSon data."
+            tools="CSS, Javascript, Html, VScode"
             repo="https://github.com/MJStone587/What2Watch/"
             site="https://mjstone587.github.io/What2Watch/"
           />
@@ -90,7 +92,7 @@ const Projects = (props, ref) => {
             title="Portfolio"
             alt="Portfolio"
             description="You are looking at it!"
-            tools="CSS, Javascript, Html"
+            tools="CSS, Javascript, Html, ReactJS, VScode"
             repo="https://github.com/MJStone587/portfolio-repo"
             site="https://mjstone587.github.io/Pokemon/"
           />

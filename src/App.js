@@ -108,7 +108,7 @@ function App() {
               <li>
                 <a
                   aria-label="Linkedin  "
-                  href="https://linkedin.com  /in/MJStone587"
+                  href="https://linkedin.com/in/MJStone587"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -176,6 +176,7 @@ function App() {
           <Home ref={homeRef} />
           <AboutMe ref={aboutRef} />
           <Projects ref={projectsRef} />
+          <Contact ref={contactRef} />
         </main>
       )}
     </>

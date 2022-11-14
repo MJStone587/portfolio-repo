@@ -19,6 +19,7 @@ import {
   faEnvelopesBulk,
   faBars,
   faPowerOff,
+  faRightToBracket,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -33,7 +34,8 @@ library.add(
   faCircleNotch,
   faEnvelopesBulk,
   faBars,
-  faPowerOff
+  faPowerOff,
+  faRightToBracket
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

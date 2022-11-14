@@ -25,7 +25,11 @@ const Contact = (props, ref) => {
       );
   };
   return (
-    <div className="contact_container" ref={ref}>
+    <section className="contact_container" ref={ref}>
+      <div className="contact_header">
+        <h1>Contact</h1>
+        <h2>This form will send directly to my email</h2>
+      </div>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -40,7 +44,7 @@ const Contact = (props, ref) => {
         <h1>Send me an email and let's get in touch!</h1>
         <FontAwesomeIcon icon="fa-solid fa-envelopes-bulk" />
       </aside>
-    </div>
+    </section>
   );
 };
 

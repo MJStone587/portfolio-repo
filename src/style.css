@@ -15,6 +15,7 @@ html {
   --blueBorder-color: #2adfff6c;
   --blueShadow-color: #2adfff6c;
   --pinkGradientButton-color: #fb00afb4;
+  --pinkImageCover-color: #6d004e;
   --global-borderRadius: 0.25rem;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "VT323", monospace;
@@ -24,17 +25,9 @@ section {
   max-width: 1600px;
   padding: 0rem 15rem;
 }
-.mobileMainContainer {
-  min-height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: var(--bg-color);
-  scroll-snap-type: y proximity;
-}
 .desktopContent {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 100vh;
   width: 100%;
   background-color: var(--bg-color);
 }
@@ -175,6 +168,13 @@ section {
 .fa-bars:hover {
   cursor: pointer;
 }
+.mobileMainContainer {
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  scroll-snap-type: y proximity;
+}
 .navbarMobile {
   position: fixed;
   width: 28vw;
@@ -207,6 +207,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
+  height: 100vh;
 }
 
 .homeContainer_centerBox {
@@ -215,8 +216,8 @@ section {
   padding: calc(2rem + 0.390625vw) calc(2rem + 0.390625vw);
   border: 1px solid var(--blueBorder-color);
   box-shadow: 6px 6px 12px 7px black;
-  max-width: 40vw;
-  min-width: 40vw;
+  max-width: 35vw;
+  min-width: 35vw;
   border-radius: 0.25rem;
   background-color: var(--boxBG-color);
 }
@@ -235,14 +236,14 @@ section {
   color: var(--pinkFadedFont-color);
 }
 .homeContainer_centerBox_p2Span {
-  font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
   color: #27b5ce;
 }
 .homeContainer_centerBox_typeWriterText {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  font-size: calc(24px + (64 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)));
   color: #2adfff;
 }
 .continueBtn_container {
@@ -275,6 +276,9 @@ section {
 .continueBtn_container:hover {
   border: 1px solid var(--blueFont-color);
 }
+.continueBtn:hover {
+  cursor: pointer;
+}
 /*-------------------------*/
 /* ----------About Me---------- */
 .aboutMeContainer {
@@ -282,7 +286,7 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
 }
 .aboutMe_header {
   align-self: flex-start;
@@ -292,7 +296,7 @@ section {
   color: var(--blueFont-color);
   font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
   border-bottom: 1px solid var(--pinkFadedFont-color);
-  width: 100%;
+  width: 80%;
 }
 .aboutMe_box {
   display: flex;
@@ -305,10 +309,10 @@ section {
   display: flex;
   flex-flow: column wrap;
   color: var(--pinkFadedFont-color);
-  max-width: 35vw;
+  max-width: 38vw;
   order: 1;
   max-height: 25vh;
-  font-size: calc(18px + (23 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 0.25rem;
 }
 .skillsBox {
@@ -349,14 +353,13 @@ section {
   color: var(--blueFadedFont-color);
 }
 .portraitBox {
-  background-color: var(--boxBG-color);
   height: 60vh;
   max-width: 18vw;
   min-width: 15vw;
   order: 3;
-  box-shadow: 2px 2px 10px 2px black;
-  margin-left: calc(-8rem - 0.390625vw);
+  margin-left: calc(-7rem - 0.390625vw);
   z-index: 5;
+  border-right: 1px solid var(--pinkFadedFont-color);
 }
 /*-------------------------*/
 
@@ -366,14 +369,14 @@ section {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 110vh;
 }
 .projects_header {
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: flex-end;
+  width: 80%;
+  justify-content: flex-start;
+  align-self: flex-start;
   border-bottom: 1px solid var(--pinkFadedFont-color);
 }
 .projects_header h1 {
@@ -403,31 +406,32 @@ section {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  column-gap: 1rem;
-  width: 80%;
+  justify-content: space-evenly;
+  width: 90%;
 }
 .fa-chevron-right {
   font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--blueFadedFont-color);
   z-index: 10;
   background-color: transparent;
 }
 .fa-chevron-left {
   font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--blueFadedFont-color);
   z-index: 10;
   background-color: transparent;
 }
 .fa-chevron-right:hover {
   cursor: pointer;
-  color: var(--pinkFont-color);
+  color: var(--blueFont-color);
 }
 .fa-chevron-left:hover {
-  color: var(--pinkFont-color);
+  color: var(--blueFont-color);
 }
 .projects_carousel_nav {
   display: flex;
   flex-flow: row nowrap;
+  column-gap: 1rem;
   padding: 0.2rem;
 }
 .fa-circle-notch {
@@ -436,13 +440,11 @@ section {
 .fa-circle-notch:hover {
   cursor: pointer;
 }
-/* height: calc(225px + (450 - 225) * ((100vw - 320px) / (1600 - 320)));
-  width: calc(100px + (700 - 100) * ((100vw - 320px) / (1600 - 320)));
-  */
 .projects_carousel_window {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50vh;
   flex-flow: row nowrap;
   padding: 1rem;
 }
@@ -450,7 +452,7 @@ section {
   display: flex;
   border-radius: 0.25rem;
   width: 50%;
-  background-color: var(--boxBG-alt-color);
+  background-color: var(--pinkImageCover-color);
   z-index: 1;
   transition: background-color 0.5s;
 }
@@ -474,21 +476,21 @@ section {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  row-gap: 0.5rem;
+  row-gap: 0.25rem;
   background-color: var(--boxBG-color);
   border-radius: var(--global-borderRadius);
   margin-left: -5rem;
   z-index: 5;
-  height: calc(125px + (150 - 125) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(125px + (175 - 125) * ((100vw - 320px) / (1600 - 320)));
   width: 50%;
   box-shadow: 2px 2px 10px 0px black;
 }
-.projects_carousel_window h2 {
+.projects_carousel_window h1 {
   font-size: calc(23px + (30 - 23) * ((100vw - 320px) / (1600 - 320)));
   color: var(--blueFont-color);
 }
-figcaption {
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
+.projects_carousel_window h3 {
+  font-size: calc(23px + (20 - 23) * ((100vw - 320px) / (1600 - 320)));
   color: var(--pinkFadedFont-color);
 }
 .projects_carousel_window p {
@@ -497,21 +499,19 @@ figcaption {
 }
 .projects_carousel_window a {
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
-  color: var(--blueFont-color);
-  background-color: var(--boxBG-alt-color);
-  border-radius: 5%;
-  text-decoration: none;
-  border: 1px solid transparent;
-  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-  box-shadow: 1px 1px 8px 2px black;
+  color: var(--pinkFadedFont-color);
 }
 .projects_carousel_window a:hover {
   cursor: pointer;
   color: white;
-  border: 1px solid var(--blueFont-color);
+}
+.fa-share-from-square {
+  color: var(--blueFont-color);
 }
 .carousel_window_right_innerTop {
   display: flex;
+  width: 100%;
+  padding: 0rem 1rem;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
@@ -530,11 +530,28 @@ figcaption {
 
 /*-------Contact---------*/
 .contact_container {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
   align-items: center;
+}
+.contact_header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--pinkFadedFont-color);
+  align-self: flex-start;
+  width: 80%;
+}
+.contact_header h1 {
+  color: var(--blueFont-color);
+  font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
+}
+.contact_header h2 {
+  color: var(--pinkFadedFont-color);
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 /*------------------------*/
 
@@ -608,8 +625,8 @@ figcaption {
   }
   .btnMobile {
     border: none;
-    background-color: #c4d8e1;
     width: 100%;
+    color: var(--blueFadedFont-color);
   }
   .btnMobile:hover {
     color: #5ebce7;
