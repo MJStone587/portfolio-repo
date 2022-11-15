@@ -37,18 +37,19 @@ section {
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 12;
-  bottom: 0;
-  left: 5%;
-  width: 3rem;
+  width: 100%;
 }
 .desktopOverlay_container li {
   color: #2adfff;
 }
 .left_overlayList {
+  position: fixed;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  left: 5%;
+  bottom: 0;
 }
 .left_overlayList::after {
   content: "";
@@ -56,7 +57,21 @@ section {
   height: 99px;
   background-color: var(--pinkFadedFont-color);
 }
-
+.right_overlayList {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  right: 5%;
+  bottom: 0;
+}
+.right_overlayList::after {
+  content: "";
+  width: 1px;
+  height: 99px;
+  background-color: var(--pinkFadedFont-color);
+}
 .overlay-github {
   color: #961f74;
 }
