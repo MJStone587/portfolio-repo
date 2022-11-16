@@ -22,7 +22,7 @@ html {
 }
 section {
   margin: 0rem auto;
-  max-width: 1600px;
+  max-width: 1200px;
   padding: 0rem 15rem;
 }
 .desktopContent {
@@ -72,8 +72,13 @@ section {
   height: 99px;
   background-color: var(--pinkFadedFont-color);
 }
-.overlay-github {
+.overlay {
   color: #961f74;
+}
+.overlay_email {
+  writing-mode: vertical-rl;
+  letter-spacing: 2px;
+  text-decoration: none;
 }
 .overlay:hover {
   color: var(--blueFont-color);

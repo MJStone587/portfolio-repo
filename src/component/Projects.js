@@ -92,7 +92,7 @@ const Projects = (props, ref) => {
             title="Portfolio"
             alt="Portfolio"
             description="You are looking at it!"
-            tools="CSS, Javascript, Html, ReactJS, VScode"
+            tools="CSS, Javascript, Html, ReactJS, VScode, EmailJS"
             repo="https://github.com/MJStone587/portfolio-repo"
             site="https://mjstone587.github.io/Pokemon/"
           />
