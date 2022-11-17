@@ -77,7 +77,6 @@ function App() {
                 </button>
               </div>
             </div>
-
             <div className="navbarRight">
               <img src={logo} alt="Logo" id="navbarLogo"></img>
             </div>
@@ -145,7 +144,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <main className="desktopContent fillHeight">
+          <main className="desktopContent">
             <Home ref={homeRef} />
             <AboutMe ref={aboutRef} />
             <Projects ref={projectsRef} />
@@ -157,7 +156,7 @@ function App() {
         <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
       )}
       {width < 768 && (
-        <main onClick={turnOffNav} className="mobileMainContainer">
+        <>
           {navToggle === true && (
             <ul className="navbarMobile">
               <button
@@ -186,11 +185,13 @@ function App() {
               </button>
             </ul>
           )}
-          <Home ref={homeRef} />
-          <AboutMe ref={aboutRef} />
-          <Projects ref={projectsRef} />
-          <Contact ref={contactRef} />
-        </main>
+          <main onClick={turnOffNav} className="mobileMainContainer">
+            <Home ref={homeRef} />
+            <AboutMe ref={aboutRef} />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />
+          </main>
+        </>
       )}
     </>
   );

@@ -20,10 +20,7 @@ const AboutMe = (props, ref) => {
           </h3>
         </div>
         <div className="skillsBox">
-          <div className="skillsBox_row1">
-            <h1>Skills</h1>
-          </div>
-          <div className="skillsBox_row2">
+          <div className="skillsBox_content">
             <ol>
               <h3>HTML</h3>
               <h3>CSS</h3>
@@ -38,7 +35,14 @@ const AboutMe = (props, ref) => {
             </ol>
           </div>
         </div>
-        <div className="portraitBox"></div>
+        <div className="portraitBox">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
+            quis commodo odio aenean sed adipiscing diam. Eget sit amet tellus
+            cras adipiscing enim eu turpis.
+          </p>
+        </div>
       </div>
     </section>
   );

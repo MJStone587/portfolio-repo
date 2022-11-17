@@ -2,8 +2,8 @@
 
 html {
   margin: 0;
-  font-size: 18px;
   width: 100%;
+  overflow-y: scroll;
   overflow-x: hidden;
   --bg-color: #000631;
   --boxBG-color: #000949;
@@ -21,14 +21,12 @@ html {
   font-family: "VT323", monospace;
 }
 section {
-  margin: 0rem auto;
+  margin: 0rem 150px;
   max-width: 1200px;
-  padding: 0rem 15rem;
 }
 .desktopContent {
-  overflow-x: hidden;
-  overflow-y: scroll;
   width: 100%;
+  padding: 0rem 0rem 5rem 0rem;
   background-color: var(--bg-color);
 }
 .desktopOverlay_container {
@@ -102,19 +100,17 @@ section {
   justify-content: space-evenly;
   display: flex;
   align-items: center;
-  width: 50%;
-  padding: 0rem 0rem 0rem 2rem;
+  flex: 2;
 }
 #navbarLogo {
   width: 6rem;
   height: 6rem;
 }
 .navbarRight {
-  width: 50%;
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0rem 2rem 0rem 0rem;
 }
 .btnHome_container,
 .btnAbout_container,
@@ -189,18 +185,16 @@ section {
   cursor: pointer;
 }
 .mobileMainContainer {
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
-  overflow-x: hidden;
   background-color: var(--bg-color);
-  scroll-snap-type: y proximity;
 }
 .navbarMobile {
   position: fixed;
   width: 28vw;
   margin-left: calc(1.25rem + 1vw);
   height: calc(200px + (250 - 200) * ((100vw - 320px) / (1920 - 320)));
-  overflow: scroll;
   margin-top: calc(3rem - 0.390625vw);
   font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1920 - 300)));
   z-index: 10;
@@ -226,8 +220,8 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
 }
 
 .homeContainer_centerBox {
@@ -271,20 +265,18 @@ section {
   justify-content: center;
   align-items: center;
   height: 6vh;
-  min-height: 6vh;
   width: 10vw;
-  min-width: 10vw;
   align-self: flex-end;
-  margin-top: calc(-1.5rem - 0.390625vw);
-  margin-right: calc(18rem - 0.390625vw);
+  margin-top: -1.5rem;
+  margin-right: 30rem;
   background-color: var(--boxBG-color);
   box-shadow: 3px 3px 10px 4px black;
   border: 1px solid var(--blueBorder-color);
   border-radius: 0.25rem;
 }
 .continueBtn {
-  height: 6vh;
-  width: 10vw;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: var(--blueFont-color);
   background-color: var(--boxBG-alt-color);
@@ -306,7 +298,9 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: var(--boxBG-color);
 }
 .aboutMe_header {
   align-self: flex-start;
@@ -320,66 +314,55 @@ section {
 }
 .aboutMe_box {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+  align-items: center;
   padding-top: 1rem;
+  flex: 2;
 }
 .aboutMe_description {
   display: flex;
   flex-flow: column wrap;
   color: var(--pinkFadedFont-color);
-  max-width: 38vw;
   order: 1;
-  max-height: 25vh;
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 0.25rem;
+  z-index: 1;
 }
 .skillsBox {
   display: flex;
   color: #2adfff;
   flex-flow: column nowrap;
   align-items: center;
+  order: 2;
   justify-content: flex-end;
   border-radius: 0.25rem;
-  margin-top: calc(8rem - 0.390625vw);
-  margin-left: calc(-18rem - 0.390625vw);
-  order: 2;
   z-index: 10;
 }
-.skillsBox_row1 {
-  place-self: center;
-  padding: 1rem;
-}
-.skillsBox h1 {
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-  text-shadow: 1px 1px 5px black;
-}
-.skillsBox_row2 ol {
+.skillsBox_content ol {
   display: flex;
   flex-flow: row wrap;
-  justify-items: space-evenly;
-  column-gap: 0.5rem;
-  align-items: flex-start;
+  align-items: center;
   padding: 0.15rem;
   background-color: var(--boxBG-alt-color);
-  max-width: 25vw;
   border-radius: 0.25rem;
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   box-shadow: 2px 2px 10px 2px black;
 }
-.skillsBox_row2 h3 {
+.skillsBox_content h3 {
   padding: 1rem;
   color: var(--blueFadedFont-color);
 }
 .portraitBox {
-  height: 60vh;
-  max-width: 18vw;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  max-width: 30vw;
   min-width: 15vw;
   order: 3;
-  margin-left: calc(-7rem - 0.390625vw);
   z-index: 5;
-  border-right: 1px solid var(--pinkFadedFont-color);
+  color: var(--pinkFadedFont-color);
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 /*-------------------------*/
 
@@ -388,8 +371,9 @@ section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
-  height: 110vh;
+  justify-content: flex-start;
+  min-height: 100vh;
+  max-width: 100%;
 }
 .projects_header {
   display: flex;
@@ -448,23 +432,12 @@ section {
 .fa-chevron-left:hover {
   color: var(--blueFont-color);
 }
-.projects_carousel_nav {
-  display: flex;
-  flex-flow: row nowrap;
-  column-gap: 1rem;
-  padding: 0.2rem;
-}
-.fa-circle-notch {
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
-}
-.fa-circle-notch:hover {
-  cursor: pointer;
-}
 .projects_carousel_window {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  margin-top: 5rem;
+  flex: 2;
   flex-flow: row nowrap;
   padding: 1rem;
 }
@@ -482,10 +455,9 @@ section {
 }
 .carousel_window_left img {
   width: 100%;
-  height: 100%;
+  height: 14rem;
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(1) brightness(90%);
-  transition: mix-blend-mode 0.5s filter 0.5s;
 }
 .carousel_window_left img:hover {
   mix-blend-mode: none;
@@ -505,25 +477,25 @@ section {
   width: 50%;
   box-shadow: 2px 2px 10px 0px black;
 }
-.projects_carousel_window h1 {
+.carousel_window_right_innerTop h1 {
   font-size: calc(23px + (30 - 23) * ((100vw - 320px) / (1600 - 320)));
   color: var(--blueFont-color);
 }
-.projects_carousel_window h3 {
+.carousel_window_right_innerTop h3 {
   font-size: calc(23px + (20 - 23) * ((100vw - 320px) / (1600 - 320)));
   color: var(--pinkFadedFont-color);
 }
-.projects_carousel_window p {
+.carousel_window_right_innerTop p {
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
   color: var(--blueFadedFont-color);
 }
-.projects_carousel_window a {
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
+.carousel_window_right_innerBot a {
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1600 - 320)));
   color: var(--pinkFadedFont-color);
 }
 .projects_carousel_window a:hover {
   cursor: pointer;
-  color: white;
+  color: var(--blueFont-color);
 }
 .fa-share-from-square {
   color: var(--blueFont-color);
@@ -531,7 +503,6 @@ section {
 .carousel_window_right_innerTop {
   display: flex;
   width: 100%;
-  padding: 0rem 1rem;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
@@ -546,15 +517,28 @@ section {
   column-gap: 2rem;
   flex-grow: 1;
 }
+.projects_carousel_nav {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 2rem;
+  column-gap: 1rem;
+  padding: 0.2rem;
+}
+.fa-circle-notch {
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
+}
+.fa-circle-notch:hover {
+  cursor: pointer;
+}
 /*-------------------------*/
 
 /*-------Contact---------*/
 .contact_container {
   height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  margin-top: 5rem;
   align-items: center;
 }
 .contact_header {
@@ -635,64 +619,67 @@ section {
 }
 @media screen and (max-width: 1024px) {
   html {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (max-width: 415px) {
-  html {
-    font-size: 16px;
+  section {
+    max-width: 414px;
+    padding: 0px 50px;
   }
-  .btnMobile {
-    border: none;
+  .homeContainer_centerBox {
+    max-width: 75vw;
+    min-width: 75vw;
+    padding: 1.5rem;
+  }
+  .continueBtn_container {
+    margin-right: 2rem;
+    margin-top: -1rem;
+    height: 2rem;
+    width: 25vw;
+  }
+  .aboutMeContainer {
+    justify-content: flex-start;
+    width: 80%;
+  }
+  .aboutMe_box {
+    flex-flow: column nowrap;
+  }
+  .skillsBox {
+    margin: 0;
+  }
+  .portraitBox {
+    margin: 0;
+    max-width: 80vw;
+    min-width: 80vw;
+    height: 30vh;
+  }
+  .projects_container {
+    justify-content: flex-start;
+  }
+  .projects_carousel {
+    flex: 2;
     width: 100%;
-    color: var(--blueFadedFont-color);
   }
-  .btnMobile:hover {
-    color: #5ebce7;
-  }
-  .homeContainer {
-    padding-bottom: 10vh;
-  }
-  .aboutBodyContainer {
-    padding-top: 5vh;
-  }
-  .aboutMe_description {
+  .projects_carousel_window {
     margin: 0;
+    row-gap: 10px;
+    flex-flow: column nowrap;
   }
-  .aboutBodyArrow {
-    display: none;
+  .carousel_window_left {
+    order: 2;
+    width: 100%;
+    flex: 1;
   }
-  .projectDispContainer {
-    padding-top: 2rem;
-    height: 100vh;
-    scroll-snap-align: center;
+  .carousel_window_right {
+    width: 100%;
     margin: 0;
-  }
-  .projectDispContainer h1 {
-    padding: 5px;
-    font-size: 2rem;
-  }
-  .projectDispBox {
-    width: 75vw;
-    z-index: 1;
-  }
-  .fa-chevron-right,
-  .fa-chevron-left {
-    font-size: 45px;
-  }
-  .carouselNav {
-    margin-bottom: 1rem;
-    width: 40vw;
-    height: 8vh;
-  }
-  .fa-circle-notch {
-    font-size: 1.25rem;
+    flex: 2;
+    order: 1;
   }
   .contact_container {
-    display: grid;
-    scroll-snap-align: center;
-    place-items: center;
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 391px) {
