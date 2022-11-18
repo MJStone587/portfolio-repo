@@ -21,12 +21,13 @@ html {
   font-family: "VT323", monospace;
 }
 section {
-  margin: 0rem 150px;
-  max-width: 1200px;
+  margin: 0px 150px;
+  width: 1200px;
 }
 .desktopContent {
-  width: 100%;
-  padding: 0rem 0rem 5rem 0rem;
+  margin: 0px auto;
+  max-width: 100%;
+  padding: 0px 150px;
   background-color: var(--bg-color);
 }
 .desktopOverlay_container {
@@ -94,6 +95,8 @@ section {
   flex-flow: row nowrap;
   background-color: transparent;
   height: 11vh;
+  box-sizing: border-box;
+  padding: 10px 20px 0px 20px;
   z-index: 5;
 }
 .navbarLeft {
@@ -185,8 +188,8 @@ section {
   cursor: pointer;
 }
 .mobileMainContainer {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
   background-color: var(--bg-color);
 }
@@ -268,7 +271,7 @@ section {
   width: 10vw;
   align-self: flex-end;
   margin-top: -1.5rem;
-  margin-right: 30rem;
+  margin-right: 20rem;
   background-color: var(--boxBG-color);
   box-shadow: 3px 3px 10px 4px black;
   border: 1px solid var(--blueBorder-color);
@@ -300,7 +303,6 @@ section {
   align-items: center;
   max-width: 100%;
   min-height: 100vh;
-  background-color: var(--boxBG-color);
 }
 .aboutMe_header {
   align-self: flex-start;
@@ -371,7 +373,7 @@ section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   min-height: 100vh;
   max-width: 100%;
 }
@@ -408,10 +410,9 @@ section {
 }
 .projects_carousel {
   display: flex;
-  flex-flow: row nowrap;
+  margin-top: 2rem;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-evenly;
-  width: 90%;
 }
 .fa-chevron-right {
   font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
@@ -436,10 +437,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
   flex: 2;
+  width: 70vw;
   flex-flow: row nowrap;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+.projects_carousel_window:not(:last-of-type) {
+  margin-bottom: 15rem;
 }
 .carousel_window_left {
   display: flex;
@@ -449,13 +453,14 @@ section {
   z-index: 1;
   transition: background-color 0.5s;
 }
+
 .carousel_window_left:hover {
   background-color: transparent;
   cursor: pointer;
 }
 .carousel_window_left img {
   width: 100%;
-  height: 14rem;
+  height: 20rem;
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(1) brightness(90%);
 }
@@ -467,13 +472,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   flex-flow: column nowrap;
   row-gap: 0.25rem;
   background-color: var(--boxBG-color);
   border-radius: var(--global-borderRadius);
   margin-left: -5rem;
   z-index: 5;
-  height: calc(125px + (175 - 125) * ((100vw - 320px) / (1600 - 320)));
+  order: 2;
+  height: 25vh;
   width: 50%;
   box-shadow: 2px 2px 10px 0px black;
 }
@@ -482,8 +489,9 @@ section {
   color: var(--blueFont-color);
 }
 .carousel_window_right_innerTop h3 {
-  font-size: calc(23px + (20 - 23) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1600 - 320)));
   color: var(--pinkFadedFont-color);
+  padding: 0px 20px;
 }
 .carousel_window_right_innerTop p {
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
@@ -502,15 +510,14 @@ section {
 }
 .carousel_window_right_innerTop {
   display: flex;
-  width: 100%;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100%;
   justify-content: center;
   flex-grow: 2;
 }
 .carousel_window_right_innerBot {
   display: flex;
-  width: 100%;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -534,19 +541,19 @@ section {
 
 /*-------Contact---------*/
 .contact_container {
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .contact_header {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
+  justify-content: center;
   border-bottom: 1px solid var(--pinkFadedFont-color);
-  align-self: flex-start;
   width: 80%;
 }
 .contact_header h1 {
@@ -625,8 +632,9 @@ section {
 
 @media screen and (max-width: 415px) {
   section {
-    max-width: 414px;
+    width: 414px;
     padding: 0px 50px;
+    margin: 0px auto;
   }
   .homeContainer_centerBox {
     max-width: 75vw;
@@ -634,8 +642,8 @@ section {
     padding: 1.5rem;
   }
   .continueBtn_container {
-    margin-right: 2rem;
-    margin-top: -1rem;
+    align-self: center;
+    margin: -1rem 0rem 5rem 10rem;
     height: 2rem;
     width: 25vw;
   }
@@ -683,4 +691,8 @@ section {
   }
 }
 @media screen and (max-width: 391px) {
+  section {
+    width: 391px;
+    padding: 0px 20px;
+  }
 }

@@ -9,14 +9,15 @@ const AboutMe = (props, ref) => {
       <div className="aboutMe_box">
         <div className="aboutMe_description">
           <h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
-            quis commodo odio aenean sed adipiscing diam. Eget sit amet tellus
-            cras adipiscing enim eu turpis. Auctor augue mauris augue neque
-            gravida in fermentum et sollicitudin. Venenatis urna cursus eget
-            nunc scelerisque. Maecenas volutpat blandit aliquam etiam erat
-            velit. Platea dictumst quisque sagittis purus sit amet volutpat
-            consequat.
+            Computers have always been a passion of mine, but as I have matured
+            so has learning. I love to learn and grow and programming gives me
+            the perfect opportunity for this. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Morbi quis commodo odio aenean sed
+            adipiscing diam. Eget sit amet tellus cras adipiscing enim eu
+            turpis.
           </h3>
         </div>
         <div className="skillsBox">

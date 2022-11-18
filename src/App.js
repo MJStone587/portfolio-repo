@@ -27,17 +27,6 @@ function App() {
   const turnOffNav = () => {
     setNavToggle(false);
   };
-  // {navToggle === true && width < 820 && <NavbarMobile />}
-  /* <Home ref={homeRef} />
-            <ParallaxEffect />
-            <div className="desktopEmptyDiv"></div>
-            <NeonCity />
-            <Mountains />
-            <Projects ref={projectsRef} />
-            <Contact ref={contactRef} />\
-          <main className="desktopMainContainer">
-</main>
-*/
   return (
     <>
       {width >= 768 && (

@@ -29,10 +29,10 @@ const Home = (props, ref) => {
             {" "}
             Software Developer.{" "}
           </span>
-          I graduated with an Associates in Software Development. After
-          graduating, I have spent the past year honing my craft, learning
-          frameworks, building apps, and exploring development. Take a look at
-          my skills, experience, and apps!
+          I graduated with an Associates in Software Development in 2021. After
+          graduating, I have spent the past year and more honing my craft,
+          learning frameworks, building apps, and exploring development. Take a
+          look at my skills, experience, and projects!
         </p>
       </div>
       <div className="continueBtn_container">

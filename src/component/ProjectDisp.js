@@ -5,9 +5,11 @@ export default function ProjectDisp(props) {
   return (
     <figure className="projects_carousel_window">
       <div className="carousel_window_left">
-        <img src={props.image} alt={props.alt}></img>
+        <a target="_blank" rel="noreferrer" href={props.site}>
+          <img src={props.image} alt={props.alt}></img>
+        </a>
       </div>
-      <aside className="carousel_window_right">
+      <div className="carousel_window_right">
         <div className="carousel_window_right_innerTop">
           <h1>{props.title}</h1>
           <h3>{props.description}</h3>
@@ -26,7 +28,7 @@ export default function ProjectDisp(props) {
             <FontAwesomeIcon icon="fa-solid fa-right-to-bracket" />
           </a>
         </div>
-      </aside>
+      </div>
     </figure>
   );
 }
