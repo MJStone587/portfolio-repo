@@ -10,7 +10,7 @@ const Home = (props, ref) => {
   return (
     <section className="homeContainer" ref={ref}>
       <div className="homeContainer_centerBox">
-        <p className="homeContainer_centerBox_p1">Hi, my name is</p>
+        <p className="homeContainer_centerBox_p1">Hello, my name is</p>
         <div className="homeContainer_centerBox_typeWriterText">
           <Typewriter
             onInit={(typewriter) => {
@@ -29,10 +29,9 @@ const Home = (props, ref) => {
             {" "}
             Software Developer.{" "}
           </span>
-          I graduated with an Associates in Software Development in 2021. After
-          graduating, I have spent the past year and more honing my craft,
-          learning frameworks, building apps, and exploring development. Take a
-          look at my skills, experience, and projects!
+          I graduated with an Associates Degree in Software Development in 2021.
+          Come explore my site. Take a look at my skills, experience, and
+          projects!
         </p>
       </div>
       <div className="continueBtn_container">

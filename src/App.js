@@ -1,5 +1,5 @@
 import "./style.css";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import useWindowSize from "use-window-size-v2";
 import Home from "./component/Home";
 import Projects from "./component/Projects";
@@ -12,10 +12,29 @@ import { motion } from "framer-motion";
 function App() {
   const { width } = useWindowSize();
   const [navToggle, setNavToggle] = useState(false);
+  const [showNav, setNavShow] = useState(true);
   const homeRef = useRef();
   const aboutRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
+  let oldScrollY = 0;
+
+  const navbarControl = () => {
+    const currentScrollY = window.pageYOffset;
+    if (currentScrollY > oldScrollY) {
+      setNavShow(false);
+    } else {
+      setNavShow(true);
+    }
+    oldScrollY = window.scrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", navbarControl);
+    return () => {
+      window.removeEventListener("scroll", navbarControl);
+    };
+  }, []);
 
   function scrollToDiv(currentRef) {
     currentRef.current.scrollIntoView({ behavior: "smooth" });
@@ -31,7 +50,7 @@ function App() {
     <>
       {width >= 768 && (
         <>
-          <nav className="navbar">
+          <nav className={`navbar ${showNav && "navDisplayed"}`}>
             <div className="navbarLeft">
               <div className="btnHome_container">
                 <button

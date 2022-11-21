@@ -1,6 +1,5 @@
-import React, { useState, forwardRef, useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import ProjectDisp from "./ProjectDisp.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import financialForgeScreen from "../images/financialForgeSS.png";
 import pokemonScreen from "../images/pokemonAppScreen1.png";
 import what2watchScreen from "../images/what2watchScreen.png";
@@ -37,7 +36,7 @@ const Projects = (props, ref) => {
       <div className="projects_carousel">
         <ProjectDisp
           image={financialForgeScreen}
-          title="Financial Organizer App"
+          title="Financial Organizer"
           alt="Financial Organizer"
           description="My first experience using ExpressJS / NodesJS for a CRUD app and login authentication. Understanding how to store encrypted passwords using bcrypt. Mostly using Grid css for this. The whole project was a massive learning experience."
           tools="Javascript, Html, CSS, MongoDB, Express, NodeJS"
@@ -46,7 +45,7 @@ const Projects = (props, ref) => {
         />
         <ProjectDisp
           image={what2watchScreen}
-          title="Movie / Television Browsing App"
+          title="Movie/Show Browsing App"
           alt="What2Watch"
           description="Crud Project from college using PHP and mySQL. Came back to make improvements to this project, mostly styling changes."
           tools="CSS, PHP, mySQL, Html, VScode"
@@ -57,7 +56,7 @@ const Projects = (props, ref) => {
           image={portfolioScreen}
           title="Portfolio"
           alt="Portfolio"
-          description="This portfolio project was my introdcution to React. I have had many iterations of this since then, trying out variations of styles and methods. I used this opportunity to not just learn ReactJS but also to understand different styling designs. Looking at other portfolios or websites to take inspiration. Learn how to better read others code, and learn from their techniques."
+          description="My introduction to React, this project had many iterations to try out variations of styles and methods. I used this opportunity to not just learn ReactJS but to also improve my styling by studying other sites techniques."
           tools="CSS, Javascript, Html, ReactJS, VScode, EmailJS"
           repo="https://github.com/MJStone587/portfolio-repo"
           site="https://mjstone587.github.io/Pokemon/"
