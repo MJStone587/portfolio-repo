@@ -313,7 +313,6 @@ section {
   align-items: center;
   max-width: 100%;
   min-height: 100vh;
-  border-bottom: 1px solid var(--pinkFadedFont-color);
 }
 .aboutMe_header {
   align-self: flex-start;
@@ -321,7 +320,7 @@ section {
   flex-flow: row nowrap;
   justify-content: flex-start;
   color: var(--blueFont-color);
-  font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(24px + (35 - 24) * ((100vw - 320px) / (1920 - 320)));
   border-bottom: 1px solid var(--pinkFadedFont-color);
   width: 80%;
 }
@@ -403,7 +402,7 @@ section {
   font-weight: bold;
   padding-top: 1rem;
   text-shadow: 6px 5px 1px #031013;
-  font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(24px + (35 - 24) * ((100vw - 320px) / (1920 - 320)));
 }
 .projects_header h2 {
   grid-area: contactLink;
@@ -427,13 +426,13 @@ section {
   align-items: center;
 }
 .fa-chevron-right {
-  font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1920 - 320)));
   color: var(--blueFadedFont-color);
   z-index: 10;
   background-color: transparent;
 }
 .fa-chevron-left {
-  font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(28px + (48 - 28) * ((100vw - 320px) / (1920 - 320)));
   color: var(--blueFadedFont-color);
   z-index: 10;
   background-color: transparent;
@@ -498,20 +497,20 @@ section {
   box-shadow: 2px 2px 10px 0px black;
 }
 .carousel_window_right_innerTop h1 {
-  font-size: calc(23px + (30 - 23) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: var(--blueFont-color);
 }
 .carousel_window_right_innerTop h3 {
-  font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: var(--pinkFadedFont-color);
   padding: 0px 20px;
 }
 .carousel_window_right_innerTop p {
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: var(--blueFadedFont-color);
 }
 .carousel_window_right_innerBot a {
-  font-size: calc(22px + (26 - 22) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(22px + (26 - 22) * ((100vw - 320px) / (1920 - 320)));
   color: var(--pinkFadedFont-color);
 }
 .projects_carousel_window a:hover {
@@ -545,7 +544,7 @@ section {
   padding: 0.2rem;
 }
 .fa-circle-notch {
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 .fa-circle-notch:hover {
   cursor: pointer;
@@ -638,8 +637,27 @@ section {
   }
 }
 @media screen and (max-width: 1024px) {
-  html {
-    overflow-x: hidden;
+  section {
+    width: 1024px;
+    margin: 0px auto;
+  }
+  .homeContainer_centerBox {
+    max-width: 60vw;
+  }
+  .continueBtn_container {
+    margin-right: 6rem;
+  }
+  .projects_carousel_window {
+    width: 85vw;
+  }
+  .projects_carousel_window:not(:last-of-type) {
+    margin-bottom: 8rem;
+  }
+  .carousel_window_left img {
+    height: 15rem;
+  }
+  .carousel_window_right {
+    height: 20vh;
   }
 }
 
@@ -700,8 +718,8 @@ section {
   .carousel_window_right {
     width: 100%;
     margin: 0;
-    flex: 2;
     order: 1;
+    height: 28vh;
     row-gap: 0px;
   }
   .carousel_window_right_innerBot {
