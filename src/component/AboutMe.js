@@ -9,14 +9,13 @@ const AboutMe = (props, ref) => {
       <div className="aboutMe_box">
         <div className="aboutMe_description">
           <h3>
-            After graduation I spent a year+ learning frameworks, creating apps,
-            and improving my knowledge. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing
-            diam. Eget sit amet tellus cras adipiscing enim eu turpis. Below are
-            the languages, frameworks, and tools I am currently versed in.
+            After graduating college I spent a year+ learning frameworks,
+            creating apps, and improving my knowledge. I have continually tried
+            to improve the quality of my code and knowing that I can improve it
+            more fuels my passion for learning. The more projects I build the
+            easier it has become to organize and design my projects at a higher
+            level. Currently the languages below are the languages I am most
+            experienced in.
           </h3>
         </div>
         <div className="skillsBox">

@@ -52,7 +52,7 @@ function App() {
         <>
           <nav className={`navbar ${showNav && "navDisplayed"}`}>
             <div className="navbarLeft">
-              <div className="btnHome_container">
+              <div className="btnContainer btnHome_container">
                 <button
                   className="navBtn btnHome"
                   onClick={() => scrollToDiv(homeRef)}
@@ -60,7 +60,7 @@ function App() {
                   Home
                 </button>
               </div>
-              <div className="btnAbout_container">
+              <div className="btnContainer btnAbout_container">
                 <button
                   className="navBtn btnAbout"
                   onClick={() => scrollToDiv(aboutRef)}
@@ -68,7 +68,7 @@ function App() {
                   About
                 </button>
               </div>
-              <div className="btnProjects_container">
+              <div className="btnContainer btnProjects_container">
                 <button
                   className="navBtn btnProjects"
                   onClick={() => scrollToDiv(projectsRef)}
@@ -76,7 +76,7 @@ function App() {
                   Projects
                 </button>
               </div>
-              <div className="btnContact_container">
+              <div className="btnContainer btnContact_container">
                 <button
                   className="navBtn btnContact"
                   onClick={() => scrollToDiv(contactRef)}

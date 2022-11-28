@@ -30,8 +30,8 @@ const Home = (props, ref) => {
             Software Developer.{" "}
           </span>
           I graduated with an Associates Degree in Software Development in 2021.
-          Come explore my site. Take a look at my skills, experience, and
-          projects!
+          This site is a collection of the projects I've worked on, the
+          experience I've acquired, and a bit about me the developer.
         </p>
       </div>
       <div className="continueBtn_container">

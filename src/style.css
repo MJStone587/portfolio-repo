@@ -15,8 +15,11 @@ html {
   --blueBorder-color: #2adfff6c;
   --blueShadow-color: #2adfff6c;
   --pinkGradientButton-color: #fb00afb4;
-  --pinkImageCover-color: #6d004e;
+  --pinkImageCover-color: #500039;
   --global-borderRadius: 0.25rem;
+  --header--font-size: calc(
+    24px + (36 - 24) * ((100vw - 320px) / (1920 - 320))
+  );
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "VT323", monospace;
 }
@@ -93,11 +96,12 @@ section {
   position: fixed;
   width: 100%;
   flex-flow: row nowrap;
-  background-color: transparent;
-  height: 11vh;
+  background-color: var(--bg-color);
+  height: 10vh;
   box-sizing: border-box;
   padding: 10px 20px 0px 20px;
   z-index: 12;
+  box-shadow: 2px 2px 5px 3px black;
   transition-timing-function: ease-in;
 }
 .navDisplayed {
@@ -147,11 +151,9 @@ section {
   font-family: "VT323", monospace;
   border-radius: 0.25rem;
 }
-.btnHome:hover,
-.btnAbout:hover,
-.btnProjects:hover,
-.btnContact:hover {
+.navBtn:hover {
   box-shadow: 1px 1px 10px 3px var(--blueShadow-color);
+  cursor: pointer;
 }
 .btnHome:before,
 .btnAbout:before,
@@ -182,7 +184,7 @@ section {
 /* ---------Navbar Mobile-------- */
 .fa-bars {
   position: fixed;
-  color: #c4d8e1;
+  color: var(--blueFont-color);
   font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
   margin-top: calc(1rem + 0.390625vw);
   margin-left: calc(1.5rem + 0.390625vw);
@@ -202,7 +204,7 @@ section {
   font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1920 - 300)));
   z-index: 12;
   border-radius: 5px;
-  background-color: #c4d8e1;
+  background-color: var(--boxBG-alt-color);
 }
 .btnMobile {
   padding: calc(0.85rem + 0.390625vw);
@@ -210,7 +212,7 @@ section {
   text-align: center;
   width: 100%;
   text-decoration: none;
-  color: #072329;
+  color: var(--blueFont-color);
   background-color: transparent;
   border: none;
   padding: 1rem;
@@ -236,7 +238,6 @@ section {
   min-height: 100vh;
   max-width: 100%;
 }
-
 .homeContainer_centerBox {
   display: flex;
   flex-flow: column nowrap;
@@ -320,17 +321,17 @@ section {
   flex-flow: row nowrap;
   justify-content: flex-start;
   color: var(--blueFont-color);
-  font-size: calc(24px + (35 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: var(--header--font-size);
   border-bottom: 1px solid var(--pinkFadedFont-color);
   width: 80%;
 }
 .aboutMe_box {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
-  row-gap: 20px;
+  padding: 4rem;
+  justify-content: flex-start;
+  row-gap: 5rem;
   align-items: center;
-  padding-top: 1rem;
   flex: 2;
 }
 .aboutMe_description {
@@ -338,7 +339,7 @@ section {
   flex-flow: column wrap;
   color: var(--pinkFadedFont-color);
   order: 1;
-  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 0.25rem;
   z-index: 1;
 }
@@ -370,12 +371,10 @@ section {
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
-  max-width: 30vw;
-  min-width: 15vw;
   order: 3;
   z-index: 5;
   color: var(--pinkFadedFont-color);
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 /*-------------------------*/
 
@@ -402,7 +401,7 @@ section {
   font-weight: bold;
   padding-top: 1rem;
   text-shadow: 6px 5px 1px #031013;
-  font-size: calc(24px + (35 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: var(--header--font-size);
 }
 .projects_header h2 {
   grid-area: contactLink;
@@ -570,7 +569,7 @@ section {
 }
 .contact_header h1 {
   color: var(--blueFont-color);
-  font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size: var(--header--font-size);
 }
 .contact_header h2 {
   color: var(--pinkFadedFont-color);
@@ -641,11 +640,21 @@ section {
     width: 1024px;
     margin: 0px auto;
   }
+  .navbar {
+    height: 8vh;
+  }
   .homeContainer_centerBox {
+    margin-top: -15rem;
     max-width: 60vw;
   }
   .continueBtn_container {
     margin-right: 6rem;
+    width: 15vw;
+    height: 4vh;
+  }
+  .aboutMe_box {
+    row-gap: 4rem;
+    padding: 4rem;
   }
   .projects_carousel_window {
     width: 85vw;
@@ -667,6 +676,7 @@ section {
     margin: 0px auto;
   }
   .homeContainer_centerBox {
+    margin: 0;
     max-width: 75vw;
     min-width: 75vw;
     padding: 1.5rem;
