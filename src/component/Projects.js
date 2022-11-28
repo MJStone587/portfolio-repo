@@ -1,7 +1,6 @@
 import React, { forwardRef, useRef } from "react";
 import ProjectDisp from "./ProjectDisp.js";
 import financialForgeScreen from "../images/financialForgeSS.png";
-import pokemonScreen from "../images/pokemonAppScreen1.png";
 import what2watchScreen from "../images/what2watchScreen.png";
 import portfolioScreen from "../images/portfolioScreen.png";
 

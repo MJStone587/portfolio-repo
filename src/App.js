@@ -7,7 +7,6 @@ import Contact from "./component/Contact";
 import AboutMe from "./component/AboutMe";
 import logo from "./images/logoMJ5.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
 
 function App() {
   const { width } = useWindowSize();
