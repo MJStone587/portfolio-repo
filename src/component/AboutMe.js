@@ -10,12 +10,11 @@ const AboutMe = (props, ref) => {
         <div className="aboutMe_description">
           <h3>
             After graduating college I spent a year+ learning frameworks,
-            creating apps, and improving my knowledge. I have continually tried
-            to improve the quality of my code and knowing that I can improve it
-            more fuels my passion for learning. The more projects I build the
-            easier it has become to organize and design my projects at a higher
-            level. Currently the languages below are the languages I am most
-            experienced in.
+            creating apps, and improving my knowledge. I continuously strive to
+            improve my code; how easy it is to read, how modular it is, and how
+            well it performs. Learning and improving fuels my passion for
+            software development. Currently I am most proficient in the
+            following languages:
           </h3>
         </div>
         <div className="skillsBox">
@@ -36,10 +35,14 @@ const AboutMe = (props, ref) => {
         </div>
         <div className="portraitBox">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
-            quis commodo odio aenean sed adipiscing diam. Eget sit amet tellus
-            cras adipiscing enim eu turpis.
+            Building projects has taught me a lot about the importance of
+            high-level design. Good design helps create a smooth and easy build
+            process, prevents scope creep (this one gets me often), and helps
+            better manage my time. This is also true for high-level design of my
+            own code structure, which is something I feel is a weakness of mine.
+            So I keep working and keep improving. I hope you can see these
+            improvements in the progression of projects I have displayed down
+            the page.
           </p>
         </div>
       </div>

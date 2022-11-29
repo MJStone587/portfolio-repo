@@ -30,20 +30,22 @@ const Contact = (props, ref) => {
         <h1>Contact</h1>
         <h2>This form will send directly to my email</h2>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
+      <div className="contact_body">
+        <form className="contact_form" ref={form} onSubmit={sendEmail}>
+          <label>Name:</label>
+          <input type="text" name="user_name" />
+          <label>Email:</label>
+          <input type="email" name="user_email" />
+          <label>Message:</label>
+          <textarea name="message" />
+          <input id="contact_submit" type="submit" value="Send" />
+        </form>
 
-      <aside>
-        <h1>Send me an email and let's get in touch!</h1>
-        <FontAwesomeIcon icon="fa-solid fa-envelopes-bulk" />
-      </aside>
+        <aside className="contact_aside">
+          <h1>Send me an email and let's get in touch!</h1>
+          <FontAwesomeIcon icon="fa-solid fa-envelopes-bulk" />
+        </aside>
+      </div>
     </section>
   );
 };

@@ -34,15 +34,6 @@ const Projects = (props, ref) => {
       </div>
       <div className="projects_carousel">
         <ProjectDisp
-          image={financialForgeScreen}
-          title="Financial Organizer"
-          alt="Financial Organizer"
-          description="My first experience using ExpressJS / NodesJS for a CRUD app and login authentication. Understanding how to store encrypted passwords using bcrypt. Used Grid styling to better understand it."
-          tools="JS, Html, CSS, MongoDB, Express, NodeJS"
-          repo="https://github.com/MJStone587/Framework"
-          site="https://hidden-peak-86387.herokuapp.com/catalog"
-        />
-        <ProjectDisp
           image={what2watchScreen}
           title="Movie/Show Browsing App"
           alt="What2Watch"
@@ -52,13 +43,22 @@ const Projects = (props, ref) => {
           site="https://mjstone587.github.io/What2Watch/"
         />
         <ProjectDisp
+          image={financialForgeScreen}
+          title="Financial Organizer"
+          alt="Financial Organizer"
+          description="My first experience using ExpressJS / NodesJS for a CRUD app and login authentication. Understanding how to store encrypted passwords using bcrypt. Used Grid styling to better understand it."
+          tools="JS, Html, CSS, MongoDB, Express, NodeJS"
+          repo="https://github.com/MJStone587/Framework"
+          site="https://hidden-peak-86387.herokuapp.com/catalog"
+        />
+        <ProjectDisp
           image={portfolioScreen}
           title="Portfolio"
           alt="Portfolio"
           description="My introduction to React, this project had many iterations to try out variations of styles and methods. I used this opportunity to not just learn ReactJS but to also improve my styling."
           tools="CSS, JS, Html, ReactJS, VScode, EmailJS"
           repo="https://github.com/MJStone587/portfolio-repo"
-          site="https://mjstone587.github.io/#/"
+          site="https://markjportfolio.netlify.app/"
         />
       </div>
     </section>
