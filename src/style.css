@@ -238,6 +238,12 @@ section {
   min-height: 100vh;
   max-width: 100%;
 }
+.homeAnimateBox {
+  height: 28px;
+  width: 13px;
+  z-index: 10;
+  background-image: url(images/rogue_sprite.png);
+}
 .homeContainer_centerBox {
   display: flex;
   flex-flow: column nowrap;
