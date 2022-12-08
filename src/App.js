@@ -19,6 +19,41 @@ function App() {
   let oldScrollY = 0;
 
   const navbarControl = () => {
+    /*
+       {width < 768 && (
+        <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
+      )}
+      {width < 768 && (
+        <>
+          {navToggle === true && (
+            <ul className="navbarMobile">
+              <button
+                className="btnMobile homeMobile"
+                onClick={() => scrollToDiv(homeRef)}
+              >
+                Home
+              </button>
+              <button
+                className="btnMobile aboutMobile"
+                onClick={() => scrollToDiv(aboutRef)}
+              >
+                About
+              </button>
+              <button
+                className="btnMobile projectsMobile"
+                onClick={() => scrollToDiv(projectsRef)}
+              >
+                Projects
+              </button>
+              <button
+                className="btnMobile contactMobile"
+                onClick={() => scrollToDiv(contactRef)}
+              >
+                Contact
+              </button>
+            </ul>
+          )}
+    */
     const currentScrollY = window.pageYOffset;
     if (currentScrollY > oldScrollY) {
       setNavShow(false);
@@ -160,38 +195,43 @@ function App() {
         </>
       )}
       {width < 768 && (
-        <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
-      )}
-      {width < 768 && (
         <>
-          {navToggle === true && (
-            <ul className="navbarMobile">
-              <button
-                className="btnMobile homeMobile"
-                onClick={() => scrollToDiv(homeRef)}
-              >
-                Home
-              </button>
-              <button
-                className="btnMobile aboutMobile"
-                onClick={() => scrollToDiv(aboutRef)}
-              >
-                About
-              </button>
-              <button
-                className="btnMobile projectsMobile"
-                onClick={() => scrollToDiv(projectsRef)}
-              >
-                Projects
-              </button>
-              <button
-                className="btnMobile contactMobile"
-                onClick={() => scrollToDiv(contactRef)}
-              >
-                Contact
-              </button>
-            </ul>
-          )}
+          <nav className={`navbar ${showNav && "navDisplayed"}`}>
+            <div className="navbarLeft">
+              <div className="btnContainer btnHome_container">
+                <button
+                  className="navBtn btnHome"
+                  onClick={() => scrollToDiv(homeRef)}
+                >
+                  Home
+                </button>
+              </div>
+              <div className="btnContainer btnAbout_container">
+                <button
+                  className="navBtn btnAbout"
+                  onClick={() => scrollToDiv(aboutRef)}
+                >
+                  About
+                </button>
+              </div>
+              <div className="btnContainer btnProjects_container">
+                <button
+                  className="navBtn btnProjects"
+                  onClick={() => scrollToDiv(projectsRef)}
+                >
+                  Projects
+                </button>
+              </div>
+              <div className="btnContainer btnContact_container">
+                <button
+                  className="navBtn btnContact"
+                  onClick={() => scrollToDiv(contactRef)}
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+          </nav>
           <main onClick={turnOffNav} className="mobileMainContainer">
             <Home ref={homeRef} />
             <AboutMe ref={aboutRef} />

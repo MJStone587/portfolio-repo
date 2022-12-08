@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const AboutMe = (props, ref) => {
   return (
@@ -7,33 +8,58 @@ const AboutMe = (props, ref) => {
         <h1>About Me</h1>
       </div>
       <div className="aboutMe_box">
-        <div className="aboutMe_description">
-          <h3>
-            After graduating college I spent a year+ learning frameworks,
-            creating apps, and improving my knowledge. I continuously strive to
-            improve my code; how easy it is to read, how modular it is, and how
-            well it performs. Learning and improving fuels my passion for
-            software development. Currently I am most proficient in the
-            following languages:
-          </h3>
-        </div>
-        <div className="skillsBox">
-          <div className="skillsBox_content">
-            <ol>
-              <h3>HTML</h3>
-              <h3>CSS</h3>
-              <h3>Javascript</h3>
-              <h3>Express</h3>
-              <h3>NodeJS</h3>
-              <h3>MongoDb</h3>
-              <h3>PHP</h3>
-              <h3>mySQL</h3>
-              <h3>ReactJS</h3>
-              <h3>Java</h3>
-            </ol>
-          </div>
-        </div>
-        <div className="portraitBox">
+        <AnimatePresence>
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: 100, opacity: 0 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ ease: "easeOut" }}
+            viewport={{ amount: 0.5, once: true }}
+            className="aboutMe_description"
+          >
+            <h3>
+              After graduating college I spent a year+ learning frameworks,
+              creating apps, and improving my knowledge. I continuously strive
+              to improve my code; how easy it is to read, how modular it is, and
+              how well it performs. Learning and improving fuels my passion for
+              software development. Currently I am most proficient in the
+              following languages:
+            </h3>
+          </motion.div>
+        </AnimatePresence>
+        <AnimatePresence>
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            exit={{ x: -100, opacity: 0 }}
+            transition={{ ease: "easeOut" }}
+            viewport={{ amount: 0.5, once: true }}
+            className="skillsBox"
+          >
+            <div className="skillsBox_content">
+              <ol>
+                <h3>HTML</h3>
+                <h3>CSS</h3>
+                <h3>Javascript</h3>
+                <h3>Express</h3>
+                <h3>NodeJS</h3>
+                <h3>MongoDb</h3>
+                <h3>PHP</h3>
+                <h3>mySQL</h3>
+                <h3>ReactJS</h3>
+                <h3>Java</h3>
+              </ol>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+        <motion.div
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: 100, opacity: 0 }}
+          exit={{ x: 100, opacity: 0 }}
+          transition={{ ease: "easeOut" }}
+          viewport={{ amount: 0.5, once: true }}
+          className="portraitBox"
+        >
           <p>
             Building projects has taught me a lot about the importance of
             high-level design. Good design helps create a smooth and easy build
@@ -44,7 +70,7 @@ const AboutMe = (props, ref) => {
             improvements in the progression of projects I have displayed down
             the page.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
