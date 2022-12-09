@@ -24,16 +24,7 @@ const Home = (props, ref) => {
       >
         <p className="home_centerbox_p1">Hello, my name is</p>
         <div className="home_centerbox_typewriter">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .changeDeleteSpeed(30)
-                .changeDelay(100)
-                .pauseFor(200)
-                .typeString("Mark Johnston.")
-                .start();
-            }}
-          />
+          <h1>Mark Johnston</h1>
         </div>
         <p className="home_centerbox_p2">
           I am a...
