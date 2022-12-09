@@ -24,15 +24,21 @@ const Home = (props, ref) => {
       >
         <p className="home_centerbox_p1">Hello, my name is</p>
         <div className="home_centerbox_typewriter">
-          <h1>Mark Johnston</h1>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .changeDeleteSpeed(30)
+                .changeDelay(100)
+                .pauseFor(200)
+                .typeString("Mark Johnston.")
+                .start();
+            }}
+          />
         </div>
         <p className="home_centerbox_p2">
-          I am a...
-          <span className="home_centerbox_p2span"> Software Developer. </span>I
-          graduated with an Associates Degree in Software Development in 2021.
-          This site is a collection of the projects I've worked on, the
-          experience I've acquired, and a bit about me the developer. Don't
-          worry about the continue button, I'll fix that.
+          I am a... graduated with an Associates Degree in Software Development
+          in 2021. This site is a collection of the projects I've worked on, the
+          experience I've acquired, and a bit about me the developer.
         </p>
       </motion.div>
       <motion.div
