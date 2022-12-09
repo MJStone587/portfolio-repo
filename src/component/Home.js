@@ -36,8 +36,10 @@ const Home = (props, ref) => {
           />
         </div>
         <p className="home_centerbox_p2">
-          I am a... graduated with an Associates Degree in Software Development
-          in 2021. This site is a collection of the projects I've worked on, the
+          I am a...
+          <span className="home_centerbox_p2span"> Software Developer. </span>I
+          graduated with an Associates Degree in Software Development in 2021.
+          This site is a collection of the projects I've worked on, the
           experience I've acquired, and a bit about me the developer.
         </p>
       </motion.div>
