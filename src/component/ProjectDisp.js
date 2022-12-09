@@ -16,7 +16,13 @@ export default function ProjectDisp(props) {
           viewport={{ amount: 0, once: true }}
           className="carousel_window_left"
         >
-          <a target="_blank" rel="noreferrer" id={props.id} href={props.site}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Website_image_link"
+            id={props.id}
+            href={props.site}
+          >
             <img src={props.image} alt={props.alt}></img>
           </a>
         </motion.div>

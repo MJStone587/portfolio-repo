@@ -6,7 +6,6 @@ import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import AboutMe from "./component/AboutMe";
 import logo from "./images/logoMJ5.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   const { width } = useWindowSize();
@@ -73,13 +72,14 @@ function App() {
   function scrollToDiv(currentRef) {
     currentRef.current.scrollIntoView({ behavior: "smooth" });
   }
-
+  /*
   const triggerNavToggle = () => {
     setNavToggle(!navToggle);
   };
   const turnOffNav = () => {
     setNavToggle(false);
   };
+  */
   return (
     <>
       {width >= 768 && (
@@ -232,7 +232,7 @@ function App() {
               </div>
             </div>
           </nav>
-          <main onClick={turnOffNav} className="mobile_main_container">
+          <main className="mobile_main_container">
             <Home ref={homeRef} />
             <AboutMe ref={aboutRef} />
             <Projects ref={projectsRef} />
