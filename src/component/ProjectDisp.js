@@ -51,6 +51,7 @@ export default function ProjectDisp(props) {
               <FontAwesomeIcon icon="fa-brands fa-github" />
             </a>
             <a
+              aria-label="Website_link"
               id={props.id2}
               target="_blank"
               rel="noreferrer"
