@@ -30,6 +30,7 @@ const Contact = (props, ref) => {
         <h1>Contact</h1>
         <h2>This form will send directly to my email</h2>
       </div>
+
       <div className="contact_body">
         <form className="contact_form" ref={form} onSubmit={sendEmail}>
           <label>Name:</label>

@@ -27,7 +27,7 @@ const Projects = (props, ref) => {
         <h1>My Projects</h1>
         <h2>
           Like what you see?
-          <button id="contactMeBtn" onClick={() => scrollToDiv(contactRef)}>
+          <button id="contact_btn" onClick={() => scrollToDiv(contactRef)}>
             Contact Me!
           </button>
         </h2>

@@ -11,19 +11,19 @@ const Home = (props, ref) => {
   }
 
   return (
-    <section className="homeContainer" ref={ref}>
-      <div className="homeAnimationRow">
-        <motion.div className="homeAnimateRogue"></motion.div>
+    <section className="home_container" ref={ref}>
+      <div className="home_sprite_container">
+        <motion.div className="home_rogue_sprite"></motion.div>
       </div>
       <motion.div
         whileInView={{ x: 0 }}
         initial={{ x: -100 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ ease: "easeOut" }}
-        className="homeContainer_centerBox"
+        className="home_centerbox"
       >
-        <p className="homeContainer_centerBox_p1">Hello, my name is</p>
-        <div className="homeContainer_centerBox_typeWriterText">
+        <p className="home_centerbox_p1">Hello, my name is</p>
+        <div className="home_centerbox_typewriter">
           <Typewriter
             onInit={(typewriter) => {
               typewriter
@@ -35,13 +35,10 @@ const Home = (props, ref) => {
             }}
           />
         </div>
-        <p className="homeContainer_centerBox_p2">
+        <p className="home_centerbox_p2">
           I am a...
-          <span className="homeContainer_centerBox_p2Span">
-            {" "}
-            Software Developer.{" "}
-          </span>
-          I graduated with an Associates Degree in Software Development in 2021.
+          <span className="home_centerbox_p2span"> Software Developer. </span>I
+          graduated with an Associates Degree in Software Development in 2021.
           This site is a collection of the projects I've worked on, the
           experience I've acquired, and a bit about me the developer. Don't
           worry about the continue button, I'll fix that.
@@ -52,9 +49,9 @@ const Home = (props, ref) => {
         initial={{ x: 100 }}
         viewport={{ once: true, amount: 0 }}
         transition={{ ease: "easeOut" }}
-        className="continueBtn_container"
+        className="continue_btn_container"
       >
-        <button className="continueBtn" onClick={() => scrollToDiv(aboutRef)}>
+        <button className="continue_btn" onClick={() => scrollToDiv(aboutRef)}>
           Continue
         </button>
       </motion.div>

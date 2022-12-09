@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const AboutMe = (props, ref) => {
   return (
-    <section className="aboutMeContainer" ref={ref}>
-      <div className="aboutMe_header">
+    <section className="aboutme_container" ref={ref}>
+      <div className="aboutme_header">
         <h1>About Me</h1>
       </div>
-      <div className="aboutMe_box">
+      <div className="aboutme_box">
         <AnimatePresence>
           <motion.div
             whileInView={{ x: 0, opacity: 1 }}
@@ -15,7 +15,7 @@ const AboutMe = (props, ref) => {
             exit={{ x: 100, opacity: 0 }}
             transition={{ ease: "easeOut" }}
             viewport={{ amount: 0.5, once: true }}
-            className="aboutMe_description"
+            className="aboutme_description"
           >
             <h3>
               After graduating college I spent a year+ learning frameworks,
@@ -34,9 +34,9 @@ const AboutMe = (props, ref) => {
             exit={{ x: -100, opacity: 0 }}
             transition={{ ease: "easeOut" }}
             viewport={{ amount: 0.5, once: true }}
-            className="skillsBox"
+            className="skills_box"
           >
-            <div className="skillsBox_content">
+            <div className="skills_box_content">
               <ol>
                 <h3>HTML</h3>
                 <h3>CSS</h3>
@@ -58,7 +58,7 @@ const AboutMe = (props, ref) => {
           exit={{ x: 100, opacity: 0 }}
           transition={{ ease: "easeOut" }}
           viewport={{ amount: 0.5, once: true }}
-          className="portraitBox"
+          className="portrait_box"
         >
           <p>
             Building projects has taught me a lot about the importance of
