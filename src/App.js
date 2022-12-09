@@ -5,7 +5,7 @@ import Home from "./component/Home";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 import AboutMe from "./component/AboutMe";
-import logo from "./images/logoMJ5.png";
+import logo from "./images/logoMJ5.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {

@@ -1,8 +1,8 @@
 import React, { forwardRef, useRef } from "react";
 import ProjectDisp from "./ProjectDisp.js";
-import financialForgeScreen from "../images/financialForgeSS.png";
-import what2watchScreen from "../images/what2watchScreen.png";
-import portfolioScreen from "../images/portfolioScreen.png";
+import financialForgeScreen from "../images/financialForgeSS.webp";
+import what2watchScreen from "../images/what2watchScreen.webp";
+import portfolioScreen from "../images/portfolioScreen.webp";
 
 const Projects = (props, ref) => {
   const contactRef = useRef();
