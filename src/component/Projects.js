@@ -35,7 +35,8 @@ const Projects = (props, ref) => {
       <div className="projects_carousel">
         <ProjectDisp
           image={what2watchScreen}
-          id="what_2_watch"
+          id="what_2_watch_site"
+          id2="what_2_watch_btn"
           title="Movie/Show Browsing App"
           alt="What2Watch"
           description="Crud Project from college using PHP and mySQL. Came back to make improvements to this project, mostly styling changes."
@@ -45,7 +46,8 @@ const Projects = (props, ref) => {
         />
         <ProjectDisp
           image={financialForgeScreen}
-          id="financial_forge"
+          id="financial_forge_site"
+          id2="financial_forge_btn"
           title="Financial Organizer"
           alt="Financial Organizer"
           description="My first experience using ExpressJS / NodesJS for a CRUD app and login authentication. Understanding how to store encrypted passwords using bcrypt. Used Grid styling to better understand it."
@@ -56,6 +58,7 @@ const Projects = (props, ref) => {
         <ProjectDisp
           image={portfolioScreen}
           id="portfolio_site"
+          id2="portfolio_site_btn"
           title="Portfolio"
           alt="Portfolio"
           description="My introduction to React, this project had many iterations to try out variations of styles and methods. I used this opportunity to not just learn ReactJS but to also improve my styling."

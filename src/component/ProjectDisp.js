@@ -44,7 +44,12 @@ export default function ProjectDisp(props) {
             >
               <FontAwesomeIcon icon="fa-brands fa-github" />
             </a>
-            <a id="boxLink2" target="_blank" rel="noreferrer" href={props.site}>
+            <a
+              id={props.id2}
+              target="_blank"
+              rel="noreferrer"
+              href={props.site}
+            >
               <FontAwesomeIcon icon="fa-solid fa-right-to-bracket" />
             </a>
           </div>
