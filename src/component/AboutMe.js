@@ -17,14 +17,14 @@ const AboutMe = (props, ref) => {
             viewport={{ amount: 0.5, once: true }}
             className="aboutme_description"
           >
-            <h3>
+            <p>
               After graduating college I spent a year+ learning frameworks,
               creating apps, and improving my knowledge. I continuously strive
               to improve my code; how easy it is to read, how modular it is, and
               how well it performs. Learning and improving fuels my passion for
               software development. Currently I am most proficient in the
               following languages:
-            </h3>
+            </p>
           </motion.div>
         </AnimatePresence>
         <AnimatePresence>
@@ -37,7 +37,7 @@ const AboutMe = (props, ref) => {
             className="skills_box"
           >
             <div className="skills_box_content">
-              <ol>
+              <div className="skills_list">
                 <h3>HTML</h3>
                 <h3>CSS</h3>
                 <h3>Javascript</h3>
@@ -48,7 +48,7 @@ const AboutMe = (props, ref) => {
                 <h3>mySQL</h3>
                 <h3>ReactJS</h3>
                 <h3>Java</h3>
-              </ol>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

@@ -367,7 +367,7 @@ section {
   border-radius: 0.25rem;
   z-index: 10;
 }
-.skills_box_content ol {
+.skills_list {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -377,7 +377,7 @@ section {
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   box-shadow: 2px 2px 10px 2px black;
 }
-.skills_box_content h3 {
+.skills_list h3 {
   padding: 1rem;
   color: var(--blueFadedFont-color);
 }
@@ -808,6 +808,9 @@ section {
   }
   .skills_box {
     margin: 0;
+  }
+  .skills_list {
+    padding: 1rem;
   }
   .portrait_box {
     margin: 0;
