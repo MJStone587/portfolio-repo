@@ -5,10 +5,6 @@ import { motion } from "framer-motion";
 
 const Home = (props, ref) => {
   const aboutRef = useRef(null);
-  /*  <div className="home_sprite_container">
-        <motion.div className="home_rogue_sprite"></motion.div>
-      </div> */
-
   function scrollToDiv(currentRef) {
     currentRef.current.scrollIntoView({ behavior: "smooth" });
   }

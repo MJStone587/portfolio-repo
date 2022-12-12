@@ -191,20 +191,6 @@ section {
   min-height: 100vh;
   max-width: 100%;
 }
-.home_sprite_container {
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 8px;
-}
-.home_rogue_sprite {
-  height: 28px;
-  width: 13px;
-  z-index: 10;
-  background-image: url(images/rogue_sprite.png);
-  animation: rogueFlourish 1.5s ease-out;
-  animation-delay: 1.5s;
-}
-
 .home_centerbox {
   display: flex;
   flex-flow: column nowrap;
@@ -593,43 +579,6 @@ section {
 }
 
 /*-------------------------*/
-
-/*-----Animation ETC ------*/
-
-.invisibile {
-  visibility: hidden;
-}
-.hidden {
-  display: none;
-}
-@keyframes rogueFall {
-  0% {
-    background-image: url(images/rogue_fall_8.png);
-  }
-  15% {
-    background-image: url(images/rogue_fall_7.png);
-  }
-  35% {
-    background-image: url(images/rogue_fall_6.png);
-  }
-  55% {
-    background-image: url(images/rogue_fall_5.png);
-  }
-  65% {
-    background-image: url(images/rogue_fall_4.png);
-  }
-  75% {
-    background-image: url(images/rogue_fall_3.png);
-  }
-  90% {
-    background-image: url(images/rogue_fall_2.png);
-  }
-  100% {
-    background-image: url(images/rogue_fall_1.png);
-  }
-}
-
-/* ----------------- */
 
 @media screen and (max-width: 1024px) {
   section {

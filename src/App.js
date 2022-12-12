@@ -15,41 +15,6 @@ function App() {
   let oldScrollY = 0;
 
   const navbarControl = () => {
-    /*
-       {width < 768 && (
-        <FontAwesomeIcon onClick={triggerNavToggle} icon="fa-solid fa-bars" />
-      )}
-      {width < 768 && (
-        <>
-          {navToggle === true && (
-            <ul className="navbarMobile">
-              <button
-                className="btnMobile homeMobile"
-                onClick={() => scrollToDiv(homeRef)}
-              >
-                Home
-              </button>
-              <button
-                className="btnMobile aboutMobile"
-                onClick={() => scrollToDiv(aboutRef)}
-              >
-                About
-              </button>
-              <button
-                className="btnMobile projectsMobile"
-                onClick={() => scrollToDiv(projectsRef)}
-              >
-                Projects
-              </button>
-              <button
-                className="btnMobile contactMobile"
-                onClick={() => scrollToDiv(contactRef)}
-              >
-                Contact
-              </button>
-            </ul>
-          )}
-    */
     const currentScrollY = window.pageYOffset;
     if (currentScrollY > oldScrollY) {
       setNavShow(false);
@@ -69,14 +34,7 @@ function App() {
   function scrollToDiv(currentRef) {
     currentRef.current.scrollIntoView({ behavior: "smooth" });
   }
-  /*
-  const triggerNavToggle = () => {
-    setNavToggle(!navToggle);
-  };
-  const turnOffNav = () => {
-    setNavToggle(false);
-  };
-  */
+
   return (
     <>
       <nav className={`navbar ${showNav && "nav_displayed"}`}>
