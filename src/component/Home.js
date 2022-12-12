@@ -23,7 +23,17 @@ const Home = (props, ref) => {
         className="home_centerbox"
       >
         <p className="home_centerbox_p1">Hello, my name is</p>
-        <div className="home_centerbox_typewriter">
+        <div
+          className="home_centerbox_typewriter"
+          style={{
+            display: "flex",
+            flexFlow: "column nowrap",
+            alignItems: "flex-start",
+            fontSize:
+              "calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)))",
+            color: "#2adfff",
+          }}
+        >
           <Typewriter
             onInit={(typewriter) => {
               typewriter
@@ -37,8 +47,18 @@ const Home = (props, ref) => {
         </div>
         <p className="home_centerbox_p2">
           I am a...
-          <span className="home_centerbox_p2span"> Software Developer. </span>I
-          graduated with an Associates Degree in Software Development in 2021.
+          <span
+            style={{
+              fontSize:
+                "calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)))",
+              color: "var(--blueFont-color)",
+            }}
+            className="home_centerbox_p2span"
+          >
+            {" "}
+            Software Developer.{" "}
+          </span>
+          I graduated with an Associates Degree in Software Development in 2021.
           This site is a collection of the projects I've worked on, the
           experience I've acquired, and a bit about me the developer.
         </p>

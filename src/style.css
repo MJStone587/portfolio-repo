@@ -238,17 +238,6 @@ section {
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: var(--pinkFadedFont-color);
 }
-.home_centerbox_p2span {
-  font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--blueFont-color);
-}
-.home_centerbox_typewriter {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)));
-  color: #2adfff;
-}
 .continue_btn_container {
   display: flex;
   justify-content: center;
