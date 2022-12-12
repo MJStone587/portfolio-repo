@@ -28,7 +28,7 @@ section {
   margin: 0px 150px;
   width: 1200px;
 }
-.desktop_content {
+.content {
   margin: 0px auto;
   max-width: 100%;
   padding: 0px 150px;
@@ -179,15 +179,6 @@ section {
 .btn_projects:hover:before,
 .btn_contact:hover:before {
   left: 100%;
-}
-/*-------------------------*/
-
-/* --------- Mobile-------- */
-.mobile_main_container {
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: var(--bg-color);
 }
 /*-------------------------*/
 
@@ -684,6 +675,20 @@ section {
 }
 
 @media screen and (max-width: 414px) {
+  .content {
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--bg-color);
+  }
+  .desktop_overlay_container {
+    display: none;
+  }
+  .navbar_right {
+    display: none;
+  }
   section {
     width: 412px;
     margin: 0px auto;
@@ -776,6 +781,12 @@ section {
 @media screen and (max-width: 391px) {
   section {
     width: 391px;
+  }
+  .content {
+    padding: 0px 10px;
+  }
+  .carousel_window_right {
+    height: 30vh;
   }
   .home_centerbox {
     margin-top: 100px;
