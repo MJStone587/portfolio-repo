@@ -662,17 +662,14 @@ section {
   .aboutme_box {
     flex-flow: column nowrap;
   }
-  .skills_box {
-    margin: 0;
-  }
-  .skills_list {
-    padding: 1rem;
-  }
   .portrait_box {
     margin: 0;
     max-width: 80vw;
     min-width: 80vw;
     height: 30vh;
+  }
+  .skills_list {
+    padding: 0px 0px 0px 20px;
   }
   .projects_container {
     justify-content: flex-start;
@@ -736,7 +733,7 @@ section {
     padding: 0px 10px;
   }
   .carousel_window_right {
-    height: 30vh;
+    height: 250px;
   }
   .home_centerbox {
     margin-top: 100px;
