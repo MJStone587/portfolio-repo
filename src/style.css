@@ -310,6 +310,7 @@ section {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  word-spacing: 20px;
   padding: 0.15rem;
   background-color: var(--boxBG-alt-color);
   border-radius: 0.25rem;
@@ -318,7 +319,7 @@ section {
 }
 .skills_list h3 {
   padding: 1rem;
-  color: var(--blueFadedFont-color);
+  color: var(--blueFont-color);
 }
 .portrait_box {
   display: flex;

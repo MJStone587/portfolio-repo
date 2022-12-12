@@ -38,16 +38,10 @@ const AboutMe = (props, ref) => {
           >
             <div className="skills_box_content">
               <div className="skills_list">
-                <h3>HTML</h3>
-                <h3>CSS</h3>
-                <h3>Javascript</h3>
-                <h3>Express</h3>
-                <h3>NodeJS</h3>
-                <h3>MongoDb</h3>
-                <h3>PHP</h3>
-                <h3>mySQL</h3>
-                <h3>ReactJS</h3>
-                <h3>Java</h3>
+                <h3>
+                  HTML/CSS Javascript Express NodeJS MongoDb PHP mySQL ReactJS
+                  Java
+                </h3>
               </div>
             </div>
           </motion.div>
