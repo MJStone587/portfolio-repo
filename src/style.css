@@ -10,8 +10,8 @@ html {
   --boxBG-alt-color: #000b5f;
   --blueFont-color: #2adfff;
   --blueFadedFont-color: #27b5ce;
-  --pinkFadedFont-color: #ad1181;
-  --pinkFont-color: #fb00af;
+  --pinkFadedFont-color: #c01a91;
+  --pinkFont-color: #fd15b7;
   --blueBorder-color: #2adfff6c;
   --blueShadow-color: #2adfff6c;
   --pinkGradientButton-color: #fb00afb4;
@@ -240,7 +240,7 @@ section {
 }
 .home_centerbox_p2span {
   font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
-  color: #27b5ce;
+  color: var(--blueFont-color);
 }
 .home_centerbox_typewriter {
   display: flex;
