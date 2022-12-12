@@ -10,12 +10,13 @@ html {
   --boxBG-alt-color: #000b5f;
   --blueFont-color: #2adfff;
   --blueFadedFont-color: #27b5ce;
-  --pinkFadedFont-color: #e01ea9;
+  --pinkFadedFont-color: #ff00b7;
   --pinkFont-color: #fd15b7;
   --blueBorder-color: #2adfff6c;
   --blueShadow-color: #2adfff6c;
   --pinkGradientButton-color: #fb00afb4;
-  --pinkImageCover-color: #500039;
+  --pinkImageCover-color: #700050;
+  --pinkImageCover-backup: #700050;
   --global-borderRadius: 0.25rem;
   --header--font-size: calc(
     24px + (36 - 24) * ((100vw - 320px) / (1920 - 320))
