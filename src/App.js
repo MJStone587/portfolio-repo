@@ -102,7 +102,7 @@ function App() {
           <li>
             <a
               aria-label="Linkedin  "
-              href="https://linkedin.com/in/MJStone587"
+              href="www.linkedin.com/in/mark-johnston-740853219"
               target="_blank"
               rel="noreferrer"
             >
