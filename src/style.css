@@ -694,11 +694,15 @@ section {
     display: none;
   }
   .carousel_window_right {
+    border: 1px solid var(--blueBorder-color);
     width: 100%;
     margin: 0;
     order: 1;
     height: 28vh;
     row-gap: 0px;
+  }
+  .carousel_window_right:hover {
+    border: 1px solid var(--blueFont-color);
   }
   .carousel_window_right_innerBot {
     width: 100%;
