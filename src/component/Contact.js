@@ -33,11 +33,11 @@ const Contact = (props, ref) => {
 
       <div className="contact_body">
         <form className="contact_form" ref={form} onSubmit={sendEmail}>
-          <label htmlFor="name_input">Name:</label>
+          <label htmlFor="name_input">Your Name:</label>
           <input id="name_input" type="text" name="from_name" />
-          <label htmlFor="email_input">Email:</label>
+          <label htmlFor="email_input">Your Email:</label>
           <input id="email_input" type="email" name="from_email" />
-          <label htmlFor="message_input">Message:</label>
+          <label htmlFor="message_input">Your Message:</label>
           <textarea id="message_input" name="message" />
           <input id="contact_submit" type="submit" value="Send" />
         </form>
