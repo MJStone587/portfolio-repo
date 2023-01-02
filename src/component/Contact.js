@@ -22,7 +22,8 @@ const Contact = (props, ref) => {
         (error) => {
           console.log(error.text);
         }
-      );
+      )
+      .then(document.getElementById("contact_form").reset());
   };
   return (
     <section className="contact_container" ref={ref}>
