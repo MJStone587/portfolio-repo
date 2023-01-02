@@ -47,12 +47,7 @@ const Contact = (props, ref) => {
           <input id="email_input" type="email" name="reply_to" />
           <label htmlFor="message_input">Your Message:</label>
           <textarea id="message_input" name="message" />
-          <input
-            id="contact_submit"
-            type="submit"
-            value="Send"
-            onClick={formReset}
-          />
+          <input id="contact_submit" type="submit" value="Send" />
         </form>
 
         <aside className="contact_aside">
