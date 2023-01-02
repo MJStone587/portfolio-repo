@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Contact = (props, ref) => {
   const form = useRef();
 
+  const formReset = () => {
+    document.getElementById("contact_form").reset();
+  };
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -32,14 +35,24 @@ const Contact = (props, ref) => {
       </div>
 
       <div className="contact_body">
-        <form className="contact_form" ref={form} onSubmit={sendEmail}>
+        <form
+          className="contact_form"
+          id="contact_form"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <label htmlFor="name_input">Your Name:</label>
           <input id="name_input" type="text" name="from_name" />
           <label htmlFor="email_input">Your Email:</label>
           <input id="email_input" type="email" name="reply_to" />
           <label htmlFor="message_input">Your Message:</label>
           <textarea id="message_input" name="message" />
-          <input id="contact_submit" type="submit" value="Send" />
+          <input
+            id="contact_submit"
+            type="submit"
+            value="Send"
+            onClick={formReset}
+          />
         </form>
 
         <aside className="contact_aside">
