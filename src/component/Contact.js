@@ -5,15 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Contact = (props, ref) => {
   const form = useRef();
 
-  const formReset = () => {
-    document.getElementById("contact_form").reset();
-  };
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_ayrsxlegi",
+        "service_ed6sbqh",
         "template_x3poq8d",
         form.current,
         "aPezDmMulLcn0LnSi"
