@@ -39,7 +39,7 @@ const Projects = (props, ref) => {
           id2="what_2_watch_btn"
           title="Movie/Show Browsing App"
           alt="What2Watch"
-          description="Crud Project from college using PHP and mySQL. Came back to make improvements to this project, mostly styling changes."
+          description="Originally a CRUD project from College using PHP and MySQL, I created a secondary version using Javascript and my own JSON file to store data"
           tools="CSS, PHP, mySQL, HTML, VScode, JS"
           repo="https://github.com/MJStone587/What2Watch/"
           site="https://mjstone587.github.io/What2Watch/"
