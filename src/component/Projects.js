@@ -25,6 +25,15 @@ const Projects = (props, ref) => {
       </div>
       <div className="projects_carousel">
         <ProjectDisp
+          image={pokemonScreen}
+          title="Pokemon Search"
+          alt="Pokemon App"
+          description="To better understand APIs, I created this Pokemon search/browse app"
+          tools="CSS, Javascript, HTML, PokeAPI, VScode  "
+          repo="https://github.com/MJStone587/Pokemon"
+          site="https://mjstone587.github.io/Pokemon/"
+        />
+        <ProjectDisp
           image={what2watchScreen}
           id="what_2_watch_site"
           id2="what_2_watch_btn"
@@ -56,15 +65,6 @@ const Projects = (props, ref) => {
           tools="CSS, JS, HTML, ReactJS, VScode, EmailJS"
           repo="https://github.com/MJStone587/portfolio-repo"
           site="https://markjportfolio.netlify.app/"
-        />
-        <ProjectDisp
-          image={pokemonScreen}
-          title="Pokemon Search"
-          alt="Pokemon App"
-          description="To better understand APIs, I created this Pokemon search/browse app"
-          tools="CSS, Javascript, HTML, PokeAPI, VScode  "
-          repo="https://github.com/MJStone587/Pokemon"
-          site="https://mjstone587.github.io/Pokemon/"
         />
       </div>
     </section>
