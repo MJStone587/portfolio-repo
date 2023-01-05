@@ -8,16 +8,6 @@ import pokemonScreen from "../images/pokemonAppScreen1.webp";
 const Projects = (props, ref) => {
   const contactRef = useRef();
 
-  /*<ProjectDisp
-          image={pokemonScreen}
-          title="Pokemon Search"
-          alt="Pokemon App"
-          description="To better understand APIs, I created this Pokemon search/browse app"
-          tools="CSS, Javascript, Html, PokemonAPI, VScode  "
-          repo="https://github.com/MJStone587/Pokemon"
-          site="https://mjstone587.github.io/Pokemon/"
-        />
-  */
   function scrollToDiv(currentRef) {
     currentRef.current.scrollIntoView({ behavior: "smooth" });
   }
