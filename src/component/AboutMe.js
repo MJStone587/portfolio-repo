@@ -23,7 +23,7 @@ const AboutMe = (props, ref) => {
               to improve my code; how easy it is to read, how modular it is, and
               how well it performs. Learning and improving fuels my passion for
               software development. Currently I am most proficient in the
-              following languages:
+              following technologies:
             </p>
           </motion.div>
         </AnimatePresence>
