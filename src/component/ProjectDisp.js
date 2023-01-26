@@ -1,6 +1,6 @@
-import { React, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AnimatePresence, motion } from "framer-motion";
+import { React, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function ProjectDisp(props) {
   const viewRef = useRef();
@@ -12,7 +12,7 @@ export default function ProjectDisp(props) {
           whileInView={{ x: 0, opacity: 1 }}
           initial={{ x: -100, opacity: 0 }}
           exit={{ x: -100, opacity: 0 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: 'easeOut' }}
           viewport={{ amount: 0, once: true }}
           className="carousel_window_left"
         >
@@ -32,14 +32,14 @@ export default function ProjectDisp(props) {
           whileInView={{ x: 0, opacity: 1 }}
           initial={{ x: 100, opacity: 0 }}
           exit={{ x: 100, opacity: 0 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: 'easeOut' }}
           viewport={{ amount: 0.5, once: true }}
           className="carousel_window_right"
         >
           <div className="carousel_window_right_innerTop">
-            <h1>{props.title}</h1>
-            <h3>{props.description}</h3>
-            <p>{props.tools}</p>
+            <p id="carousel_card_title">{props.title}</p>
+            <p id="carousel_card_desc">{props.description}</p>
+            <p id="carousel_card_tools">{props.tools}</p>
           </div>
           <div className="carousel_window_right_innerBot">
             <a

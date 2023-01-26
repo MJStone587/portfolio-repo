@@ -1,6 +1,6 @@
-import React, { useRef, forwardRef } from "react";
-import emailjs from "@emailjs/browser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef, forwardRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = (props, ref) => {
   const form = useRef();
@@ -10,10 +10,10 @@ const Contact = (props, ref) => {
 
     emailjs
       .sendForm(
-        "service_ed6sbqh",
-        "template_x3poq8d",
+        'service_ed6sbqh',
+        'template_x3poq8d',
         form.current,
-        "aPezDmMulLcn0LnSi"
+        'aPezDmMulLcn0LnSi'
       )
       .then(
         (result) => {
@@ -23,7 +23,7 @@ const Contact = (props, ref) => {
           console.log(error.text);
         }
       )
-      .then(document.getElementById("contact_form").reset());
+      .then(document.getElementById('contact_form').reset());
   };
   return (
     <section className="contact_container" ref={ref}>
@@ -49,7 +49,7 @@ const Contact = (props, ref) => {
         </form>
 
         <aside className="contact_aside">
-          <h1>Send me an email and let's get in touch!</h1>
+          <p>Send me an email and let's get in touch!</p>
           <FontAwesomeIcon icon="fa-solid fa-envelopes-bulk" />
         </aside>
       </div>

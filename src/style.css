@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&family=VT323&display=swap');
 
 html {
   margin: 0;
@@ -22,7 +22,7 @@ html {
     24px + (36 - 24) * ((100vw - 320px) / (1920 - 320))
   );
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
 }
 section {
   margin: 0px 150px;
@@ -55,7 +55,7 @@ section {
   bottom: 0;
 }
 .left_overlay_list::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 99px;
   background-color: var(--pinkFadedFont-color);
@@ -70,7 +70,7 @@ section {
   bottom: 0;
 }
 .right_overlay_list::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 99px;
   background-color: var(--pinkFadedFont-color);
@@ -149,7 +149,7 @@ section {
   overflow: hidden;
   border: 0.5px solid var(--blueBorder-color);
   background-color: transparent;
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   border-radius: 0.25rem;
 }
 .nav_btn:hover {
@@ -160,7 +160,7 @@ section {
 .btn_about:before,
 .btn_projects:before,
 .btn_contact:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -249,7 +249,7 @@ section {
   background-color: var(--boxBG-alt-color);
   border: none;
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   text-transform: uppercase;
 }
 .continue_btn_container:hover {
@@ -317,7 +317,7 @@ section {
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   box-shadow: 2px 2px 10px 2px black;
 }
-.skills_list h3 {
+.skills_list p {
   padding: 1rem;
   color: var(--blueFont-color);
 }
@@ -430,11 +430,11 @@ section {
   width: 50%;
   box-shadow: 2px 2px 10px 0px black;
 }
-.carousel_window_right_innerTop h1 {
+#carousel_card_title {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: var(--blueFont-color);
 }
-.carousel_window_right_innerTop h3 {
+#carousel_card_desc {
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: var(--pinkFadedFont-color);
   padding: 0px 20px;
@@ -537,7 +537,7 @@ section {
   background-color: var(--boxBG-alt-color);
   border: 1px solid var(--blueBorder-color);
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   box-shadow: 2px 2px 10px 2px black;
   height: 4vh;
   width: 12vw;

@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { forwardRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const AboutMe = (props, ref) => {
   return (
@@ -13,7 +13,7 @@ const AboutMe = (props, ref) => {
             whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: 100, opacity: 0 }}
             exit={{ x: 100, opacity: 0 }}
-            transition={{ ease: "easeOut" }}
+            transition={{ ease: 'easeOut' }}
             viewport={{ amount: 0.5, once: true }}
             className="aboutme_description"
           >
@@ -32,16 +32,16 @@ const AboutMe = (props, ref) => {
             whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
             exit={{ x: -100, opacity: 0 }}
-            transition={{ ease: "easeOut" }}
+            transition={{ ease: 'easeOut' }}
             viewport={{ amount: 0.5, once: true }}
             className="skills_box"
           >
             <div className="skills_box_content">
               <div className="skills_list">
-                <h3>
+                <p>
                   HTML/CSS Javascript Express NodeJS MongoDb PHP mySQL ReactJS
                   Java
-                </h3>
+                </p>
               </div>
             </div>
           </motion.div>
@@ -50,7 +50,7 @@ const AboutMe = (props, ref) => {
           whileInView={{ x: 0, opacity: 1 }}
           initial={{ x: 100, opacity: 0 }}
           exit={{ x: 100, opacity: 0 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: 'easeOut' }}
           viewport={{ amount: 0.5, once: true }}
           className="portrait_box"
         >
