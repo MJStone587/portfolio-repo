@@ -1,21 +1,16 @@
-import React, { forwardRef, useRef } from "react";
-import Typewriter from "typewriter-effect";
-import "animate.css";
-import { motion } from "framer-motion";
+import React, { forwardRef } from 'react';
+import Typewriter from 'typewriter-effect';
+import 'animate.css';
+import { motion } from 'framer-motion';
 
 const Home = (props, ref) => {
-  const aboutRef = useRef(null);
-  function scrollToDiv(currentRef) {
-    currentRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
     <section className="home_container" ref={ref}>
       <motion.div
         whileInView={{ x: 0 }}
         initial={{ x: -100 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ ease: "easeOut" }}
+        transition={{ ease: 'easeOut' }}
         className="home_centerbox"
       >
         <p className="home_centerbox_p1">Hello, my name is</p>
@@ -26,7 +21,7 @@ const Home = (props, ref) => {
                 .changeDeleteSpeed(30)
                 .changeDelay(100)
                 .pauseFor(100)
-                .typeString("Mark Johnston.")
+                .typeString('Mark Johnston.')
                 .start();
             }}
           />
@@ -38,17 +33,6 @@ const Home = (props, ref) => {
           This site is a collection of the projects I've worked on, the
           experience I've acquired, and a bit about me the developer.
         </p>
-      </motion.div>
-      <motion.div
-        whileInView={{ x: 0 }}
-        initial={{ x: 100 }}
-        viewport={{ once: true, amount: 0 }}
-        transition={{ ease: "easeOut" }}
-        className="continue_btn_container"
-      >
-        <button className="continue_btn" onClick={() => scrollToDiv(aboutRef)}>
-          Continue
-        </button>
       </motion.div>
     </section>
   );

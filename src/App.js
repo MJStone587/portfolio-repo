@@ -1,10 +1,10 @@
-import "./style.css";
-import React, { useState, useRef, useEffect } from "react";
-import Home from "./component/Home";
-import Projects from "./component/Projects";
-import Contact from "./component/Contact";
-import AboutMe from "./component/AboutMe";
-import logo from "./images/logoMJ5.webp";
+import './style.css';
+import React, { useState, useRef, useEffect } from 'react';
+import Home from './component/Home';
+import Projects from './component/Projects';
+import Contact from './component/Contact';
+import AboutMe from './component/AboutMe';
+import logo from './images/logoMJ5.webp';
 
 function App() {
   const [showNav, setNavShow] = useState(true);
@@ -25,19 +25,20 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", navbarControl);
+    window.addEventListener('scroll', navbarControl);
     return () => {
-      window.removeEventListener("scroll", navbarControl);
+      window.removeEventListener('scroll', navbarControl);
     };
   }, []);
 
   function scrollToDiv(currentRef) {
-    currentRef.current.scrollIntoView({ behavior: "smooth" });
+    console.log(currentRef.current);
+    currentRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <>
-      <nav className={`navbar ${showNav && "nav_displayed"}`}>
+      <nav className={`navbar ${showNav && 'nav_displayed'}`}>
         <div className="navbar_left">
           <div className="btn_container btn_home_container">
             <button

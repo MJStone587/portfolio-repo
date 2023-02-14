@@ -188,7 +188,7 @@ section {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 99vh;
   max-width: 100%;
 }
 .home_centerbox {
