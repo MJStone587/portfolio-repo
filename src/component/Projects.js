@@ -34,26 +34,15 @@ const Projects = (props, ref) => {
           site="https://mjstone587.github.io/Pokemon/"
         />
         <ProjectDisp
-          image={what2watchScreen}
-          id="what_2_watch_site"
-          id2="what_2_watch_btn"
-          title="Movie/Show Browsing App"
-          alt="What2Watch"
-          description="To better understand API JSON structure data I created my own JSON and imported the data into this site"
-          tools="CSS, PHP, mySQL, HTML, VScode, JS"
-          repo="https://github.com/MJStone587/What2Watch/"
-          site="https://mjstone587.github.io/What2Watch/"
-        />
-        <ProjectDisp
           image={financialForgeScreen}
           id="financial_forge_site"
           id2="financial_forge_btn"
           title="Financial Organizer"
           alt="Financial Organizer"
-          description="My first experience using ExpressJS / NodesJS for a CRUD app and login authentication. Understanding how to store encrypted passwords using bcrypt."
+          description="My first full stack project using MERN stack. A fairly straightforward CRUD app that lets you track financial spending and income."
           tools="JS, HTML, CSS, MongoDB, Express, NodeJS"
-          repo="https://github.com/MJStone587/Framework"
-          site="https://financialforge.onrender.com/catalog"
+          repo="https://github.com/MJStone587/FinancialForge_MERN"
+          site="https://financialforge.netlify.app/income"
         />
         <ProjectDisp
           image={portfolioScreen}
