@@ -12,6 +12,17 @@ const Projects = (props, ref) => {
     currentRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
+  /*<ProjectDisp
+  image={financialForgeScreen}
+  id="financial_forge_site"
+  id2="financial_forge_btn"
+  title="Financial Organizer"
+  alt="Financial Organizer"
+  description="My first full stack project using MERN stack. A fairly straightforward CRUD app that lets you track financial spending and income."
+  tools="JS, HTML, CSS, MongoDB, Express, NodeJS"
+  repo="https://github.com/MJStone587/FinancialForge_MERN"
+  site="https://financialforge.netlify.app"
+/>*/
   return (
     <section className="projects_container" ref={ref}>
       <div className="projects_header">
@@ -33,17 +44,7 @@ const Projects = (props, ref) => {
           repo="https://github.com/MJStone587/Pokemon"
           site="https://mjstone587.github.io/Pokemon/"
         />
-        <ProjectDisp
-          image={financialForgeScreen}
-          id="financial_forge_site"
-          id2="financial_forge_btn"
-          title="Financial Organizer"
-          alt="Financial Organizer"
-          description="My first full stack project using MERN stack. A fairly straightforward CRUD app that lets you track financial spending and income."
-          tools="JS, HTML, CSS, MongoDB, Express, NodeJS"
-          repo="https://github.com/MJStone587/FinancialForge_MERN"
-          site="https://financialforge.netlify.app"
-        />
+
         <ProjectDisp
           image={portfolioScreen}
           id="portfolio_site"
