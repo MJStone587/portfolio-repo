@@ -40,7 +40,7 @@ const Projects = (props, ref) => {
           title="Financial Organizer"
           alt="Financial Organizer"
           description="My first full stack project using MERN stack. A fairly straightforward CRUD app that lets you track financial spending and income."
-          tools="JS, HTML, CSS, MongoDB, Express, NodeJS, Reactjs"
+          tools="MongoDB, Express, NodeJS, Reactjs"
           repo="https://github.com/MJStone587/FinancialForge_MERN"
           site="https://financialforge.netlify.app"
         />
