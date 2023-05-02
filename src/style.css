@@ -5,18 +5,16 @@ html {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  --bg-color: #000631;
-  --boxBG-color: #000949;
-  --boxBG-alt-color: #000b5f;
-  --blueFont-color: #2adfff;
-  --blueFadedFont-color: #27b5ce;
-  --pinkFadedFont-color: #ff00b7;
-  --pinkFont-color: #fd15b7;
-  --blueBorder-color: #2adfff6c;
-  --blueShadow-color: #2adfff6c;
-  --pinkGradientButton-color: #fb00afb4;
-  --pinkImageCover-color: #700050;
-  --pinkImageCover-backup: #700050;
+  --bg-color: #160f29;
+  --boxBG-color: #246a73;
+  --boxBG-alt-color: #246a73;
+  --boldFont-color: #f3dfc1;
+  --blueFadedFont-color: #ddbea8;
+  --smallFont-color: #ddbea8;
+  --boxBorder-color: #368f8b;
+  --navShadow-color: #2adfff6c;
+  --gradientButton-color: #368f8b;
+  --imageCover-color: #22173f;
   --global-borderRadius: 0.25rem;
   --header--font-size: calc(
     24px + (36 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -58,7 +56,7 @@ section {
   content: '';
   width: 1px;
   height: 99px;
-  background-color: var(--pinkFadedFont-color);
+  background-color: var(--smallFont-color);
 }
 .right_overlay_list {
   position: fixed;
@@ -73,10 +71,10 @@ section {
   content: '';
   width: 1px;
   height: 99px;
-  background-color: var(--pinkFadedFont-color);
+  background-color: var(--smallFadedFont-color);
 }
 .overlay {
-  color: #961f74;
+  color: #368f8b;
 }
 .overlay_email {
   writing-mode: vertical-rl;
@@ -84,7 +82,7 @@ section {
   text-decoration: none;
 }
 .overlay:hover {
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .desktop_overlay_container li a svg {
   width: 1.25rem;
@@ -115,8 +113,8 @@ section {
   flex: 2;
 }
 #navbar_logo {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 }
 .navbar_right {
   flex: 2;
@@ -140,20 +138,20 @@ section {
 .btn_contact_container button {
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   padding: 0.5rem 1rem;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
   text-transform: uppercase;
 }
 .nav_btn {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  border: 0.5px solid var(--blueBorder-color);
+  border: 0.5px solid var(--boxBorder-color);
   background-color: transparent;
   font-family: 'VT323', monospace;
   border-radius: 0.25rem;
 }
 .nav_btn:hover {
-  box-shadow: 1px 1px 10px 3px var(--blueShadow-color);
+  box-shadow: 1px 1px 10px 3px var(--navShadow-color);
   cursor: pointer;
 }
 .btn_home:before,
@@ -169,7 +167,7 @@ section {
   background: linear-gradient(
     120deg,
     transparent,
-    var(--pinkGradientButton-color),
+    var(--gradientButton-color),
     transparent
   );
   transition: all 500ms;
@@ -195,7 +193,7 @@ section {
   display: flex;
   flex-flow: column nowrap;
   padding: calc(2rem + 0.390625vw) calc(2rem + 0.390625vw);
-  border: 1px solid var(--blueBorder-color);
+  border: 1px solid var(--boxBorder-color);
   box-shadow: 6px 6px 12px 7px black;
   max-width: 35vw;
   min-width: 35vw;
@@ -207,25 +205,25 @@ section {
   flex-flow: column nowrap;
   align-items: flex-start;
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
 }
 .home_centerbox_p2 {
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
 }
 .home_centerbox_p2span {
   font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .home_centerbox_typewriter {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)));
-  color: #2adfff;
+  color: var(--boldFont-color);
 }
 .continue_btn_container {
   display: flex;
@@ -238,25 +236,8 @@ section {
   margin-right: 20rem;
   background-color: var(--boxBG-color);
   box-shadow: 3px 3px 10px 4px black;
-  border: 1px solid var(--blueBorder-color);
+  border: 1px solid var(--boxBorder-color);
   border-radius: 0.25rem;
-}
-.continue_btn {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: var(--blueFont-color);
-  background-color: var(--boxBG-alt-color);
-  border: none;
-  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
-  font-family: 'VT323', monospace;
-  text-transform: uppercase;
-}
-.continue_btn_container:hover {
-  border: 1px solid var(--blueFont-color);
-}
-.continue_btn:hover {
-  cursor: pointer;
 }
 /*-------------------------*/
 /* ----------About Me---------- */
@@ -273,9 +254,9 @@ section {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  color: var(--blueFont-color);
+  color: var(--boxBorder-color);
   font-size: var(--header--font-size);
-  border-bottom: 1px solid var(--pinkFadedFont-color);
+  border-bottom: 1px solid var(--smallFont-color);
   width: 80%;
 }
 .aboutme_box {
@@ -290,7 +271,7 @@ section {
 .aboutme_description {
   display: flex;
   flex-flow: column wrap;
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
   order: 1;
   font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 0.25rem;
@@ -298,7 +279,7 @@ section {
 }
 .skills_box {
   display: flex;
-  color: #2adfff;
+  color: var(--boldFont-color);
   flex-flow: column nowrap;
   align-items: center;
   order: 2;
@@ -319,7 +300,7 @@ section {
 }
 .skills_list p {
   padding: 1rem;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .portrait_box {
   display: flex;
@@ -327,7 +308,7 @@ section {
   align-content: center;
   order: 3;
   z-index: 5;
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
   font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 /*-------------------------*/
@@ -347,11 +328,11 @@ section {
   width: 80%;
   justify-content: flex-start;
   align-self: flex-start;
-  border-bottom: 1px solid var(--pinkFadedFont-color);
+  border-bottom: 1px solid var(--smallFont-color);
 }
 .projects_header h1 {
   grid-area: title;
-  color: var(--blueFont-color);
+  color: var(--boxBorder-color);
   font-weight: bold;
   padding-top: 1rem;
   text-shadow: 6px 5px 1px #031013;
@@ -359,7 +340,7 @@ section {
 }
 .projects_header h2 {
   grid-area: contactLink;
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 #contact_btn {
@@ -370,7 +351,7 @@ section {
 }
 #contact_btn:hover {
   cursor: pointer;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .projects_carousel {
   display: flex;
@@ -394,7 +375,7 @@ section {
   display: flex;
   border-radius: 0.25rem;
   width: 50%;
-  background-color: var(--pinkImageCover-color);
+  background-color: var(--imageCover-color);
   z-index: 1;
   transition: background-color 0.5s;
 }
@@ -432,11 +413,11 @@ section {
 }
 #carousel_card_title {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 #carousel_card_desc {
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
   padding: 0px 20px;
 }
 .carousel_window_right_innerTop p {
@@ -445,14 +426,14 @@ section {
 }
 .carousel_window_right_innerBot a {
   font-size: calc(22px + (26 - 22) * ((100vw - 320px) / (1920 - 320)));
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
 }
 .projects_carousel_window a:hover {
   cursor: pointer;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .fa-share-from-square {
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .carousel_window_right_innerTop {
   display: flex;
@@ -480,7 +461,7 @@ section {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
 }
 .contact_header {
   display: flex;
@@ -488,14 +469,14 @@ section {
   width: 80%;
   justify-content: flex-start;
   align-self: flex-start;
-  border-bottom: 1px solid var(--pinkFadedFont-color);
+  border-bottom: 1px solid var(--smallFont-color);
 }
 .contact_header h1 {
-  color: var(--blueFont-color);
+  color: var(--boxBorder-color);
   font-size: var(--header--font-size);
 }
 .contact_header h2 {
-  color: var(--pinkFadedFont-color);
+  color: var(--smallFont-color);
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 .contact_body {
@@ -533,9 +514,9 @@ section {
 }
 #contact_submit {
   text-decoration: none;
-  color: var(--blueFont-color);
+  color: var(--boldFont-color);
   background-color: var(--boxBG-alt-color);
-  border: 1px solid var(--blueBorder-color);
+  border: 1px solid var(--boxBorder-color);
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   font-family: 'VT323', monospace;
   box-shadow: 2px 2px 10px 2px black;
@@ -544,7 +525,7 @@ section {
   text-transform: uppercase;
 }
 #contact_submit:hover {
-  border: 1px solid var(--blueFont-color);
+  border: 1px solid var(--boldFont-color);
   cursor: pointer;
 }
 .contact_aside {
@@ -576,7 +557,7 @@ section {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blueFont-color);
+  background: var(--boldFont-color);
 }
 
 /*-------------------------*/
@@ -694,7 +675,7 @@ section {
     display: none;
   }
   .carousel_window_right {
-    border: 1px solid var(--blueBorder-color);
+    border: 1px solid var(--boxBorder-color);
     width: 100%;
     margin: 0;
     order: 1;
@@ -702,7 +683,7 @@ section {
     row-gap: 0px;
   }
   .carousel_window_right:hover {
-    border: 1px solid var(--blueFont-color);
+    border: 1px solid var(--boldFont-color);
   }
   .carousel_window_right_innerBot {
     width: 100%;

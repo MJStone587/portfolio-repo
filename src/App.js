@@ -4,7 +4,7 @@ import Home from './component/Home';
 import Projects from './component/Projects';
 import Contact from './component/Contact';
 import AboutMe from './component/AboutMe';
-import logo from './images/logoMJ5.webp';
+import logo from './images/logoMJ4.webp';
 
 function App() {
   const [showNav, setNavShow] = useState(true);

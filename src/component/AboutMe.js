@@ -57,12 +57,8 @@ const AboutMe = (props, ref) => {
           <p>
             Building projects has taught me a lot about the importance of
             high-level design. Good design helps create a smooth and easy build
-            process, prevents scope creep (this one gets me often), and helps
-            better manage my time. This is also true for high-level design of my
-            own code structure, which is something I feel is a weakness of mine.
-            So I keep working and keep improving. I hope you can see these
-            improvements in the progression of projects I have displayed down
-            the page.
+            process. This is something I have worked to improve and I think it
+            shows in the progression of my the apps I have created.
           </p>
         </motion.div>
       </div>
