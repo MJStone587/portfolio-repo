@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@100;300&family=VT323&display=swap");
 
 html {
   margin: 0;
@@ -20,7 +20,7 @@ html {
     24px + (36 - 24) * ((100vw - 320px) / (1920 - 320))
   );
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
 }
 section {
   margin: 0px 150px;
@@ -53,7 +53,7 @@ section {
   bottom: 0;
 }
 .left_overlay_list::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 99px;
   background-color: var(--smallFont-color);
@@ -68,7 +68,7 @@ section {
   bottom: 0;
 }
 .right_overlay_list::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 99px;
   background-color: var(--smallFont-color);
@@ -147,7 +147,7 @@ section {
   overflow: hidden;
   border: 0.5px solid var(--boxBorder-color);
   background-color: transparent;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   border-radius: 0.25rem;
 }
 .nav_btn:hover {
@@ -158,7 +158,7 @@ section {
 .btn_about:before,
 .btn_projects:before,
 .btn_contact:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -387,6 +387,7 @@ section {
 .carousel_window_left img {
   width: 100%;
   height: 20rem;
+  border-radius: 5px;
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(1) brightness(90%);
 }
@@ -518,7 +519,7 @@ section {
   background-color: var(--boxBG-alt-color);
   border: 1px solid var(--boxBorder-color);
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   box-shadow: 2px 2px 10px 2px black;
   height: 4vh;
   width: 12vw;
