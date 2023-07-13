@@ -1,14 +1,14 @@
-import React, { forwardRef, useRef } from 'react';
-import ProjectDisp from './ProjectDisp.js';
-import financialForgeScreen from '../images/financialForgeSS.webp';
-import portfolioScreen from '../images/portfolioScreen.webp';
-import pokemonScreen from '../images/pokemonAppScreen1.webp';
+import React, { forwardRef, useRef } from "react";
+import ProjectDisp from "./ProjectDisp.js";
+import financialForgeScreen from "../images/financialForgeSS.webp";
+import portfolioScreen from "../images/portfolioScreen.webp";
+import pokemonScreen from "../images/pokemonAppScreen1.webp";
 
 const Projects = (props, ref) => {
   const contactRef = useRef();
 
   function scrollToDiv(currentRef) {
-    currentRef.current.scrollIntoView({ behavior: 'smooth' });
+    currentRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -27,7 +27,7 @@ const Projects = (props, ref) => {
           image={pokemonScreen}
           title="Pokemon Search"
           alt="Pokemon App"
-          description="This app was created to better understand and use API data in a project."
+          description="My first personal project. This app was created to better understand and use API data in a project."
           tools="CSS, Javascript, HTML, PokeAPI, VScode  "
           repo="https://github.com/MJStone587/Pokemon"
           site="https://mjstone587.github.io/Pokemon/"
