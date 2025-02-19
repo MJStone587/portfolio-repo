@@ -24,7 +24,6 @@ function App() {
 			}
 			oldScrollY = window.scrollY;
 		};
-		window.addEventListener("scroll", navbarControl);
 		return () => {
 			window.removeEventListener("scroll", navbarControl);
 		};
