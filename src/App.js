@@ -121,7 +121,7 @@ function App() {
 							rel='noreferrer'
 							className='overlay overlay_email'
 						>
-							MJdev587@yahoo.com
+							MJstone587@yahoo.com
 						</a>
 					</li>
 				</ul>
